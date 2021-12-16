@@ -40,6 +40,53 @@
         "show_text_below": true
       }
     },
+    "1639665225f1f076a1": {
+      "type": "multicolumn",
+      "blocks": {
+        "1639665225765b1e4f-0": {
+          "type": "column",
+          "settings": {
+            "title": "300+",
+            "text": "<p>Homemade meals<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1639665225765b1e4f-1": {
+          "type": "column",
+          "settings": {
+            "title": "1.1+ Million",
+            "text": "<p>Meals sold every month<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1639665225765b1e4f-2": {
+          "type": "column",
+          "settings": {
+            "title": "54",
+            "text": "<p>Cities delivered<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1639665225765b1e4f-0",
+        "1639665225765b1e4f-1",
+        "1639665225765b1e4f-2"
+      ],
+      "settings": {
+        "title": "",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
@@ -54,15 +101,6 @@
           "type": "text",
           "settings": {
             "text": "<p>Homemade meals<\/p>"
-          }
-        },
-        "button": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
           }
         }
       },
@@ -262,6 +300,7 @@
   },
   "order": [
     "image_banner",
+    "1639665225f1f076a1",
     "rich_text",
     "16396589767ba9a2af",
     "16396590655e0d85af",
