@@ -17,7 +17,7 @@
             "type": "announcement",
             "settings": {
               "text": "Check if we deliver to you",
-              "color_scheme": "background-1",
+              "color_scheme": "inverse",
               "link": "shopify:\/\/pages\/contact"
             }
           }
