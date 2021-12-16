@@ -192,11 +192,14 @@
 .banner__content {
   padding: 0;
   display: flex;
-  position: relative;
+  position: absolute;
   width: 100%;
   align-items: center;
   justify-content: center;
   z-index: 2;
+  max-width: 400px;
+  top: 15%;
+  left: 10%;
 }
 
 @media screen and (min-width: 750px) {
@@ -329,6 +332,9 @@
     width: auto;
     max-width: 71rem;
     min-width: 45rem;
+    background: #FEF9F0;
+    opacity: 0.8;
+    border-radius: 20px;
   }
 }
 
