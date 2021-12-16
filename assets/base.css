@@ -1790,6 +1790,7 @@ input[type='checkbox'] {
 /* section-announcement-bar */
 #shopify-section-announcement-bar {
   z-index: 4;
+  background: #2A332F;
 }
 
 .announcement-bar {
@@ -1826,6 +1827,7 @@ input[type='checkbox'] {
   padding: 1rem 2rem;
   margin: 0;
   letter-spacing: 0.1rem;
+  color: #FFFFFF;
 }
 
 /* section-header */
