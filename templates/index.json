@@ -55,11 +55,92 @@
           "settings": {
             "text": "<p>Homemade meals<\/p>"
           }
+        },
+        "button": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
         }
       },
       "block_order": [
         "heading",
         "text"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true
+      }
+    },
+    "16396589767ba9a2af": {
+      "type": "rich-text",
+      "blocks": {
+        "16396589766287fb6b-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "1.1+ Million",
+            "heading_size": "h1"
+          }
+        },
+        "16396589766287fb6b-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Meals sold every month<\/p>"
+          }
+        },
+        "16396589766287fb6b-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "16396589766287fb6b-0",
+        "16396589766287fb6b-1",
+        "16396589766287fb6b-2"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": false
+      }
+    },
+    "16396590655e0d85af": {
+      "type": "rich-text",
+      "blocks": {
+        "163965906592a04b6e-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "54",
+            "heading_size": "h1"
+          }
+        },
+        "163965906592a04b6e-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Cities delivered<\/p>"
+          }
+        },
+        "163965906592a04b6e-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "163965906592a04b6e-0",
+        "163965906592a04b6e-1",
+        "163965906592a04b6e-2"
       ],
       "settings": {
         "color_scheme": "background-1",
@@ -182,6 +263,8 @@
   "order": [
     "image_banner",
     "rich_text",
+    "16396589767ba9a2af",
+    "16396590655e0d85af",
     "featured_products",
     "collage",
     "video",
