@@ -250,7 +250,6 @@ html.no-js .no-js-hidden {
   margin-bottom: 0;
 }
 
-body,
 .color-background-1,
 .color-background-2,
 .color-inverse,
@@ -1870,8 +1869,8 @@ input[type='checkbox'] {
 
 @media screen and (min-width: 990px) {
   .header {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .header--has-menu:not(.header--middle-left) {

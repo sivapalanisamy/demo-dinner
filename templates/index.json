@@ -55,20 +55,11 @@
           "settings": {
             "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
           }
-        },
-        "button": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
-          }
         }
       },
       "block_order": [
         "heading",
-        "text",
-        "button"
+        "text"
       ],
       "settings": {
         "color_scheme": "background-1",
