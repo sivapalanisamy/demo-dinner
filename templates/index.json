@@ -82,12 +82,28 @@
         "image_ratio": "adapt",
         "column_alignment": "left",
         "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
         "swipe_on_mobile": false
       }
     },
     "easy-pea-sy": {
       "type": "easy-pea-sy",
+      "blocks": {
+        "f656f57d-3708-42f8-a3aa-7fed34476601": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_21_1.png",
+            "imageHeading": "We COOK it",
+            "imageDescription": "<p>Made we fresh and healthy ingredients as we would for us.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "f656f57d-3708-42f8-a3aa-7fed34476601"
+      ],
       "settings": {
+        "headinglabel": ""
       }
     },
     "featured_products": {
