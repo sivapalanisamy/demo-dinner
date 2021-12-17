@@ -4,14 +4,15 @@
   {% for block in section.blocks %}
     <div class="slider_item">
         <div class="slider_img_wrap">
-          <img src="{{ block.settings.slide_img | img_url: 'original' }}" alt="" loading="lazy" class="slider_img">
+          <img src="{{ block.settings.slide_img | img_url: 'original' }}" alt="" loading="lazy" class="slider_img"  width=""   height="">
         </div>
       <div class="content_wrap">
-      <div class="slider_content">
-        <h2 class="slider_title">{{  block.settings.slide_title }}</h2>
-        <p class="slider_text">{{  block.settings.slide_text }}</p>
-        <a href="{{ block.settings.slide_link }}" class="button">{{ block.settings.button_title }}</a>
-      </div>
+        <div class="slider_content">
+            <h2 class="slider_title">{{  block.settings.slide_title }}</h2>
+            <p class="slider_text">{{  block.settings.slide_text }}</p>
+            <a href="{{ block.settings.slide_link }}" class="button">{{ block.settings.button_title }}</a>
+        </div>
+        </div>
     </div>
   {% endfor %}
 </div>
@@ -106,7 +107,7 @@
 $('.slider_wrap').slick({
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToShow: 4,
+    slidesToScroll: 2
 });
 {% endjavascript %}
