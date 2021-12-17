@@ -101,15 +101,33 @@
         "d55f8cc7-c521-4e11-a8c9-bbe43ce7430b": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_21_1.png",
+            "image": "shopify:\/\/shop_images\/Rectangle_22.png",
             "imageHeading": "2. We Freeze it",
             "imageDescription": "<p>To lock flavour and nutrients, safely and hygienically.<\/p>"
+          }
+        },
+        "9de21d76-1d03-432d-b55d-ff3a7fe54dee": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_25.png",
+            "imageHeading": "3. You Heat it",
+            "imageDescription": "<p>From freezer to oven. So you can spend your time where it matters<\/p>"
+          }
+        },
+        "5be7810d-809c-43a8-8ed8-fdcefbcf2191": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_45.png",
+            "imageHeading": "4. You Enjoy it",
+            "imageDescription": "<p>Fresh as the day it was made - because it is!<\/p>"
           }
         }
       },
       "block_order": [
         "f656f57d-3708-42f8-a3aa-7fed34476601",
-        "d55f8cc7-c521-4e11-a8c9-bbe43ce7430b"
+        "d55f8cc7-c521-4e11-a8c9-bbe43ce7430b",
+        "9de21d76-1d03-432d-b55d-ff3a7fe54dee",
+        "5be7810d-809c-43a8-8ed8-fdcefbcf2191"
       ],
       "settings": {
         "headinglabel": ""
