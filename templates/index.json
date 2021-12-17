@@ -196,8 +196,8 @@
       ],
       "settings": {
         "carousel_autoplay": false,
-        "carousel_dots": false,
-        "carousel_arrows": false,
+        "carousel_dots": true,
+        "carousel_arrows": true,
         "autoplay_speed": "7000"
       }
     },
