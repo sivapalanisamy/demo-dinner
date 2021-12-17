@@ -1,7 +1,15 @@
+<h5>{{section.settings.headinglabel}}</h5>
+
 {% schema %}
   {
     "name": "Easy peasy block",
-    "settings": []
+    "settings": [
+					{
+						"type":"text",
+						"label":"Enter heading label",
+						"id": "headinglabel"
+					}
+				]
   }
 {% endschema %}
 
