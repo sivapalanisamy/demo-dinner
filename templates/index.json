@@ -85,6 +85,11 @@
         "swipe_on_mobile": false
       }
     },
+    "easy-pea-sy": {
+      "type": "easy-pea-sy",
+      "settings": {
+      }
+    },
     "featured_products": {
       "type": "featured-collection",
       "settings": {
@@ -201,6 +206,7 @@
   "order": [
     "image_banner",
     "achieve",
+    "easy-pea-sy",
     "featured_products",
     "collage",
     "video",
