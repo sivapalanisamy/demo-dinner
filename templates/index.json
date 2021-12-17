@@ -133,6 +133,9 @@
         "headinglabel": ""
       }
     },
+    "categories-slider": {
+      "type": "categories-slider"
+    },
     "featured_products": {
       "type": "featured-collection",
       "settings": {
@@ -250,6 +253,7 @@
     "image_banner",
     "achieve",
     "easy-pea-sy",
+    "categories-slider",
     "featured_products",
     "collage",
     "video",
