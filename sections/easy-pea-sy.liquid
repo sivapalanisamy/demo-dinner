@@ -1,4 +1,11 @@
 <h5>{{section.settings.headinglabel}}</h5>
+{%for block in section.blocks %}
+	<div class="easy-col">
+      	<img src="{{block.settings.image | img_url: 'master'}}"
+         <h2>{{block.settings.imageHeading}}</h2>
+		<p>{{block.settings.imageDescription}}</p>
+	</div>
+{%endfor%}
 
 {% schema %}
   {
