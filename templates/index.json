@@ -97,10 +97,19 @@
             "imageHeading": "We COOK it",
             "imageDescription": "<p>Made we fresh and healthy ingredients as we would for us.<\/p>"
           }
+        },
+        "d55f8cc7-c521-4e11-a8c9-bbe43ce7430b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_21_1.png",
+            "imageHeading": "",
+            "imageDescription": ""
+          }
         }
       },
       "block_order": [
-        "f656f57d-3708-42f8-a3aa-7fed34476601"
+        "f656f57d-3708-42f8-a3aa-7fed34476601",
+        "d55f8cc7-c521-4e11-a8c9-bbe43ce7430b"
       ],
       "settings": {
         "headinglabel": ""
