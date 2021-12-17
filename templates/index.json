@@ -134,7 +134,9 @@
       }
     },
     "categories-slider": {
-      "type": "categories-slider"
+      "type": "categories-slider",
+      "settings": {
+      }
     },
     "featured_products": {
       "type": "featured-collection",
