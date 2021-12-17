@@ -134,7 +134,72 @@
       }
     },
     "categories-slider": {
-      "type": "categories-slider"
+      "type": "categories-slider",
+      "blocks": {
+        "e1a65b8f-9c10-436b-baa5-e315ccd91fb1": {
+          "type": "slide",
+          "settings": {
+            "button_title": "",
+            "slide_link": "",
+            "slide_title": "",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/Rectangle_123.png"
+          }
+        },
+        "810ca8f3-ea5b-468e-95f4-1019ae1a00fb": {
+          "type": "slide",
+          "settings": {
+            "button_title": "",
+            "slide_link": "",
+            "slide_title": "",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/Rectangle_121.png"
+          }
+        },
+        "b0172adb-d4e6-4b2f-98d4-7196886f517a": {
+          "type": "slide",
+          "settings": {
+            "button_title": "",
+            "slide_link": "",
+            "slide_title": "",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/Rectangle_125.png"
+          }
+        },
+        "295db187-a422-4c14-8256-1191d41dc5a9": {
+          "type": "slide",
+          "settings": {
+            "button_title": "",
+            "slide_link": "",
+            "slide_title": "",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/Rectangle_122.png"
+          }
+        },
+        "4c164b6f-72b1-4279-9b97-ad81cf7f0d09": {
+          "type": "slide",
+          "settings": {
+            "button_title": "",
+            "slide_link": "",
+            "slide_title": "",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/Rectangle_124.png"
+          }
+        }
+      },
+      "block_order": [
+        "e1a65b8f-9c10-436b-baa5-e315ccd91fb1",
+        "810ca8f3-ea5b-468e-95f4-1019ae1a00fb",
+        "b0172adb-d4e6-4b2f-98d4-7196886f517a",
+        "295db187-a422-4c14-8256-1191d41dc5a9",
+        "4c164b6f-72b1-4279-9b97-ad81cf7f0d09"
+      ],
+      "settings": {
+        "carousel_autoplay": false,
+        "carousel_dots": false,
+        "carousel_arrows": false,
+        "autoplay_speed": "7000"
+      }
     },
     "featured_products": {
       "type": "featured-collection",
