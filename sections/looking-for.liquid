@@ -1,5 +1,6 @@
 {% if section.blocks.size > 0 %}
-<div class="slider_looking category-slider" data-slick='{"autoplay": {{ section.settings.carousel_autoplay }}, "autoplaySpeed": {{ section.settings.autoplay_speed }}, "dots": {{ section.settings.carousel_dots }}, "arrows": {{ section.settings.carousel_arrows }}}'>
+<div class="page-width">
+<div class="slider_looking looking-slider" data-slick='{"autoplay": {{ section.settings.carousel_autoplay }}, "autoplaySpeed": {{ section.settings.autoplay_speed }}, "dots": {{ section.settings.carousel_dots }}, "arrows": {{ section.settings.carousel_arrows }}}'>
 
   {% for block in section.blocks %}
     <div class="slider_item">
@@ -15,6 +16,7 @@
         </div>
     </div>
   {% endfor %}
+</div>
 </div>
 {% endif %}
 
@@ -105,10 +107,9 @@
 
 {% javascript %}
 $('.slider_looking').slick({
-    infinite: true,
-    centerPadding: '0',
+    
     speed: 500,
-    slidesToShow: 6,
+    slidesToShow: 4,
     slidesToScroll: 2
 });
 {% endjavascript %}
