@@ -235,7 +235,83 @@
       }
     },
     "looking-for": {
-      "type": "looking-for"
+      "type": "looking-for",
+      "blocks": {
+        "77644443-a10a-49d0-ada6-4bbe6b51c305": {
+          "type": "slide",
+          "settings": {
+            "button_title": "EXPLORE NOW",
+            "slide_link": "",
+            "slide_title": "Low-Carb",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/Rectangle_189.png"
+          }
+        },
+        "ef181cf0-177a-432f-addf-57db0abdd70e": {
+          "type": "slide",
+          "settings": {
+            "button_title": "EXPLORE NOW",
+            "slide_link": "",
+            "slide_title": "Kids",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/Rectangle_189_1.png"
+          }
+        },
+        "a670d47c-0902-4434-a255-0b0122570c2b": {
+          "type": "slide",
+          "settings": {
+            "button_title": "EXPLORE Now",
+            "slide_link": "",
+            "slide_title": "VEGETARIAN",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/Rectangle_189_2.png"
+          }
+        },
+        "2d6e9617-7da1-47a2-800a-2fd285798789": {
+          "type": "slide",
+          "settings": {
+            "button_title": "EXPLORE Now",
+            "slide_link": "",
+            "slide_title": "PLANTED-BASED",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/Rectangle_189_3.png"
+          }
+        },
+        "6d1f7562-2840-4857-b31c-1ba2ef4661c0": {
+          "type": "slide",
+          "settings": {
+            "button_title": "EXPLORE NOW",
+            "slide_link": "",
+            "slide_title": "Kids",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/Rectangle_189_1.png"
+          }
+        },
+        "3518efe6-53b8-4336-88c1-aec3c52d553c": {
+          "type": "slide",
+          "settings": {
+            "button_title": "EXPLORE NOW",
+            "slide_link": "",
+            "slide_title": "My looking",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/Rectangle_189.png"
+          }
+        }
+      },
+      "block_order": [
+        "77644443-a10a-49d0-ada6-4bbe6b51c305",
+        "ef181cf0-177a-432f-addf-57db0abdd70e",
+        "a670d47c-0902-4434-a255-0b0122570c2b",
+        "2d6e9617-7da1-47a2-800a-2fd285798789",
+        "6d1f7562-2840-4857-b31c-1ba2ef4661c0",
+        "3518efe6-53b8-4336-88c1-aec3c52d553c"
+      ],
+      "settings": {
+        "carousel_autoplay": false,
+        "carousel_dots": false,
+        "carousel_arrows": false,
+        "autoplay_speed": "7000"
+      }
     },
     "featured_products": {
       "type": "featured-collection",
