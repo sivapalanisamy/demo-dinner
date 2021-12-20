@@ -234,6 +234,9 @@
         "autoplay_speed": "7000"
       }
     },
+    "looking-for": {
+      "type": "looking-for"
+    },
     "featured_products": {
       "type": "featured-collection",
       "settings": {
@@ -355,6 +358,7 @@
     "achieve",
     "easy-pea-sy",
     "categories-slider",
+    "looking-for",
     "featured_products",
     "collage",
     "video",
