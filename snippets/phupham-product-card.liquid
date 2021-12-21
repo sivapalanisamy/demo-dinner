@@ -184,6 +184,7 @@
     }
 
     function addProductVariantToCart(variantID) {
+
         console.log('Adding product variant [' + variantID + '] to cart...');
 
         // Add to cart data
@@ -196,13 +197,6 @@
             ]
         };
 
-        // AJAX add to cart
-        /*$.post('/cart/add.js', items,
-            function (data) {
-                console.log('add to cart - data: ', data);
-            },
-            "json"
-        );*/
         fetch('/cart/add.js', {
             method: 'POST',
             headers: {
@@ -210,6 +204,7 @@
             },
             body: JSON.stringify(items)
         }).then(response => {
+            alert('Successfully add product variant: [' + variantID + '] to cart !');
             return response.json();
         }).catch((error) => {
             console.error('Error:', error);
