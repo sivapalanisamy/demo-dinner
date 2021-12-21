@@ -138,14 +138,14 @@
     <div>This product has no variant</div>
 {%- else -%}
     {%- for variant in product_card_product.variants -%}
-        <div class="menu-price-wrap clearfix" style="display: inline-block;">
-            <div class="menu-type-wrap" style="float: left;">
+        <div class="menu-price-wrap clearfix" style="display: inline-block; width: 100%;">
+            <div class="menu-type-wrap" style="float: left; width: 50%;">
                 <div class="menu-type-price clearfix">
                     <div class="order-type">{{ variant.title }}</div>
                     <div class="menu-base-price">{{ variant.price }}</div>
                 </div>
             </div>
-            <div class="snipper-wrap" style="float: right;">
+            <div class="snipper-wrap" style="float: right; width: 50%;">
                 <div class="clearfix">
                     <button type="button" class="btn cart-btn next-step" data-sizeid="60713">
                         -
