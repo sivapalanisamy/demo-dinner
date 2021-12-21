@@ -133,11 +133,12 @@
         </div>
     </div>
 </div>
+<div class="product-variant-wrap" style="background-color: #d0b28e;border-radius: 10px;margin: 10px 0;padding: 10px;">
 
-{%- if product_card_product.has_only_default_variant -%}
-    <div>This product has no variant</div>
-{%- else -%}
-    <div class="product-variant-wrap">
+    {%- if product_card_product.has_only_default_variant -%}
+        <div>This product has no variant</div>
+    {%- else -%}
+
         {%- for variant in product_card_product.variants -%}
             <div class="menu-price-wrap clearfix" style="display: inline-block; width: 100%;">
                 <div class="menu-type-wrap" style="float: left; width: 50%;">
@@ -167,9 +168,8 @@
                 </div>
             </div>
         {%- endfor -%}
-    </div>
-{%- endif -%}
-
+    {%- endif -%}
+</div>
 <script type="text/javascript">
     function addToCart(id) {
         addProductVariantToCart(id);
