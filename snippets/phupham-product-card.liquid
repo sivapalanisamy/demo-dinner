@@ -137,35 +137,37 @@
 {%- if product_card_product.has_only_default_variant -%}
     <div>This product has no variant</div>
 {%- else -%}
-    {%- for variant in product_card_product.variants -%}
-        <div class="menu-price-wrap clearfix" style="display: inline-block; width: 100%;">
-            <div class="menu-type-wrap" style="float: left; width: 50%;">
-                <div class="menu-type-price clearfix">
-                    <div class="order-type">{{ variant.title }}</div>
-                    <div class="menu-base-price">
-                        {% render 'price', product: variant, price_class: '' %}
+    <div class="product-variant-wrap">
+        {%- for variant in product_card_product.variants -%}
+            <div class="menu-price-wrap clearfix" style="display: inline-block; width: 100%;">
+                <div class="menu-type-wrap" style="float: left; width: 50%;">
+                    <div class="menu-type-price clearfix">
+                        <div class="order-type">{{ variant.title }}</div>
+                        <div class="menu-base-price">
+                            {% render 'price', product: variant, price_class: '' %}
+                        </div>
+                    </div>
+                </div>
+                <div class="snipper-wrap" style="float: right; width: 50%;">
+                    <div class="clearfix" style="text-align: right;">
+                        <button type="button" class="btn cart-btn next-step" data-sizeid="60713"
+                                onclick="plusProductVariantQuantity({{ variant.id }});">
+                            -
+                        </button>
+                        <button class="btn cart-btn qty next-step" data-qty="0"
+                                onclick="addToCart({{ variant.id }});">
+                            ADD
+                        </button>
+                        <button type="button" class="btn cart-btn next-step"
+                                data-sizeid="60713" data-state="FROZEN"
+                                onclick="minusProductVariantQuantity({{ variant.id }});">
+                            +
+                        </button>
                     </div>
                 </div>
             </div>
-            <div class="snipper-wrap" style="float: right; width: 50%;">
-                <div class="clearfix" style="text-align: right;">
-                    <button type="button" class="btn cart-btn next-step" data-sizeid="60713"
-                            onclick="plusProductVariantQuantity({{ variant.id }});">
-                        -
-                    </button>
-                    <button class="btn cart-btn qty next-step" data-qty="0"
-                            onclick="addToCart({{ variant.id }});">
-                        ADD
-                    </button>
-                    <button type="button" class="btn cart-btn next-step"
-                            data-sizeid="60713" data-state="FROZEN"
-                            onclick="minusProductVariantQuantity({{ variant.id }});">
-                        +
-                    </button>
-                </div>
-            </div>
-        </div>
-    {%- endfor -%}
+        {%- endfor -%}
+    </div>
 {%- endif -%}
 
 <script type="text/javascript">
@@ -221,6 +223,7 @@
                 console.log(data);
                 return data
             });
+        return false;
     }
 
 </script>
