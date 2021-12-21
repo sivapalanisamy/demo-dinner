@@ -170,14 +170,37 @@
 
 <script type="text/javascript">
     function addToCart(id) {
-        alert('Add to cart: [' + id + ']');
+        addProductVariantToCart(id);
     }
 
     function plusProductVariantQuantity(id) {
-        alert('Plus quantity [' + id + ']');
+        console.log('Plus quantity [' + id + ']');
     }
 
     function minusProductVariantQuantity(id) {
-        alert('Plus quantity [' + id + ']');
+        console.log('Plus quantity [' + id + ']');
     }
+
+    function addProductVariantToCart(variantID) {
+        console.log('Adding product variant [' + variantID + '] to cart...');
+        
+        // Add to cart data
+        var items = {
+            'items': [
+                {
+                    'id': parseInt(variantID),
+                    'quantity': 1
+                }
+            ]
+        };
+
+        // AJAX add to cart
+        $.post('/cart/add.js', items,
+            function (data) {
+                console.log('add to cart - data: ', data);
+            },
+            "json"
+        );
+    }
+
 </script>
