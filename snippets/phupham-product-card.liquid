@@ -135,11 +135,29 @@
 </div>
 
 {%- if product_card_product.has_only_default_variant -%}
-    <input name="id" value="{{ variant.id }}" type="hidden">
+    <div>This product has no variant</div>
 {%- else -%}
-    <select name="id">
-        {%- for variant in product_card_product.variants -%}
-            <option value="{{ variant.id }}">{{ variant.title }}</option>
-        {%- endfor -%}
-    </select>
+    {%- for variant in product_card_product.variants -%}
+        <div class="menu-price-wrap clearfix">
+            <div class="menu-type-wrap">
+                <div class="menu-type-price clearfix">
+                    <div class="order-type">{{ variant.title }}</div>
+                    <div class="menu-base-price">{{ variant.price }}</div>
+                </div>
+            </div>
+            <div class="snipper-wrap">
+                <div class="spinner clearfix">
+                    <button type="button" class="btn cart-btn next-step" data-sizeid="60713">
+                        -
+                    </button>
+                    <div class="btn cart-btn qty next-step" data-qty="0">
+                        ADD
+                    </div>
+                    <button type="button" class="btn cart-btn next-step" data-sizeid="60713" data-state="FROZEN">
+                        +
+                    </button>
+                </div>
+            </div>
+        </div>
+    {%- endfor -%}
 {%- endif -%}
