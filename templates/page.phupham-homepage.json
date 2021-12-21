@@ -410,12 +410,22 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "50e47980-3b02-4721-9098-983153a04206": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "column1",
         "column2",
-        "column3"
+        "column3",
+        "50e47980-3b02-4721-9098-983153a04206"
       ],
       "settings": {
         "title": "Multicolumn",
@@ -432,7 +442,7 @@
       "type": "phupham-featured-collection",
       "settings": {
         "title": "Featured collection (PhuPham)",
-        "collection": "frontpage",
+        "collection": "phupham-collection",
         "products_to_show": 4,
         "show_view_all": true,
         "swipe_on_mobile": false,
