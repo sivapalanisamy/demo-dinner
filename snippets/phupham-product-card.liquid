@@ -198,7 +198,7 @@
         $.post('/cart/add.js', items,
             function (data) {
                 console.log('add to cart - data: ', data);
-                $.fetch('/cart/add.js', {
+                fetch('/cart/add.js', {
                     method: 'POST',
                     body: JSON.stringify({items: items}),
                     headers: {'Content-type': 'application/json'},
