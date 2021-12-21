@@ -142,7 +142,10 @@
             <div class="menu-type-wrap" style="float: left; width: 50%;">
                 <div class="menu-type-price clearfix">
                     <div class="order-type">{{ variant.title }}</div>
-                    <div class="menu-base-price">{{ variant.price }}</div>
+                    <div class="menu-base-price">
+                        {% render 'price', product: product_card_product.variant, price_class: '' %}
+                        {{ variant.price }}
+                    </div>
                 </div>
             </div>
             <div class="snipper-wrap" style="float: right; width: 50%;">
