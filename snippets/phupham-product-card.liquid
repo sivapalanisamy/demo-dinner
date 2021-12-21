@@ -155,7 +155,9 @@
                     <span class="btn cart-btn qty next-step" data-qty="0">
                         ADD
                     </span>
-                    <button type="button" class="btn cart-btn next-step" data-sizeid="60713" data-state="FROZEN">
+                    <button type="button" class="btn cart-btn next-step"
+                            data-sizeid="60713" data-state="FROZEN"
+                            onclick="addToCart({{ variant.id }});">
                         +
                     </button>
                 </div>
@@ -163,3 +165,9 @@
         </div>
     {%- endfor -%}
 {%- endif -%}
+
+<script type="text/javascript">
+    function addToCart(id) {
+        alert(id);
+    }
+</script>
