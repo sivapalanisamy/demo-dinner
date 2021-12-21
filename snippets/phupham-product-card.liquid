@@ -149,15 +149,17 @@
             </div>
             <div class="snipper-wrap" style="float: right; width: 50%;">
                 <div class="clearfix" style="text-align: right;">
-                    <button type="button" class="btn cart-btn next-step" data-sizeid="60713">
+                    <button type="button" class="btn cart-btn next-step" data-sizeid="60713"
+                            onclick="plusProductVariantQuantity({{ variant.id }});">
                         -
                     </button>
-                    <span class="btn cart-btn qty next-step" data-qty="0">
+                    <button class="btn cart-btn qty next-step" data-qty="0"
+                            onclick="addToCart({{ variant.id }});">
                         ADD
-                    </span>
+                    </button>
                     <button type="button" class="btn cart-btn next-step"
                             data-sizeid="60713" data-state="FROZEN"
-                            onclick="addToCart({{ variant.id }});">
+                            onclick="minusProductVariantQuantity({{ variant.id }});">
                         +
                     </button>
                 </div>
@@ -168,6 +170,14 @@
 
 <script type="text/javascript">
     function addToCart(id) {
-        alert(id);
+        alert('Add to cart: [' + id + ']');
+    }
+
+    function plusProductVariantQuantity(id) {
+        alert('Plus quantity [' + id + ']');
+    }
+
+    function minusProductVariantQuantity(id) {
+        alert('Plus quantity [' + id + ']');
     }
 </script>
