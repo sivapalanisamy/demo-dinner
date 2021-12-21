@@ -134,12 +134,12 @@
     </div>
 </div>
 
-{% if product.has_only_default_variant %}
+{%- if product.has_only_default_variant -%}
     <input name="id" value="{{ variant.id }}" type="hidden">
-{% else %}
+{%- else -%}
     <select name="id">
-        {% for variant in product.variants %}
+        {%- for variant in product.variants -%}
             <option value="{{ variant.id }}">{{ variant.title }}</option>
-        {% endfor %}
+        {%- endfor -%}
     </select>
-{% endif %}
+{%- endif -%}
