@@ -183,7 +183,7 @@
 
     function addProductVariantToCart(variantID) {
         console.log('Adding product variant [' + variantID + '] to cart...');
-        
+
         // Add to cart data
         var items = {
             'items': [
@@ -198,6 +198,19 @@
         $.post('/cart/add.js', items,
             function (data) {
                 console.log('add to cart - data: ', data);
+                $.fetch('/cart/add.js', {
+                    method: 'POST',
+                    body: JSON.stringify({items: items}),
+                    headers: {'Content-type': 'application/json'},
+                    credentials: 'include'
+                    // Note: Including credentials sends the cart cookie, which is important to make sure that the items go into the shopper's cart and not into a void
+                })
+                    .then(response => {
+                        return response.json();
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                    });
             },
             "json"
         );
