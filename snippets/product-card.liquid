@@ -56,6 +56,7 @@
         </p>
       {%- endif -%}
       {% render 'price', product: product_card_product, price_class: '' %}
+      
     </div>
   </div>
 
@@ -131,3 +132,9 @@
     </div>
   </div>
 </div>
+<form method="post" action="/cart/add" style="z-index:9999999">
+        <input type="hidden" name="id" value="{{ product_card_product.first_available_variant.id }}" />
+        <input type="hidden" type="number" id="quantity" name="quantity" value="1"/>
+        <input type="submit" value="Add to cart" class="btn" />
+
+        </form>
