@@ -172,6 +172,12 @@
 </div>
 
 <div>
+    {% for discount_application in discount_applications %}
+        {{ discount_application.title }} : {{ discount_application.value }}
+    {% endfor %}
+</div>
+
+<div>
     <div>discount_application {{ discount_application.all }}</div>
     {% if cart.discount_applications.size > 0 %}
         <div>cart.discount_applications.size {{ cart.discount_applications.size }}</div>
