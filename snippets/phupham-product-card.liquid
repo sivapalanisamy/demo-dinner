@@ -170,7 +170,19 @@
         {%- endfor -%}
     {%- endif -%}
 </div>
+
+<div>
+    {% if cart.discount_applications.size > 0 %}
+        <div>cart.discount_applications.size {{ cart.discount_applications.size }}</div>
+        {% assign discount_application = cart.discount_applications[0] %}
+        {% if discount_application.value_type == 'percentage' %}
+            {% assign discount_percent_off = discount_application.value | divided_by: 100 %}
+        {% endif %}
+    {% endif %}
+</div>
+
 <script type="text/javascript">
+
     function addToCart(id) {
         addProductVariantToCart(id);
     }
