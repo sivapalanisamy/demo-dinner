@@ -222,8 +222,8 @@
         addProductVariantToCart(id);
     }
 
-    function plusProductVariantQuantity(id) {
-        console.log('Plus quantity [' + id + ']');
+    function plusProductVariantQuantity(variantID) {
+        console.log('Plus quantity [' + variantID + ']');
         var currentQuantity = parseInt(jQuery('#' + variantID + '_quantity').val().trim());
         console.log('Current quantity of [' + variantID + '] = [' + currentQuantity + ']');
         if (currentQuantity > 0) {
@@ -238,7 +238,7 @@
     }
 
     function minusProductVariantQuantity(variantID) {
-        console.log('Minus quantity [' + id + ']');
+        console.log('Minus quantity [' + variantID + ']');
         var currentQuantity = parseInt(jQuery('#' + variantID + '_quantity').val().trim());
         console.log('Current quantity of [' + variantID + '] = [' + currentQuantity + ']');
         if (currentQuantity > 0) {
