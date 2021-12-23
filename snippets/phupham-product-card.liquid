@@ -224,10 +224,32 @@
 
     function plusProductVariantQuantity(id) {
         console.log('Plus quantity [' + id + ']');
+        var currentQuantity = parseInt(jQuery('#' + variantID + '_quantity').val().trim());
+        console.log('Current quantity of [' + variantID + '] = [' + currentQuantity + ']');
+        if (currentQuantity > 0) {
+            jQuery.post('/cart/update.js', {
+                updates: {
+                    variantID: currentQuantity + 1,
+                }
+            });
+        } else {
+            console.log('The current quantity is 0, this action is aborted');
+        }
     }
 
-    function minusProductVariantQuantity(id) {
-        console.log('Plus quantity [' + id + ']');
+    function minusProductVariantQuantity(variantID) {
+        console.log('Minus quantity [' + id + ']');
+        var currentQuantity = parseInt(jQuery('#' + variantID + '_quantity').val().trim());
+        console.log('Current quantity of [' + variantID + '] = [' + currentQuantity + ']');
+        if (currentQuantity > 0) {
+            jQuery.post('/cart/update.js', {
+                updates: {
+                    variantID: currentQuantity - 1,
+                }
+            });
+        } else {
+            console.log('The current quantity is 0, this action is aborted');
+        }
     }
 
     function addProductVariantToCart(variantID) {
