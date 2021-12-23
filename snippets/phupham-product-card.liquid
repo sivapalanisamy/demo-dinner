@@ -199,6 +199,9 @@
                                 -
                             </button>
                             <button class="btn cart-btn qty next-step" data-qty="0"
+                                    {% if variant_quantity > 0 %}
+                                        disabled="disabled"
+                                    {% endif %}
                                     onclick="addToCart({{ variant.id }});">
                                 ADD
                             </button>
