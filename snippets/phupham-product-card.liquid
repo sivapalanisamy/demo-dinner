@@ -242,7 +242,8 @@
             }).then(response => {
                 jQuery('#' + variantID + '_quantity').val(currentQuantity + 1);
                 alert('Successfully plus quantity to product variant: [' + variantID + '] !');
-                return response.json();
+                var jsonResponse = response.json();
+                return jsonResponse;
             }).catch((error) => {
                 console.error('Error:', error);
             });
