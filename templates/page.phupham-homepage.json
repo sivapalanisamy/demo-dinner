@@ -1,0 +1,470 @@
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Home Dinner Made Easy",
+            "heading_size": "medium"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/banner.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "achieve": {
+      "type": "multicolumn",
+      "blocks": {
+        "1639665225765b1e4f-0": {
+          "type": "column",
+          "settings": {
+            "title": "300+",
+            "text": "<p>Homemade meals<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1639665225765b1e4f-1": {
+          "type": "column",
+          "settings": {
+            "title": "1.1+ Million",
+            "text": "<p>Meals sold every month<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1639665225765b1e4f-2": {
+          "type": "column",
+          "settings": {
+            "title": "54",
+            "text": "<p>Cities delivered<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1639665225765b1e4f-0",
+        "1639665225765b1e4f-1",
+        "1639665225765b1e4f-2"
+      ],
+      "settings": {
+        "title": "",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
+    },
+    "easy-pea-sy": {
+      "type": "easy-pea-sy",
+      "blocks": {
+        "f656f57d-3708-42f8-a3aa-7fed34476601": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_21_1.png",
+            "imageHeading": "We COOK it",
+            "imageDescription": "<p>Made we fresh and healthy ingredients as we would for us.<\/p>"
+          }
+        },
+        "d55f8cc7-c521-4e11-a8c9-bbe43ce7430b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_22.png",
+            "imageHeading": "2. We Freeze it",
+            "imageDescription": "<p>To lock flavour and nutrients, safely and hygienically.<\/p>"
+          }
+        },
+        "9de21d76-1d03-432d-b55d-ff3a7fe54dee": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_25.png",
+            "imageHeading": "3. You Heat it",
+            "imageDescription": "<p>From freezer to oven. So you can spend your time where it matters<\/p>"
+          }
+        },
+        "5be7810d-809c-43a8-8ed8-fdcefbcf2191": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_45.png",
+            "imageHeading": "4. You Enjoy it",
+            "imageDescription": "<p>Fresh as the day it was made - because it is!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "f656f57d-3708-42f8-a3aa-7fed34476601",
+        "d55f8cc7-c521-4e11-a8c9-bbe43ce7430b",
+        "9de21d76-1d03-432d-b55d-ff3a7fe54dee",
+        "5be7810d-809c-43a8-8ed8-fdcefbcf2191"
+      ],
+      "settings": {
+        "headinglabel": ""
+      }
+    },
+    "categories-slider": {
+      "type": "categories-slider",
+      "blocks": {
+        "e1a65b8f-9c10-436b-baa5-e315ccd91fb1": {
+          "type": "slide",
+          "settings": {
+            "button_title": "",
+            "slide_link": "",
+            "slide_title": "",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/Rectangle_123.png"
+          }
+        },
+        "810ca8f3-ea5b-468e-95f4-1019ae1a00fb": {
+          "type": "slide",
+          "settings": {
+            "button_title": "",
+            "slide_link": "",
+            "slide_title": "",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/Rectangle_121.png"
+          }
+        },
+        "b0172adb-d4e6-4b2f-98d4-7196886f517a": {
+          "type": "slide",
+          "settings": {
+            "button_title": "",
+            "slide_link": "",
+            "slide_title": "",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/Rectangle_125.png"
+          }
+        },
+        "295db187-a422-4c14-8256-1191d41dc5a9": {
+          "type": "slide",
+          "settings": {
+            "button_title": "",
+            "slide_link": "",
+            "slide_title": "",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/Rectangle_122.png"
+          }
+        },
+        "4c164b6f-72b1-4279-9b97-ad81cf7f0d09": {
+          "type": "slide",
+          "settings": {
+            "button_title": "",
+            "slide_link": "",
+            "slide_title": "",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/Rectangle_124.png"
+          }
+        },
+        "3b5a4eed-5862-4c86-b360-d93768b91336": {
+          "type": "slide",
+          "settings": {
+            "button_title": "",
+            "slide_link": "",
+            "slide_title": "",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/Rectangle_126_1.png"
+          }
+        },
+        "fa6e2f18-7f42-4abf-aa95-67ba4bca4e78": {
+          "type": "slide",
+          "settings": {
+            "button_title": "",
+            "slide_link": "",
+            "slide_title": "",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/Rectangle_123.png"
+          }
+        },
+        "9af7bf9d-5fae-4a84-9d44-9933918465fb": {
+          "type": "slide",
+          "settings": {
+            "button_title": "",
+            "slide_link": "",
+            "slide_title": "",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/Rectangle_122.png"
+          }
+        }
+      },
+      "block_order": [
+        "e1a65b8f-9c10-436b-baa5-e315ccd91fb1",
+        "810ca8f3-ea5b-468e-95f4-1019ae1a00fb",
+        "b0172adb-d4e6-4b2f-98d4-7196886f517a",
+        "295db187-a422-4c14-8256-1191d41dc5a9",
+        "4c164b6f-72b1-4279-9b97-ad81cf7f0d09",
+        "3b5a4eed-5862-4c86-b360-d93768b91336",
+        "fa6e2f18-7f42-4abf-aa95-67ba4bca4e78",
+        "9af7bf9d-5fae-4a84-9d44-9933918465fb"
+      ],
+      "settings": {
+        "carousel_autoplay": false,
+        "carousel_dots": false,
+        "carousel_arrows": true,
+        "autoplay_speed": "7000"
+      }
+    },
+    "looking-for": {
+      "type": "looking-for",
+      "blocks": {
+        "77644443-a10a-49d0-ada6-4bbe6b51c305": {
+          "type": "slide",
+          "settings": {
+            "button_title": "EXPLORE NOW",
+            "slide_link": "",
+            "slide_title": "Low-Carb",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/2.png"
+          }
+        },
+        "ef181cf0-177a-432f-addf-57db0abdd70e": {
+          "type": "slide",
+          "settings": {
+            "button_title": "EXPLORE NOW",
+            "slide_link": "",
+            "slide_title": "Kids",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/4.png"
+          }
+        },
+        "a670d47c-0902-4434-a255-0b0122570c2b": {
+          "type": "slide",
+          "settings": {
+            "button_title": "EXPLORE Now",
+            "slide_link": "",
+            "slide_title": "VEGETARIAN",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/5.png"
+          }
+        },
+        "2d6e9617-7da1-47a2-800a-2fd285798789": {
+          "type": "slide",
+          "settings": {
+            "button_title": "EXPLORE Now",
+            "slide_link": "",
+            "slide_title": "PLANTED-BASED",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/3.png"
+          }
+        },
+        "6d1f7562-2840-4857-b31c-1ba2ef4661c0": {
+          "type": "slide",
+          "settings": {
+            "button_title": "EXPLORE NOW",
+            "slide_link": "",
+            "slide_title": "Kids",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/6.png"
+          }
+        },
+        "3518efe6-53b8-4336-88c1-aec3c52d553c": {
+          "type": "slide",
+          "settings": {
+            "button_title": "EXPLORE NOW",
+            "slide_link": "",
+            "slide_title": "My looking",
+            "slide_text": "",
+            "slide_img": "shopify:\/\/shop_images\/1.png"
+          }
+        }
+      },
+      "block_order": [
+        "77644443-a10a-49d0-ada6-4bbe6b51c305",
+        "ef181cf0-177a-432f-addf-57db0abdd70e",
+        "a670d47c-0902-4434-a255-0b0122570c2b",
+        "2d6e9617-7da1-47a2-800a-2fd285798789",
+        "6d1f7562-2840-4857-b31c-1ba2ef4661c0",
+        "3518efe6-53b8-4336-88c1-aec3c52d553c"
+      ],
+      "settings": {
+        "carousel_autoplay": false,
+        "carousel_dots": false,
+        "carousel_arrows": false,
+        "autoplay_speed": "7000"
+      }
+    },
+    "featured_products": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "collection": "all",
+        "products_to_show": 4,
+        "show_view_all": false,
+        "swipe_on_mobile": false,
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    },
+    "collage": {
+      "type": "collage",
+      "disabled": true,
+      "blocks": {
+        "video": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": "Describe the video",
+            "image_padding": false
+          }
+        },
+        "product": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "second_image": false,
+            "image_padding": false,
+            "secondary_background": false
+          }
+        },
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image_padding": false,
+            "color_scheme": "background-1"
+          }
+        }
+      },
+      "block_order": [
+        "video",
+        "product",
+        "collection"
+      ],
+      "settings": {
+        "heading": "Multimedia collage",
+        "desktop_layout": "left",
+        "mobile_layout": "collage"
+      }
+    },
+    "video": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "heading": "Video",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false
+      }
+    },
+    "multi_column": {
+      "type": "multicolumn",
+      "disabled": true,
+      "blocks": {
+        "column1": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column2": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column3": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "50e47980-3b02-4721-9098-983153a04206": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column1",
+        "column2",
+        "column3",
+        "50e47980-3b02-4721-9098-983153a04206"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
+    },
+    "16400771366661c28d": {
+      "type": "phupham-featured-collection",
+      "settings": {
+        "title": "Featured collection (PhuPham)",
+        "collection": "phupham-collection",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "achieve",
+    "easy-pea-sy",
+    "categories-slider",
+    "looking-for",
+    "featured_products",
+    "collage",
+    "video",
+    "multi_column",
+    "16400771366661c28d"
+  ]
+}
