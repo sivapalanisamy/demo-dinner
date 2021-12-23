@@ -227,11 +227,13 @@
         var currentQuantity = parseInt(jQuery('#' + variantID + '_quantity').val().trim());
         console.log('Current quantity of [' + variantID + '] = [' + currentQuantity + ']');
         if (currentQuantity > 0) {
-            jQuery.post('/cart/update.js', {
+            var updateData = {
                 updates: {
                     variantID: currentQuantity + 1,
                 }
-            });
+            };
+            console.log(updateData);
+            jQuery.post('/cart/update.js', updateData);
         } else {
             console.log('The current quantity is 0, this action is aborted');
         }
