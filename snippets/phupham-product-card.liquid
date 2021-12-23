@@ -231,7 +231,6 @@
                 'id': variantID,
                 'quantity': currentQuantity + 1
             };
-            console.log(strinupdateData);
             jQuery.post('/cart/change.js', updateData, function (data) {
                 console.log(data)
                 console.log('Successfully add quantity to [' + variantID + ']');
