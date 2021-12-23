@@ -728,3 +728,89 @@ class VariantRadios extends VariantSelects {
 }
 
 customElements.define('variant-radios', VariantRadios);
+
+
+
+
+class ProductQuantityInput extends HTMLElement {
+  constructor() {
+    super();
+    this.input = this.querySelector("input");
+    this.changeEvent = new Event("change", { bubbles: true });
+
+    this.querySelectorAll("button").forEach((button) =>
+      button.addEventListener("click", this.onButtonClick.bind(this))
+    );
+    this.cartNotification = document.querySelector("cart-notification");
+    this.form = this.querySelector("form");
+    this.form.querySelector("[name=id]").disabled = false;
+  }
+
+  onButtonClick(event) {
+    console.log(event);
+    event.preventDefault();
+    const previousValue = this.input.value;
+
+    event.target.name === "plus" ? this.input.stepUp() : this.input.stepDown();
+    if (previousValue !== this.input.value)
+      this.input.dispatchEvent(this.changeEvent);
+
+    const productID = event.target.dataset.product;
+    var items = {
+      items: [
+        {
+          id: productID,
+          quantity: 1,
+        },
+      ],
+    };
+
+    const config = fetchConfig("javascript");
+    config.headers["X-Requested-With"] = "XMLHttpRequest";
+    delete config.headers["Content-Type"];
+    console.log(this.form);
+
+    const formData = new FormData(this.form);
+    formData.append(
+      "sections",
+      this.cartNotification.getSectionsToRender().map((section) => section.id)
+    );
+    formData.append("sections_url", window.location.pathname);
+    config.body = formData;
+
+    fetch(`${routes.cart_add_url}`, config)
+      .then((response) => response.json())
+      .then((response) => {
+        console.log(response);
+        this.cartNotification.renderContents(response);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }
+  getMiniCartSectionInnerHTML(html, selector = ".shopify-section") {
+    return new DOMParser()
+      .parseFromString(html, "text/html")
+      .querySelector(selector).innerHTML;
+  }
+}
+
+customElements.define("quantity-card", ProductQuantityInput);
+
+
+
+function fetchDataFromCart() {
+  var cartContents = fetch("/cart.js")
+    .then((response) => response.json())
+    .then((data) => {
+      this.cartNotification.renderContents(data);
+      //$("#cart-count-bubble").load();
+      //var $cartLinkText = $(".cart-count-bubble").html(data.item_count);
+      return data;
+    });
+  return false;
+
+  console.log(cartContents);
+}
+
+

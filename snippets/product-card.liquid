@@ -132,9 +132,35 @@
     </div>
   </div>
 </div>
-<form method="post" action="/cart/add" style="z-index:9999999">
-        <input type="hidden" name="id" value="{{ product_card_product.first_available_variant.id }}" />
-        <input type="hidden" type="number" id="quantity" name="quantity" value="1"/>
-        <input type="submit" value="Add to cart" class="btn" />
+<div class="product-card-quantity">
+{% for variant in product_card_product.variants %}
+  <div class="qty-row" id="qty-{{ variant.id}}">
+      <label>{{ variant.title}}</label>
+      <div class="qty-selector-card">
+           <quantity-card class="quantity">
+              
+                <button class="quantity__button no-js-hidden product-{{ variant.id}}" name="minus" type="submit" data-product="{{ variant.id}}">
+                  <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
+                  {% render 'icon-minus' %}
+                </button>
+                <input class="quantity__input"
+                    type="number"
+                    name="quantity"
+                    id="quantity-{{ variant.id}}"
+                    min="1"
+                    value="1"                    
+                  >
+                
+                  <form class="quantity-form">
+                <input type="hidden" name="id" value="{{ variant.id}}" />
+                <button class="quantity__button no-js-hidden product-{{ variant.id}}" name="plus" type="submit" data-product="{{ variant.id}}">
+                  <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
+                  {% render 'icon-plus' %}
+                </button>
+              </form>
+              </quantity-card>
+      </div>
+  </div>
+{% endfor %}
+</div>
 
-        </form>
