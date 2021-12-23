@@ -199,6 +199,7 @@
                                 -
                             </button>
                             <button class="btn cart-btn qty next-step" data-qty="0"
+                                    id="{{ variant.id }}_add_button"
                                     {% if variant_quantity > 0 %}
                                         disabled="disabled"
                                     {% endif %}
@@ -206,6 +207,7 @@
                                 ADD
                             </button>
                             <button type="button" class="btn cart-btn next-step"
+                                    id="{{ variant.id }}_plus_button"
                                     data-sizeid="60713" data-state="FROZEN"
                                     onclick="plusProductVariantQuantity({{ variant.id }});">
                                 +
@@ -320,6 +322,9 @@
             },
             body: JSON.stringify(items)
         }).then(response => {
+            alert('Successfully add product variant: [' + variantID + '] to cart !');
+            jQuery('#' + variantID + '_minus_button').removeAttr('disabled');
+            jQuery('#' + variantID + '_add_button').attr('disabled', true);
             alert('Successfully add product variant: [' + variantID + '] to cart !');
             return response.json();
         }).catch((error) => {
