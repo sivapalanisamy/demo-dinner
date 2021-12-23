@@ -191,6 +191,7 @@
                         <div class="action-buttons">
                             <button type="button" class="btn cart-btn next-step"
                                     data-sizeid="60713"
+                                    id="{{ variant.id }}_minus_button"
                                     {% if variant_quantity == 0 %}
                                         disabled="disabled"
                                     {% endif %}
@@ -242,6 +243,7 @@
             }).then(response => {
                 jQuery('#' + variantID + '_quantity').val(currentQuantity + 1);
                 alert('Successfully plus quantity to product variant: [' + variantID + '] !');
+                jQuery('#' + variantID + '_minus_button').removeAttr('disabled');
                 var jsonResponse = response.json();
                 console.log(jsonResponse);
                 return jsonResponse;
@@ -282,6 +284,9 @@
             body: JSON.stringify(updateData),
         }).then(response => {
             jQuery('#' + variantID + '_quantity').val(currentQuantity - 1);
+            if (currentQuantity - 1 === 0) {
+                jQuery('#' + variantID + '_minus_button').attr('disabled', true);
+            }
             alert('Successfully minus quantity to product variant: [' + variantID + '] !');
             var jsonResponse = response.json();
             console.log(jsonResponse);
