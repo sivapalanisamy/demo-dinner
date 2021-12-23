@@ -158,12 +158,6 @@
     </div>
 </div>
 
-<div class="cart-items">
-    {% for cartItem in cart.items %}
-        <div>{{ cartItem.variant.id }}</div>
-    {% endfor %}
-</div>
-
 <div class="product-variant-wrap" style="background-color: #d0b28e;border-radius: 10px;margin: 10px 0;padding: 10px;">
 
     {%- if product_card_product.has_only_default_variant -%}
@@ -205,6 +199,9 @@
                             </button>
                             <button type="button" class="btn cart-btn next-step"
                                     data-sizeid="60713" data-state="FROZEN"
+                                    {% if variant_quantity == 0 %}
+                                        disabled="disabled"
+                                    {% endif %}
                                     onclick="minusProductVariantQuantity({{ variant.id }});">
                                 +
                             </button>
