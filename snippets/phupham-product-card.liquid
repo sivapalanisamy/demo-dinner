@@ -260,10 +260,10 @@
         console.log('Minus quantity [' + variantID + ']');
         var currentQuantity = parseInt(jQuery('#' + variantID + '_quantity').val().trim());
         console.log('Current quantity of [' + variantID + '] = [' + currentQuantity + ']');
-        if (currentQuantity > 0) {
+        if (currentQuantity > 1) {
             var updateData = {
                 'id': String(variantID),
-                'quantity': String(currentQuantity + 1)
+                'quantity': String(currentQuantity - 1)
             };
         } else {
             var updateData = {
@@ -281,7 +281,7 @@
             },
             body: JSON.stringify(updateData),
         }).then(response => {
-            jQuery('#' + variantID + '_quantity').val(currentQuantity + 1);
+            jQuery('#' + variantID + '_quantity').val(currentQuantity - 1);
             alert('Successfully minus quantity to product variant: [' + variantID + '] !');
             var jsonResponse = response.json();
             console.log(jsonResponse);
