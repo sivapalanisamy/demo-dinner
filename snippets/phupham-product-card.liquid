@@ -228,8 +228,8 @@
         console.log('Current quantity of [' + variantID + '] = [' + currentQuantity + ']');
         if (currentQuantity > 0) {
             var updateData = {
-                'id': variantID + '',
-                'quantity': (currentQuantity + 1) + ''
+                'id': String(variantID),
+                'quantity': String(currentQuantity + 1)
             };
             console.log(updateData);
             fetch('/cart/change.js', {
