@@ -171,6 +171,12 @@
     {%- else -%}
 
         {%- for variant in product_card_product.variants -%}
+            {% assign variant_quantity = 0 %}
+            {% for cartLineItem in cart.items %}
+                {% if cartLineItem.variant.id == variant.id %}
+                    {% assign variant_quantity = cartLineItem.quantity %}
+                {% endif %}
+            {% endfor %}
             <div class="menu-price-wrap clearfix" style="display: inline-block; width: 100%;">
                 <div class="menu-type-wrap" style="float: left; width: 50%;">
                     <div class="menu-type-price clearfix">
@@ -185,8 +191,8 @@
                         <div class="info">
                             <input class="field__input"
                                    style="height: 30px; padding: 10px"
-                                   id="{{ }}_quantity"
-                                   type="text" value="0" disabled="disabled">
+                                   id="{{ variant.id }}_quantity"
+                                   type="text" value="{{ variant_quantity }}" disabled="disabled">
                         </div>
                         <div class="action-buttons">
                             <button type="button" class="btn cart-btn next-step" data-sizeid="60713"
