@@ -323,9 +323,9 @@
             },
             body: JSON.stringify(items)
         }).then(response => {
-            alert('Successfully add product variant: [' + variantID + '] to cart !');
             jQuery('#' + variantID + '_minus_button').removeAttr('disabled');
             jQuery('#' + variantID + '_add_button').attr('disabled', true);
+            jQuery('#' + variantID + '_quantity').val(1);
             alert('Successfully add product variant: [' + variantID + '] to cart !');
             return response.json();
         }).catch((error) => {
