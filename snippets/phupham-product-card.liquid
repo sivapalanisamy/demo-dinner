@@ -228,8 +228,8 @@
         console.log('Current quantity of [' + variantID + '] = [' + currentQuantity + ']');
         if (currentQuantity > 0) {
             var updateData = {
-                'id': variantID,
-                'quantity': currentQuantity + 1
+                'id': variantID + '',
+                'quantity': (currentQuantity + 1) + ''
             };
             console.log(updateData);
             fetch('/cart/change.js', {
@@ -238,7 +238,7 @@
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: updateData,
+                body: JSON.stringify(updateData),
             }).then(response => {
                 jQuery('#' + variantID + '_quantity').val(currentQuantity + 1);
                 alert('Successfully plus quantity to product variant: [' + variantID + '] !');
