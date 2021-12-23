@@ -124,8 +124,6 @@
             {%- endif -%}
 
 
-
-
             <div class="card__badge">
                 {%- if product_card_product.available == false -%}
                     <span class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>
@@ -136,6 +134,19 @@
         </div>
     </div>
 </div>
+
+<style type="text/css">
+    .el-icon-tag {
+        display: inline-block;
+        position: relative;
+        padding: 0 12px 0 8px;
+        height: 24px;
+        line-height: 24px;
+        color: #fff;
+        font-size: 12px;
+        background-color: #f57224;
+    }
+</style>
 
 <div class="product-tags-wrap">
     <div class="tags-list">
