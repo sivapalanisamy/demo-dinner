@@ -194,7 +194,7 @@
                                     {% if variant_quantity == 0 %}
                                         disabled="disabled"
                                     {% endif %}
-                                    onclick="plusProductVariantQuantity({{ variant.id }});">
+                                    onclick="minusProductVariantQuantity({{ variant.id }});">
                                 -
                             </button>
                             <button class="btn cart-btn qty next-step" data-qty="0"
@@ -203,7 +203,7 @@
                             </button>
                             <button type="button" class="btn cart-btn next-step"
                                     data-sizeid="60713" data-state="FROZEN"
-                                    onclick="minusProductVariantQuantity({{ variant.id }});">
+                                    onclick="plusProductVariantQuantity({{ variant.id }});">
                                 +
                             </button>
                         </div>
