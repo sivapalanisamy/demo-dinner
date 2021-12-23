@@ -158,6 +158,12 @@
     </div>
 </div>
 
+<div class="cart-items">
+    {% for cartItem in cart.items %}
+        <div>{{ cartItem.product_id }}</div>
+    {% endfor %}
+</div>
+
 <div class="product-variant-wrap" style="background-color: #d0b28e;border-radius: 10px;margin: 10px 0;padding: 10px;">
 
     {%- if product_card_product.has_only_default_variant -%}
