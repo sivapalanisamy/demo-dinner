@@ -186,10 +186,11 @@
                                 onclick="plusProductVariantQuantity({{ variant.id }});">
                             -
                         </button>
-                        <button class="btn cart-btn qty next-step" data-qty="0"
+                        <input id="{{ variant.id }}_quantity_input" type="text" value="0" disabled="disabled">
+                        {#<button class="btn cart-btn qty next-step" data-qty="0"
                                 onclick="addToCart({{ variant.id }});">
                             ADD
-                        </button>
+                        </button>#}
                         <button type="button" class="btn cart-btn next-step"
                                 data-sizeid="60713" data-state="FROZEN"
                                 onclick="minusProductVariantQuantity({{ variant.id }});">
