@@ -291,6 +291,7 @@
             jQuery('#' + variantID + '_quantity').val(currentQuantity - 1);
             if (currentQuantity - 1 === 0) {
                 jQuery('#' + variantID + '_minus_button').attr('disabled', true);
+                jQuery('#' + variantID + '_add_button').removeAttr('disabled');
             }
             alert('Successfully minus quantity to product variant: [' + variantID + '] !');
             var jsonResponse = response.json();
