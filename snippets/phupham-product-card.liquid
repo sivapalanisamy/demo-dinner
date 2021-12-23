@@ -189,7 +189,11 @@
                                    type="text" value="{{ variant_quantity }}" disabled="disabled">
                         </div>
                         <div class="action-buttons">
-                            <button type="button" class="btn cart-btn next-step" data-sizeid="60713"
+                            <button type="button" class="btn cart-btn next-step"
+                                    data-sizeid="60713"
+                                    {% if variant_quantity == 0 %}
+                                        disabled="disabled"
+                                    {% endif %}
                                     onclick="plusProductVariantQuantity({{ variant.id }});">
                                 -
                             </button>
@@ -199,9 +203,6 @@
                             </button>
                             <button type="button" class="btn cart-btn next-step"
                                     data-sizeid="60713" data-state="FROZEN"
-                                    {% if variant_quantity == 0 %}
-                                        disabled="disabled"
-                                    {% endif %}
                                     onclick="minusProductVariantQuantity({{ variant.id }});">
                                 +
                             </button>
