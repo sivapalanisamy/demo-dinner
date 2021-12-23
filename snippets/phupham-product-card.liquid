@@ -182,20 +182,25 @@
                 </div>
                 <div class="snipper-wrap" style="float: right; width: 50%;">
                     <div class="clearfix" style="text-align: right;">
-                        <button type="button" class="btn cart-btn next-step" data-sizeid="60713"
-                                onclick="plusProductVariantQuantity({{ variant.id }});">
-                            -
-                        </button>
-                        <input id="{{ variant.id }}_quantity_input" type="text" value="0" disabled="disabled">
-                        {#<button class="btn cart-btn qty next-step" data-qty="0"
-                                onclick="addToCart({{ variant.id }});">
-                            ADD
-                        </button>#}
-                        <button type="button" class="btn cart-btn next-step"
-                                data-sizeid="60713" data-state="FROZEN"
-                                onclick="minusProductVariantQuantity({{ variant.id }});">
-                            +
-                        </button>
+                        <div class="info">
+                            <input id="{{ }}_quantity" type="text" value="0" disabled="disabled">
+                        </div>
+                        <div class="action-buttons">
+                            <button type="button" class="btn cart-btn next-step" data-sizeid="60713"
+                                    onclick="plusProductVariantQuantity({{ variant.id }});">
+                                -
+                            </button>
+                            <button class="btn cart-btn qty next-step" data-qty="0"
+                                    onclick="addToCart({{ variant.id }});">
+                                ADD
+                            </button>
+                            <button type="button" class="btn cart-btn next-step"
+                                    data-sizeid="60713" data-state="FROZEN"
+                                    onclick="minusProductVariantQuantity({{ variant.id }});">
+                                +
+                            </button>
+                        </div>
+
                     </div>
                 </div>
             </div>
