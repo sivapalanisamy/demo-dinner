@@ -122,6 +122,17 @@
                     </h2>
                 </div>
             {%- endif -%}
+            
+            <div class="card__badge">
+                <div class="tags-list">
+                    {% for tag in product.tags %}
+                        <a href="/collections/all/{{ tag | handleize }}">
+                            <span clsas="el-icon-tag">{{ tag }}</span>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+
 
             <div class="card__badge">
                 {%- if product_card_product.available == false -%}
@@ -171,22 +182,6 @@
     {%- endif -%}
 </div>
 
-<div>
-    {% for discount_application in discount_applications %}
-        {{ discount_application.title }} : {{ discount_application.value }}
-    {% endfor %}
-</div>
-
-<div>
-    <div>discount_application {{ discount_application.all }}</div>
-    {% if cart.discount_applications.size > 0 %}
-        <div>cart.discount_applications.size {{ cart.discount_applications.size }}</div>
-        {% assign discount_application = cart.discount_applications[0] %}
-        {% if discount_application.value_type == 'percentage' %}
-            {% assign discount_percent_off = discount_application.value | divided_by: 100 %}
-        {% endif %}
-    {% endif %}
-</div>
 
 <script type="text/javascript">
 
