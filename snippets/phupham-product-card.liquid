@@ -249,23 +249,46 @@
                 console.error('Error:', error);
             });
         } else {
-            console.log('The current quantity is 0, this action is aborted');
+            //The current variant is not added to cart, added to cart
+            //console.log('The current quantity is 0, this action is aborted');
+            addProductVariantToCart(variantID);
         }
     }
 
     function minusProductVariantQuantity(variantID) {
+
         console.log('Minus quantity [' + variantID + ']');
         var currentQuantity = parseInt(jQuery('#' + variantID + '_quantity').val().trim());
         console.log('Current quantity of [' + variantID + '] = [' + currentQuantity + ']');
         if (currentQuantity > 0) {
-            jQuery.post('/cart/update.js', {
-                updates: {
-                    variantID: currentQuantity - 1,
-                }
-            });
+            var updateData = {
+                'id': String(variantID),
+                'quantity': String(currentQuantity + 1)
+            };
         } else {
-            console.log('The current quantity is 0, this action is aborted');
+            var updateData = {
+                'id': String(variantID),
+                'quantity': String(0)
+            };
         }
+
+        console.log(updateData);
+        fetch('/cart/change.js', {
+            method: 'POST',
+            credentials: 'same-origin',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(updateData),
+        }).then(response => {
+            jQuery('#' + variantID + '_quantity').val(currentQuantity + 1);
+            alert('Successfully minus quantity to product variant: [' + variantID + '] !');
+            var jsonResponse = response.json();
+            console.log(jsonResponse);
+            return jsonResponse;
+        }).catch((error) => {
+            console.error('Error:', error);
+        });
     }
 
     function addProductVariantToCart(variantID) {
