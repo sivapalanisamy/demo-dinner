@@ -228,12 +228,14 @@
         console.log('Current quantity of [' + variantID + '] = [' + currentQuantity + ']');
         if (currentQuantity > 0) {
             var updateData = {
-                updates: {
-                    variantID: currentQuantity + 1,
-                }
+                'id': variantID,
+                'quantity': currentQuantity + 1
             };
-            console.log(updateData);
-            jQuery.post('/cart/update.js', updateData);
+            console.log(strinupdateData);
+            jQuery.post('/cart/change.js', updateData, function (data) {
+                console.log(data)
+                console.log('Successfully add quantity to [' + variantID + ']');
+            });
         } else {
             console.log('The current quantity is 0, this action is aborted');
         }
