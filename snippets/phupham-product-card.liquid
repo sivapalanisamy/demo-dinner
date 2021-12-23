@@ -231,10 +231,7 @@
                 'id': variantID,
                 'quantity': currentQuantity + 1
             };
-            jQuery.post('/cart/change.js', updateData, function (data) {
-                console.log(data)
-                console.log('Successfully add quantity to [' + variantID + ']');
-            });
+            jQuery.post('/cart/change.js', updateData);
         } else {
             console.log('The current quantity is 0, this action is aborted');
         }
