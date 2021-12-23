@@ -160,7 +160,7 @@
 
 <div class="cart-items">
     {% for cartItem in cart.items %}
-        <div>{{ cartItem.product_id }}</div>
+        <div>{{ cartItem.variant.id }}</div>
     {% endfor %}
 </div>
 
