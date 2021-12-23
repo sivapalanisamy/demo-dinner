@@ -231,7 +231,19 @@
                 'id': variantID,
                 'quantity': currentQuantity + 1
             };
-            jQuery.post('/cart/change.js', updateData);
+            fetch('/cart/update.js', {
+                method: 'POST',
+                credentials: 'same-origin',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(updateData),
+            }).then(response => {
+                alert('Successfully plus quantity to product variant: [' + variantID + '] !');
+                return response.json();
+            }).catch((error) => {
+                console.error('Error:', error);
+            });
         } else {
             console.log('The current quantity is 0, this action is aborted');
         }
