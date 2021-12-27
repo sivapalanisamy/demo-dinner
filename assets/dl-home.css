@@ -1,0 +1,14 @@
+.shopify-section .whatWeDo-section{
+    background: #F1ECE1;
+    margin: 0;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+.shopify-section .whatWeDo-section h5{
+    font-family: var(--font-body-family);
+  font-style: var(--font-body-style);
+  font-weight: var(--font-body-weight);
+
+}
