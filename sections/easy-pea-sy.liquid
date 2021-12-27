@@ -1,5 +1,7 @@
 <div class="shopify-section spaced-section page-width easy-pea-section">
-
+<div class="title-img">
+  <img src="{{section.settings.titleimage | img_url: 'master'}}"  loading="lazy" width=""   height="">
+</div>
 <h5>{{section.settings.headinglabel}}</h5>
 <ul class="grid grid--2-col grid--4-col-tablet grid--4-col-desktop">
 
@@ -19,6 +21,11 @@
   {
     "name": "Easy peasy block",
     "settings": [
+          {
+           "type": "image_picker",
+           "id": "titleimage",
+           "label": "Image"
+         },
 					{
 						"type":"text",
 						"label":"Enter heading label",

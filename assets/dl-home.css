@@ -6,11 +6,13 @@
     text-align: center;
 }
 
-.shopify-section .whatWeDo-section h5{
-    font-family: var(--font-body-family);
+.shopify-section .whatWeDo-section h5, 
+.shopify-section.easy-pea-section h5{
+ font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   font-weight: 700;
   font-size: 16px;
+  text-align: center;
 
 }
 
@@ -26,8 +28,6 @@
 .shopify-section .whatWeDo-section .headingtag p{
     margin: 20px 0px;
     color: #344E38;
-;
-;
 }
 .shopify-section .whatWeDo-section h2{
     font-size: 30px;
@@ -35,7 +35,6 @@
     line-height: 22px;
     margin-bottom: 0;
 }
-
 .shopify-section.easy-pea-section .easy-blk img{
     max-width: 100%;
 }
