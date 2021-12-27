@@ -25,4 +25,23 @@
 }
 .shopify-section .whatWeDo-section .headingtag p{
     margin: 20px 0px;
+    color: #344E38;
+;
+;
+}
+.shopify-section .whatWeDo-section h2{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 0;
+}
+
+.shopify-section.easy-pea-section .easy-blk img{
+    max-width: 100%;
+}
+.shopify-section.easy-pea-section .easy-blk{
+    background: #FFFAF1;
+    border: 1px solid #BBCEBA;
+    border-radius: 20px;
+    padding: 20px;
 }

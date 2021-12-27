@@ -1,13 +1,15 @@
-<div class="shopify-section spaced-section page-width">
+<div class="shopify-section spaced-section page-width easy-pea-section">
 
 <h5>{{section.settings.headinglabel}}</h5>
-<ul class="grid grid--2-col product-grid grid--2-col-tablet grid--4-col-desktop negative-margin--small">
-<p>{{ settings.body_scale}}</p>
+<ul class="grid grid--2-col grid--4-col-tablet grid--4-col-desktop">
+
 {%for block in section.blocks %}
 	<li class="grid__item easy-col">
+      <div class="easy-blk">
       	<img src="{{block.settings.image | img_url: 'master'}}"  loading="lazy" width=""   height="">
          <h2>{{block.settings.imageHeading}}</h2>
-		<p>{{block.settings.imageDescription}}</p>
+		    <p>{{block.settings.imageDescription}}</p>
+      </div>
   </li>
 
 {%endfor%}
