@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'quattrocento_sansregular';
-    src: url('fonts/quattrocentosans-regular-webfont.woff2') format('woff2'),
-         url('fonts/quattrocentosans-regular-webfont.woff') format('woff');
+    src: url('quattrocentosans-regular-webfont.woff2') format('woff2'),
+         url('quattrocentosans-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -9,8 +9,8 @@
 
 @font-face {
     font-family: 'lunchbox_slabregular';
-    src: url('fonts/kimmy_design_-_lunchboxslab_1-webfont.woff2') format('woff2'),
-         url('fonts/kimmy_design_-_lunchboxslab_1-webfont.woff') format('woff');
+    src: url('kimmy_design_-_lunchboxslab_1-webfont.woff2') format('woff2'),
+         url('kimmy_design_-_lunchboxslab_1-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
