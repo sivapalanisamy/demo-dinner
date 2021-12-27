@@ -90,6 +90,18 @@
     },
     "what-we-do": {
       "type": "What-we-do",
+      "blocks": {
+        "68b038e2-b86c-40ce-8f4d-7ef170814940": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/what-icon-1.png",
+            "imageHeading": "minimal prep – maximum flavour"
+          }
+        }
+      },
+      "block_order": [
+        "68b038e2-b86c-40ce-8f4d-7ef170814940"
+      ],
       "settings": {
         "headinglabel": "WHAT WE DO",
         "headingtag": "<p>You Live. We’ll Cook. We Know Life Is Busy. We’ve Got You Covered<\/p>"
