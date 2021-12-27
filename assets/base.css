@@ -182,7 +182,7 @@ html.no-js .no-js-hidden {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 750px) {
+@media (min-width: 750px) and (max-width: 1599px) {
   .page-width {
     padding: 0 5rem;
   }
