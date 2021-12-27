@@ -87,6 +87,11 @@
         "swipe_on_mobile": false
       }
     },
+    "what-we-do":{
+      "type": "What-we-do",
+      "settings": {
+      }
+    },
     "easy-pea-sy": {
       "type": "easy-pea-sy",
       "blocks": {
@@ -432,6 +437,7 @@
   "order": [
     "image_banner",
     "achieve",
+    "what-we-do",
     "easy-pea-sy",
     "categories-slider",
     "looking-for",
