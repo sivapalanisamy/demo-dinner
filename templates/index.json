@@ -94,21 +94,21 @@
         "68b038e2-b86c-40ce-8f4d-7ef170814940": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/what-icon-1.png",
+            "image": "shopify:\/\/shop_images\/what-icon-1_5e2a60a0-e72f-45c0-ae10-de1aea23841c.png",
             "imageHeading": "minimal prep – maximum flavour"
           }
         },
         "a618b6a6-fce7-4b1d-8b1a-c7031af1993c": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/what-icon-3.png",
+            "image": "shopify:\/\/shop_images\/what-icon-3_fd83c178-6682-45db-a45f-9bc1df7e7853.png",
             "imageHeading": "delivered to your door"
           }
         },
         "7633831b-d17d-4ff5-8021-46a07458d5c2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/what-icon-2.png",
+            "image": "shopify:\/\/shop_images\/what-icon-2_ff78848c-3ffa-4c72-bb37-9b99bd944f57.png",
             "imageHeading": "no lock-in contracts"
           }
         }
