@@ -42,6 +42,7 @@
     },
     "achieve": {
       "type": "multicolumn",
+      "disabled": true,
       "blocks": {
         "1639665225765b1e4f-0": {
           "type": "column",
@@ -85,12 +86,6 @@
         "button_label": "Button label",
         "button_link": "",
         "swipe_on_mobile": false
-      }
-    },
-    "what-we-do":{
-      "type": "What-we-do",
-      "settings": {
-        "headinglabel": ""
       }
     },
     "easy-pea-sy": {
@@ -438,7 +433,6 @@
   "order": [
     "image_banner",
     "achieve",
-    "what-we-do",
     "easy-pea-sy",
     "categories-slider",
     "looking-for",
