@@ -9,6 +9,20 @@
 .shopify-section .whatWeDo-section h5{
     font-family: var(--font-body-family);
   font-style: var(--font-body-style);
-  font-weight: var(--font-body-weight);
+  font-weight: 700;
+  font-size: 16px;
 
+}
+
+.shopify-section .whatWeDo-section .headingtag{
+    font-family: var(--font-heading-family);
+    font-size: 58px;
+    font-weight: 400;
+    max-width: 745px;
+    margin: 0 auto;
+    line-height: 64px;
+
+}
+.shopify-section .whatWeDo-section .headingtag p{
+    margin: 20px 0px;
 }
