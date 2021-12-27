@@ -90,6 +90,7 @@
     "what-we-do":{
       "type": "What-we-do",
       "settings": {
+        "headinglabel": ""
       }
     },
     "easy-pea-sy": {
