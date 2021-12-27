@@ -91,6 +91,8 @@
     "what-we-do": {
       "type": "What-we-do",
       "settings": {
+        "headinglabel": "WHAT WE DO",
+        "headingtag": "<p>You Live. We’ll Cook. We Know Life Is Busy. We’ve Got You Covered<\/p>"
       }
     },
     "easy-pea-sy": {
