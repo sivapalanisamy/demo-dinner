@@ -122,6 +122,22 @@
         "headinglabel": "HOW IT WORKS"
       }
     },
+    "164067237578ccc057": {
+      "type": "dl-featured-collection",
+      "settings": {
+        "title": "DL Featured collection",
+        "dlcollection": "monthly-collection",
+        "products_to_show": 4,
+        "show_view_all": false,
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    },
     "categories-slider": {
       "type": "categories-slider",
       "blocks": {
@@ -323,6 +339,7 @@
     "image_banner",
     "what-we-do",
     "easy-pea-sy",
+    "164067237578ccc057",
     "categories-slider",
     "looking-for",
     "featured_products"
