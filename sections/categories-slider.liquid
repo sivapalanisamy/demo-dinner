@@ -1,4 +1,5 @@
 {% if section.blocks.size > 0 %}
+<h2>{{section.settings.headinglabel}}</h2>
 <div class="slider_wrap category-slider" data-slick='{"autoplay": {{ section.settings.carousel_autoplay }}, "autoplaySpeed": {{ section.settings.autoplay_speed }}, "dots": {{ section.settings.carousel_dots }}, "arrows": {{ section.settings.carousel_arrows }}}'>
 
   {% for block in section.blocks %}
@@ -17,6 +18,11 @@
 "name": "Delicious Carousel",
 "max_blocks": 8,
 "settings": [
+  {
+    "type":"text",
+    "label":"Enter heading label",
+    "id": "headinglabel"
+  },
   {
     "type":"header",
     "content":"Carousel option"
