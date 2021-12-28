@@ -1,15 +1,17 @@
 {% if section.blocks.size > 0 %}
-<h2>{{section.settings.headinglabel}}</h2>
-<div class="slider_wrap category-slider" data-slick='{"autoplay": {{ section.settings.carousel_autoplay }}, "autoplaySpeed": {{ section.settings.autoplay_speed }}, "dots": {{ section.settings.carousel_dots }}, "arrows": {{ section.settings.carousel_arrows }}}'>
+<div class="delicious-section">
+  <h2>{{section.settings.headinglabel}}</h2>
+  <div class="slider_wrap category-slider" data-slick='{"autoplay": {{ section.settings.carousel_autoplay }}, "autoplaySpeed": {{ section.settings.autoplay_speed }}, "dots": {{ section.settings.carousel_dots }}, "arrows": {{ section.settings.carousel_arrows }}}'>
 
-  {% for block in section.blocks %}
-    <div class="slider_item">
-        <div class="slider_img_wrap">
-          <img src="{{ block.settings.slide_img | img_url: 'original' }}" alt="" loading="lazy" class="slider_img"  width=""   height="">
-        </div>
-      <h2 class="slider_title">{{  block.settings.slide_title }}</h2>
-    </div>
-  {% endfor %}
+    {% for block in section.blocks %}
+      <div class="slider_item">
+          <div class="slider_img_wrap">
+            <img src="{{ block.settings.slide_img | img_url: 'original' }}" alt="" loading="lazy" class="slider_img"  width=""   height="">
+          </div>
+        <h2 class="slider_title">{{  block.settings.slide_title }}</h2>
+      </div>
+    {% endfor %}
+  </div>
 </div>
 {% endif %}
 
