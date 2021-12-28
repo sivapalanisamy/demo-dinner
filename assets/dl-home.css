@@ -8,7 +8,7 @@
 
 .shopify-section .whatWeDo-section h5, 
 .shopify-section.easy-pea-section h5{
- font-family: var(--font-body-family);
+  font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   font-weight: 700;
   font-size: 16px;
@@ -108,4 +108,44 @@
 .shopify-section .delicious-section .category-slider .slick-prev::before,
 .shopify-section .delicious-section .category-slider .slick-next::before{
     color:#000000;
+}
+
+.shopify-section .about-section{
+    background: #FEF9F0;
+    width: 100%;
+    display: inline-block;
+    padding: 75px 0px;
+
+}
+
+.shopify-section .about-section .aboutgrid{
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+.shopify-section .about-section .aboutgrid img{
+    max-width: 100%;
+}
+.shopify-section .about-section .aboutgrid .about-content{
+    max-width: 542px;
+}
+.shopify-section .about-section .aboutgrid .about-content h5{
+    font-family: var(--font-body-family);
+    font-style: var(--font-body-style);
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0;
+}
+
+.shopify-section .about-section .aboutgrid .about-content h3{    
+    font-size: 60px;
+    line-height: 58px;
+    margin: 0;
+}
+.shopify-section .about-section .aboutgrid .about-content p{
+    font-size: 16px;
+    line-height: 24px;
+}
+.shopify-section .about-section .aboutgrid .about-content p strong{
+    font-size: 22px;    
 }
