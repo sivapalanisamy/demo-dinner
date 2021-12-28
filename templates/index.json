@@ -227,7 +227,7 @@
     "featured_products": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "Dinner Ladies Favourites",
         "collection": "all",
         "products_to_show": 12,
         "show_view_all": false,
