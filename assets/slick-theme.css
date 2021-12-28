@@ -75,6 +75,9 @@
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    width: 24px;
+    height: 20px;
+    display: inline-block;
 }
 
 .slick-prev
@@ -88,7 +91,8 @@
 }
 .slick-prev:before
 {
-    content: '←';
+    content: ' ';
+    background: url(prev-arrow.svg) no-repeat;
 }
 [dir='rtl'] .slick-prev:before
 {
@@ -106,7 +110,8 @@
 }
 .slick-next:before
 {
-    content: '→';
+    content: '';
+    background: url(next-arrow.svg) no-repeat;
 }
 [dir='rtl'] .slick-next:before
 {

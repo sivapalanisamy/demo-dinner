@@ -5,10 +5,10 @@
 
     {% for block in section.blocks %}
       <div class="slider_item">
-          <div class="slider_img_wrap">
+          <div class="slider_img_wrap"> 
             <img src="{{ block.settings.slide_img | img_url: 'original' }}" alt="" loading="lazy" class="slider_img"  width=""   height="">
           </div>
-        <h2 class="slider_title">{{  block.settings.slide_title }}</h2>
+        <h3 class="slider_title">{{  block.settings.slide_title }}</h3>
       </div>
     {% endfor %}
   </div>
