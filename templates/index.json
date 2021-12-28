@@ -40,54 +40,6 @@
         "show_text_below": true
       }
     },
-    "achieve": {
-      "type": "multicolumn",
-      "disabled": true,
-      "blocks": {
-        "1639665225765b1e4f-0": {
-          "type": "column",
-          "settings": {
-            "title": "300+",
-            "text": "<p>Homemade meals<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "1639665225765b1e4f-1": {
-          "type": "column",
-          "settings": {
-            "title": "1.1+ Million",
-            "text": "<p>Meals sold every month<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "1639665225765b1e4f-2": {
-          "type": "column",
-          "settings": {
-            "title": "54",
-            "text": "<p>Cities delivered<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "1639665225765b1e4f-0",
-        "1639665225765b1e4f-1",
-        "1639665225765b1e4f-2"
-      ],
-      "settings": {
-        "title": "",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "Button label",
-        "button_link": "",
-        "swipe_on_mobile": false
-      }
-    },
     "what-we-do": {
       "type": "What-we-do",
       "blocks": {
@@ -365,117 +317,14 @@
         "show_vendor": false,
         "show_rating": false
       }
-    },
-    "multi_column": {
-      "type": "multicolumn",
-      "disabled": true,
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "title": "Multicolumn",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "Button label",
-        "button_link": "",
-        "swipe_on_mobile": false
-      }
-    },
-    "collage": {
-      "type": "collage",
-      "disabled": true,
-      "blocks": {
-        "video": {
-          "type": "video",
-          "settings": {
-            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-            "description": "Describe the video",
-            "image_padding": false
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false,
-            "image_padding": false,
-            "secondary_background": false
-          }
-        },
-        "collection": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "image_padding": false,
-            "color_scheme": "background-1"
-          }
-        }
-      },
-      "block_order": [
-        "video",
-        "product",
-        "collection"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "desktop_layout": "left",
-        "mobile_layout": "collage"
-      }
-    },
-    "video": {
-      "type": "video",
-      "disabled": true,
-      "settings": {
-        "heading": "Video",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false
-      }
     }
   },
   "order": [
     "image_banner",
-    "achieve",
     "what-we-do",
     "easy-pea-sy",
     "categories-slider",
     "looking-for",
-    "featured_products",
-    "multi_column",
-    "collage",
-    "video"
+    "featured_products"
   ]
 }
