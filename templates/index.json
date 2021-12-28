@@ -122,22 +122,6 @@
         "headinglabel": "HOW IT WORKS"
       }
     },
-    "164067237578ccc057": {
-      "type": "dl-featured-collection",
-      "settings": {
-        "title": "DL Featured collection",
-        "dlcollection": "monthly-collection",
-        "products_to_show": 4,
-        "show_view_all": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "add_image_padding": false,
-        "show_image_outline": true,
-        "show_vendor": false,
-        "show_rating": false
-      }
-    },
     "categories-slider": {
       "type": "categories-slider",
       "blocks": {
@@ -239,85 +223,6 @@
         "autoplay_speed": "7000"
       }
     },
-    "looking-for": {
-      "type": "looking-for",
-      "blocks": {
-        "77644443-a10a-49d0-ada6-4bbe6b51c305": {
-          "type": "slide",
-          "settings": {
-            "button_title": "EXPLORE NOW",
-            "slide_link": "",
-            "slide_title": "Low-Carb",
-            "slide_text": "",
-            "slide_img": "shopify:\/\/shop_images\/2.png"
-          }
-        },
-        "ef181cf0-177a-432f-addf-57db0abdd70e": {
-          "type": "slide",
-          "settings": {
-            "button_title": "EXPLORE NOW",
-            "slide_link": "",
-            "slide_title": "Kids",
-            "slide_text": "",
-            "slide_img": "shopify:\/\/shop_images\/4.png"
-          }
-        },
-        "a670d47c-0902-4434-a255-0b0122570c2b": {
-          "type": "slide",
-          "settings": {
-            "button_title": "EXPLORE Now",
-            "slide_link": "",
-            "slide_title": "VEGETARIAN",
-            "slide_text": "",
-            "slide_img": "shopify:\/\/shop_images\/5.png"
-          }
-        },
-        "2d6e9617-7da1-47a2-800a-2fd285798789": {
-          "type": "slide",
-          "settings": {
-            "button_title": "EXPLORE Now",
-            "slide_link": "",
-            "slide_title": "PLANTED-BASED",
-            "slide_text": "",
-            "slide_img": "shopify:\/\/shop_images\/3.png"
-          }
-        },
-        "6d1f7562-2840-4857-b31c-1ba2ef4661c0": {
-          "type": "slide",
-          "settings": {
-            "button_title": "EXPLORE NOW",
-            "slide_link": "",
-            "slide_title": "Kids",
-            "slide_text": "",
-            "slide_img": "shopify:\/\/shop_images\/6.png"
-          }
-        },
-        "3518efe6-53b8-4336-88c1-aec3c52d553c": {
-          "type": "slide",
-          "settings": {
-            "button_title": "EXPLORE NOW",
-            "slide_link": "",
-            "slide_title": "My looking",
-            "slide_text": "",
-            "slide_img": "shopify:\/\/shop_images\/1.png"
-          }
-        }
-      },
-      "block_order": [
-        "77644443-a10a-49d0-ada6-4bbe6b51c305",
-        "ef181cf0-177a-432f-addf-57db0abdd70e",
-        "a670d47c-0902-4434-a255-0b0122570c2b",
-        "2d6e9617-7da1-47a2-800a-2fd285798789",
-        "6d1f7562-2840-4857-b31c-1ba2ef4661c0",
-        "3518efe6-53b8-4336-88c1-aec3c52d553c"
-      ],
-      "settings": {
-        "carousel_autoplay": false,
-        "carousel_dots": false,
-        "carousel_arrows": false,
-        "autoplay_speed": "7000"
-      }
-    },
     "featured_products": {
       "type": "featured-collection",
       "settings": {
@@ -339,9 +244,7 @@
     "image_banner",
     "what-we-do",
     "easy-pea-sy",
-    "164067237578ccc057",
     "categories-slider",
-    "looking-for",
     "featured_products"
   ]
 }
