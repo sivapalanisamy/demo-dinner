@@ -217,6 +217,7 @@
         "9af7bf9d-5fae-4a84-9d44-9933918465fb"
       ],
       "settings": {
+        "headinglabel": "Our Delicious Dinners",
         "carousel_autoplay": false,
         "carousel_dots": false,
         "carousel_arrows": true,
