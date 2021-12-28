@@ -240,39 +240,13 @@
         "show_rating": false
       }
     },
-    "1640684627079c63ad": {
-      "type": "image-with-text",
-      "blocks": {
-        "16406846279d50d6e7-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text"
-          }
-        },
-        "16406846279d50d6e7-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
-          }
-        },
-        "16406846279d50d6e7-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "16406846279d50d6e7-0",
-        "16406846279d50d6e7-1",
-        "16406846279d50d6e7-2"
-      ],
+    "1640686378b055bb34": {
+      "type": "dl-home-about",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Rectangle_156.png",
-        "height": "adapt",
-        "color_scheme": "background-1",
-        "layout": "image_first"
+        "titleimage": "shopify:\/\/shop_images\/Rectangle_156.png",
+        "headinglabel": "ABOUT US",
+        "headingtag": "Who Are the Dinner Ladies?",
+        "aboutDescription": "<p><strong>We cook real dinners, using real ingredients and snap-freeze them as soon as they’re made.<\/strong><\/p><p>The Dinner Ladies take away the stress of thinking about, shopping for, preparing and cooking dinner by delivering it to your door, so that you can enjoy great, homemade food every day. The Dinner Ladies are Katherine Westwood and Sophie Gilliatt. We got together at the school gate in 2007 and came up with the idea of preparing dinners for time-poor friends and family members so that they would always have good, homemade food in their fridges and freezers (and, incidentally, so would we). <br\/><br\/><\/p>"
       }
     }
   },
@@ -282,6 +256,6 @@
     "easy-pea-sy",
     "categories-slider",
     "featured_products",
-    "1640684627079c63ad"
+    "1640686378b055bb34"
   ]
 }
