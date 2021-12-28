@@ -153,11 +153,11 @@
         {% for tag in product_card_product.tags %}
             {% assign tag_splits = tag | split: "-" %}
             {% if tag_splits.size == 2 %}
-                <a href="/collections/all/{{ tag | handleize }}">
+                <a style="text-decoration: none;" href="/collections/all/{{ tag | handleize }}">
                     <span class="el-icon-tag" style="background-color: {{ tag_splits[1] }}">{{ tag_splits[0] }}</span>
                 </a>
             {% else %}
-                <a href="/collections/all/{{ tag | handleize }}">
+                <a style="text-decoration: none;" href="/collections/all/{{ tag | handleize }}">
                     <span class="el-icon-tag">{{ tag }}</span>
                 </a>
             {% endif %}
