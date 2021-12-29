@@ -245,6 +245,7 @@ html.no-js .no-js-hidden {
 
 .spaced-section--full-width:first-child {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .spaced-section--full-width:last-child {

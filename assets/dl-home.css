@@ -1,9 +1,68 @@
+
+.banner__heading{
+    font-size: 58px;
+    line-height: 64px;
+}
+.banner{
+    position: relative;
+}
+.banner .banner-circle-1{
+    width: 527px;
+    height: 486px;
+    background: #F1ECE1;
+    display: block;
+    border-radius: 50% 50% 0 0;
+    position: absolute;
+    left: 30%;
+    bottom: -414px;
+    z-index: 1;
+}
+.banner .banner-circle-2{
+   display: block;
+    width: 500px;
+    height: 500px;
+    background: #F1ECE1;
+    position: absolute;
+    bottom: -447px;
+    z-index: 2;
+    border-radius: 50% 50% 0 0;
+    left: 31%;
+    border-top: 1px #000 solid;
+}
+.shopify-section{
+    position: relative;
+}
+.shopify-section .shape1{
+    width: 527px;
+    height: 486px;
+    background: #F1ECE1;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    left: 30%;
+    top: -48px;
+    z-index: 1;
+}
+.shape2{
+    display: block;
+    width: 500px;
+    height: 500px;
+    background: #F1ECE1;
+    position: absolute;
+    top: -18px;
+    z-index: 999;
+    border-radius: 50% 50% 0 0;
+    left: 32%;
+    border-top: 1px #000 solid;
+}
 .shopify-section .whatWeDo-section{
     background: #F1ECE1;
     margin: 0;
     padding-top: 80px;
     padding-bottom: 80px;
     text-align: center;
+    z-index: 99;
+    position: relative;
 }
 
 .shopify-section .whatWeDo-section h5, 
