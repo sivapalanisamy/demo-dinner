@@ -151,7 +151,7 @@
 <div class="product-tags-wrap">
     <div class="tags-list">
         {% for tag in product_card_product.tags %}
-            {% if tag == 'SIZE' %}
+            {% if tag == 'SALE' or tag == 'sale' or tag == 'Sale' %}
                 <a style="text-decoration: none;" href="/collections/all/{{ tag | handleize }}">
                     <span class="el-icon-tag" style="background-color: #82BE6D;">{{ tag }}</span>
                 </a>
