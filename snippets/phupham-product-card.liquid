@@ -151,14 +151,13 @@
 <div class="product-tags-wrap">
     <div class="tags-list">
         {% for tag in product_card_product.tags %}
-            {% assign tag_splits = tag | split: "-" %}
-            {% if tag_splits.size == 2 %}
+            {% if tag == 'SIZE' %}
                 <a style="text-decoration: none;" href="/collections/all/{{ tag | handleize }}">
-                    <span class="el-icon-tag" style="background-color: {{ tag_splits[1] }}">{{ tag_splits[0] }}</span>
+                    <span class="el-icon-tag" style="background-color: #82BE6D;">{{ tag }}</span>
                 </a>
             {% else %}
                 <a style="text-decoration: none;" href="/collections/all/{{ tag | handleize }}">
-                    <span class="el-icon-tag">{{ tag }}</span>
+                    <span class="el-icon-tag" style="background-color: #FED15D;">{{ tag }}</span>
                 </a>
             {% endif %}
         {% endfor %}
