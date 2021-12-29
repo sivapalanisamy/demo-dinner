@@ -47,20 +47,20 @@
             "type": "link_list",
             "settings": {
               "heading": "Quick links",
-              "menu": "footer"
+              "menu": "footer-about-us"
             }
           },
-          "footer-1": {
-            "type": "text",
+          "471c3cc0-1802-41f5-9909-af92f33cd3c4": {
+            "type": "link_list",
             "settings": {
-              "heading": "Heading",
-              "subtext": "<p>Share store details, promotions, or brand content with your customers.<\/p>"
+              "heading": "Quick links",
+              "menu": "footer-social-media"
             }
           }
         },
         "block_order": [
           "footer-0",
-          "footer-1"
+          "471c3cc0-1802-41f5-9909-af92f33cd3c4"
         ],
         "settings": {
           "color_scheme": "background-1",
