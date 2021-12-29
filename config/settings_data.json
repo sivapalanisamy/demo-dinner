@@ -56,11 +56,27 @@
               "heading": "Social Media",
               "menu": "footer-social-media"
             }
+          },
+          "8b3fadbe-86d8-4e1f-8355-e0dba0c2b93e": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Support & Services",
+              "menu": "footer-support"
+            }
+          },
+          "8d0eb162-e039-4b02-b95e-93147ec8a5c1": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Tearms & Conditions",
+              "menu": "footer-terms"
+            }
           }
         },
         "block_order": [
           "footer-0",
-          "471c3cc0-1802-41f5-9909-af92f33cd3c4"
+          "471c3cc0-1802-41f5-9909-af92f33cd3c4",
+          "8b3fadbe-86d8-4e1f-8355-e0dba0c2b93e",
+          "8d0eb162-e039-4b02-b95e-93147ec8a5c1"
         ],
         "settings": {
           "color_scheme": "background-1",
