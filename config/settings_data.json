@@ -46,14 +46,14 @@
           "footer-0": {
             "type": "link_list",
             "settings": {
-              "heading": "Quick links",
+              "heading": "About Us",
               "menu": "footer-about-us"
             }
           },
           "471c3cc0-1802-41f5-9909-af92f33cd3c4": {
             "type": "link_list",
             "settings": {
-              "heading": "Quick links",
+              "heading": "Social Media",
               "menu": "footer-social-media"
             }
           }
