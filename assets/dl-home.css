@@ -34,6 +34,53 @@ nav ul li .list-menu__item{
 .header__icon--cart:hover .icon-cart{
     transform: inherit;
 }
+.footer{
+    background: #FEF9F0;
+
+}
+.footer .footer-menu-links{
+    max-width: 60%;
+    width: calc(60% - 1rem / 2);    
+}
+.footer .footer-menu-links .footer-block__heading{
+    font-size: 24px;
+}
+.footer .footer-menu-links ul li .link{
+    font-size: 15px;
+    font-weight: 400;
+}
+.footer .footer-menu-news{
+    padding-left: 4rem !important;
+    max-width: 40%;
+    width: calc(40% - 1rem / 2);
+}
+.footer .footer-menu-news .footer-block__heading{
+    font-size: 24px;
+    text-align: left;
+}
+.footer .footer-menu-news form{
+    width: 100%;
+    max-width: 100%;
+}
+.footer .footer-menu-news form .newsletter-form__field-wrapper{
+    max-width: 100%;
+}
+.footer .footer-menu-news form .field__input{
+    background: #FFFFFF;
+    border-radius: 46px;
+    border: 2px #FFFFFF solid;
+    box-shadow: none;
+    font-size: 16px;
+}
+.footer .footer-menu-news form .newsletter-form__button{
+    width: auto;
+    background: #E8D4B0;
+    font-family: var(--font-heading-family);
+    font-size: 24px;
+    font-weight: 400;
+    border-radius: 46px;
+    padding: 0px 36px;
+}
 .banner__heading{
     font-size: 58px;
     line-height: 64px;

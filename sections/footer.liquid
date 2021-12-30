@@ -17,6 +17,8 @@
 <footer class="footer color-{{ section.settings.color_scheme }} gradient">
   {%- if section.blocks.size > 0 or section.settings.newsletter_enable or section.settings.show_social -%}
     <div class="footer__content-top page-width">
+      <div class="grid grid--1-col grid--2-col grid--8-col-tablet">
+        <div class="grid__item footer-menu-links">
       {%- if section.blocks.size > 0 -%}
         {%- liquid
           if section.blocks.size == 9
@@ -73,7 +75,8 @@
           {%- endfor -%}
         </div>
       {%- endif -%}
-
+      </div>
+      <div class="grid__item footer-menu-news">
       <div class="footer-block--newsletter">
         {%- if section.settings.newsletter_enable -%}
           <div class="footer-block__newsletter">
@@ -108,7 +111,8 @@
                     {{ 'newsletter.label' | t }}
                   </label>
                   <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
-                    {% render 'icon-arrow' %}
+                    {% comment %} {% render 'icon-arrow' %} {% endcomment %}
+                    SUBSCRIBE
                   </button>
                 </div>
                 {%- if form.errors -%}
@@ -199,6 +203,8 @@
           </ul>
         {%- endif -%}
       </div>
+    </div>
+  </div>
     </div>
   {%- endif -%}
 
