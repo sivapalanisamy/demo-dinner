@@ -268,6 +268,90 @@
     },
     "share-love": {
       "type": "share-love",
+      "blocks": {
+        "1b4d67bb-c3ad-4182-b58a-7042de035d7c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_150.png",
+            "imageHeading": ""
+          }
+        },
+        "e4e2a8d6-8bca-4b99-97d7-3937ef3be664": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_142.png",
+            "imageHeading": ""
+          }
+        },
+        "8f7c4969-674d-4b2e-975f-de7b4e41cdd2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_154.png",
+            "imageHeading": ""
+          }
+        },
+        "d6af92e9-418a-483b-a7d8-144f9b05d5a3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_209.png",
+            "imageHeading": ""
+          }
+        },
+        "d794ae1a-7b05-4621-8f77-ae473afb8e37": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_152.png",
+            "imageHeading": ""
+          }
+        },
+        "cbcf78fe-50b3-424c-8481-c04e92fbb513": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_150.png",
+            "imageHeading": ""
+          }
+        },
+        "5ab9dc21-4502-4be5-9a36-fd2635b35cc8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_152.png",
+            "imageHeading": ""
+          }
+        },
+        "d0896855-7747-4059-aaa6-69814593d90b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_209.png",
+            "imageHeading": ""
+          }
+        },
+        "1fc46d3f-ab84-4c89-8ee3-1a0a4cb69562": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_142.png",
+            "imageHeading": ""
+          }
+        },
+        "e363a86f-ea02-46f5-a27b-6153505bcabc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_154.png",
+            "imageHeading": ""
+          }
+        }
+      },
+      "block_order": [
+        "1b4d67bb-c3ad-4182-b58a-7042de035d7c",
+        "e4e2a8d6-8bca-4b99-97d7-3937ef3be664",
+        "8f7c4969-674d-4b2e-975f-de7b4e41cdd2",
+        "d6af92e9-418a-483b-a7d8-144f9b05d5a3",
+        "d794ae1a-7b05-4621-8f77-ae473afb8e37",
+        "cbcf78fe-50b3-424c-8481-c04e92fbb513",
+        "5ab9dc21-4502-4be5-9a36-fd2635b35cc8",
+        "d0896855-7747-4059-aaa6-69814593d90b",
+        "1fc46d3f-ab84-4c89-8ee3-1a0a4cb69562",
+        "e363a86f-ea02-46f5-a27b-6153505bcabc"
+      ],
       "settings": {
         "titleimage": "shopify:\/\/shop_images\/Group.png",
         "headinglabel": "@thedinnerladies",
