@@ -1,0 +1,59 @@
+<div class="shopify-section spaced-section page-width easy-pea-section">
+<div class="title-img">
+  <img src="{{section.settings.titleimage | img_url: 'master'}}"  loading="lazy" width=""   height="">
+</div>
+<h5>{{section.settings.headinglabel}}</h5>
+{{section.settings.description}}
+<ul class="grid grid--2-col grid--4-col-tablet grid--4-col-desktop">
+
+{%for block in section.blocks %}
+	<li class="grid__item easy-col">
+      <div class="easy-blk">
+      	<img src="{{block.settings.image | img_url: 'master'}}"  loading="lazy" width=""   height="">
+      </div>
+  </li>
+
+{%endfor%}
+</ul>
+</div>
+{% schema %}
+  {
+    "name": "share the love",
+    "settings": [
+          {
+           "type": "image_picker",
+           "id": "titleimage",
+           "label": "Image"
+         },
+            {
+                "type":"text",
+                "label":"Enter heading label",
+                "id": "headinglabel"
+            },
+            {
+            "type": "richtext",
+            "id": "description",
+            "label": "Enter Description"
+            }
+				],
+	"blocks": [
+     {
+       "name": "Easy block",
+       "type": "image",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image"
+         },
+		 {
+           "type": "text",
+           "id": "imageHeading",
+           "label": "Enter Title"
+         }		 
+       ]
+     }
+	]
+  }
+{% endschema %}
+
