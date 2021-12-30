@@ -1,20 +1,22 @@
-<div class="shopify-section spaced-section page-width easy-pea-section">
-<div class="title-img">
-  <img src="{{section.settings.titleimage | img_url: 'master'}}"  loading="lazy" width=""   height="">
-</div>
-<h5>{{section.settings.headinglabel}}</h5>
-{{section.settings.description}}
-<ul class="grid grid--2-col grid--4-col-tablet grid--4-col-desktop">
+<div class="share-love-blk">
+    <div class="shopify-section spaced-section page-width share-love-section">
+    <div class="title-img">
+    <img src="{{section.settings.titleimage | img_url: 'master'}}"  loading="lazy" width=""   height="">
+    </div>
+    <h5>{{section.settings.headinglabel}}</h5>
+    {{section.settings.description}}
+    <ul class="share-slider">
 
-{%for block in section.blocks %}
-	<li class="grid__item easy-col">
-      <div class="easy-blk">
-      	<img src="{{block.settings.image | img_url: 'master'}}"  loading="lazy" width=""   height="">
-      </div>
-  </li>
+    {%for block in section.blocks %}
+        <li class="share-col">
+        <div class="share-blk">
+            <img src="{{block.settings.image | img_url: 'master'}}"  loading="lazy" width=""   height="">
+        </div>
+    </li>
 
-{%endfor%}
-</ul>
+    {%endfor%}
+    </ul>
+    </div>
 </div>
 {% schema %}
   {
@@ -38,7 +40,7 @@
 				],
 	"blocks": [
      {
-       "name": "Easy block",
+       "name": "Share block",
        "type": "image",
        "settings": [
          {
@@ -56,4 +58,13 @@
 	]
   }
 {% endschema %}
+
+{% javascript %}
+$('.share-slider').slick({
+    infinite: true,
+    speed: 500,
+    slidesToShow: 7,
+    slidesToScroll: 2
+});
+{% endjavascript %}
 
