@@ -265,6 +265,11 @@
         "headingtag": "Who Are the Dinner Ladies?",
         "aboutDescription": "<p><strong>We cook real dinners, using real ingredients and snap-freeze them as soon as they’re made.<\/strong><\/p><p>The Dinner Ladies take away the stress of thinking about, shopping for, preparing and cooking dinner by delivering it to your door, so that you can enjoy great, homemade food every day. The Dinner Ladies are Katherine Westwood and Sophie Gilliatt. We got together at the school gate in 2007 and came up with the idea of preparing dinners for time-poor friends and family members so that they would always have good, homemade food in their fridges and freezers (and, incidentally, so would we). <br\/><br\/><\/p>"
       }
+    },
+    "share-love": {
+      "type": "share-love",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -274,6 +279,7 @@
     "1640693323a1800638",
     "categories-slider",
     "featured_products",
-    "1640686378b055bb34"
+    "1640686378b055bb34",
+    "share-love"
   ]
 }
