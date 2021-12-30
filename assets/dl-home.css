@@ -48,6 +48,14 @@ nav ul li .list-menu__item{
 .footer .footer-menu-links ul li .link{
     font-size: 15px;
     font-weight: 400;
+    color:#362E2E;
+}
+.footer .footer-menu-links ul li .link:hover{
+    text-decoration: none;
+}
+.footer .footer-menu-links ul li .list-menu__item--active{
+    text-decoration: none;
+    color:#362E2E;
 }
 .footer .footer-menu-news{
     padding-left: 4rem !important;
@@ -71,6 +79,12 @@ nav ul li .list-menu__item{
     border: 2px #FFFFFF solid;
     box-shadow: none;
     font-size: 16px;
+    height: 6rem;
+}
+.footer .footer-menu-news form .field__label{
+    top: 1.8rem;
+    left: 3.5rem;
+    font-size: 16px;
 }
 .footer .footer-menu-news form .newsletter-form__button{
     width: auto;
@@ -80,6 +94,8 @@ nav ul li .list-menu__item{
     font-weight: 400;
     border-radius: 46px;
     padding: 0px 36px;
+    right: 8px;
+    top: 8px;
 }
 .banner__heading{
     font-size: 58px;
