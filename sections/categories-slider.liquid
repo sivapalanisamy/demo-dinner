@@ -111,6 +111,25 @@ $('.slider_wrap').slick({
     centerPadding: '0',
     speed: 500,
     slidesToShow: 6,
-    slidesToScroll: 2
+    slidesToScroll: 2,
+     responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
 });
 {% endjavascript %}
