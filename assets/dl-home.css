@@ -26,6 +26,13 @@
         top:-40px;
         left: 17%;
     }
+    .header #menu-drawer{
+        z-index: 0;
+        background: #FEF9F0;
+    }
+    .header #menu-drawer li{
+        margin-bottom: 1rem;
+    }
 }
 nav ul li a.link,
 nav ul li .list-menu__item{
@@ -176,6 +183,18 @@ nav ul li .list-menu__item{
 }
 .shopify-section{
     position: relative;
+}
+summary .icon-dl{
+    position: absolute;
+    height: 0.6rem;
+    right: 1.5rem;
+    top: calc(50% - 0.2rem);
+}
+@media screen and (max-width: 749px) {
+    #menu-drawer summary .icon-dl{
+        position: relative;
+        right: -10px;
+    }
 }
 .shopify-section img{
     max-width: 100%;
