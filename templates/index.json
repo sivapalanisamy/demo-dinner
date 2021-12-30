@@ -269,6 +269,9 @@
     "share-love": {
       "type": "share-love",
       "settings": {
+        "titleimage": "shopify:\/\/shop_images\/Group.png",
+        "headinglabel": "@thedinnerladies",
+        "description": "<p>Follow us and share your #dinnerladies moment to have a chance to be featured<\/p>"
       }
     }
   },
