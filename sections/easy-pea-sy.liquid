@@ -8,9 +8,19 @@
 {%for block in section.blocks %}
 	<li class="grid__item easy-col">
       <div class="easy-blk">
-      	<img src="{{block.settings.image | img_url: 'master'}}"  loading="lazy" width=""   height="">
+        <div class="img-blk">
+        	<img src="{{block.settings.image | img_url: 'master'}}"  loading="lazy" width=""   height="">
+        </div>
          <h2>{{block.settings.imageHeading}}</h2>
-		    {{block.settings.imageDescription}}
+         <div class="content-blk">
+            <div class="left">
+                {{block.settings.imageDescription}}
+            </div>
+            <div class="right">
+                <img src="{{block.settings.easyIcon | img_url: 'master'}}"  loading="lazy" width=""   height="">
+            </div>
+         </div>
+		    
       </div>
   </li>
 
@@ -51,6 +61,11 @@
            "type": "richtext",
            "id": "imageDescription",
            "label": "Enter Description"
+         },
+         {
+           "type": "image_picker",
+           "id": "easyIcon",
+           "label": "icons"
          }
        ]
      }

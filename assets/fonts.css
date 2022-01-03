@@ -15,3 +15,11 @@
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'ruffle_beautyregular';
+    src: url('ruffle_beauty-webfont.woff2') format('woff2'),
+         url('ruffle_beauty-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

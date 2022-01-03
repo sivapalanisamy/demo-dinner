@@ -19,6 +19,25 @@
 <div class="card-wrapper">
   <div class="card-information">
     <div class="card-information__wrapper">
+      {% comment %} product tags {% endcomment %}
+      <div class="product-tags-wrap">
+          <ul class="tags-list">
+              {% for tag in product_card_product.tags %}{% if tag == 'SALE' or tag == 'sale' or tag == 'Sale' %}
+                      <li>
+                        <a class="sale" href="/collections/all/{{ tag | handleize }}">
+                            <span class="el-icon-tag">{{ tag }}</span>
+                        </a>
+                      </li>
+                  {% else %}
+                      <li>
+                      <a href="/collections/all/{{ tag | handleize }}">
+                          <span class="el-icon-tag">{{ tag }}</span>
+                      </a>
+                      </li>
+                  {% endif %}{% endfor %}
+                </ul>
+      </div>
+      <div class="product-info">
       {%- if show_vendor -%}
         <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
         <div class="caption-with-letter-spacing light">{{ product_card_product.vendor }}</div>
@@ -56,7 +75,10 @@
         </p>
       {%- endif -%}
       {% render 'price', product: product_card_product, price_class: '' %}
-      
+      {% if template.name == "index" %}
+        <button class="btn btn-dl-primary">Order Now</button>
+      {%- endif -%}
+    </div>
     </div>
   </div>
 
@@ -132,6 +154,7 @@
     </div>
   </div>
 </div>
+{% if template.name != "index" %} 
 <div class="product-card-quantity">
 {% for variant in product_card_product.variants %}
   <div class="qty-row" id="qty-{{ variant.id}}">
@@ -163,4 +186,5 @@
   </div>
 {% endfor %}
 </div>
+{% endif %}
 
