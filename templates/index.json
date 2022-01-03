@@ -84,7 +84,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Rectangle_21_1.png",
             "imageHeading": "1. We COOK it",
-            "imageDescription": "<p>Made we fresh and healthy ingredients as we would for us.<\/p>"
+            "imageDescription": "<p>Made we fresh and healthy ingredients as we would for us.<\/p>",
+            "easyIcon": "shopify:\/\/shop_images\/cook.png"
           }
         },
         "d55f8cc7-c521-4e11-a8c9-bbe43ce7430b": {
@@ -92,7 +93,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Rectangle_22.png",
             "imageHeading": "2. We Freeze it",
-            "imageDescription": "<p>To lock flavour and nutrients, safely and hygienically.<\/p>"
+            "imageDescription": "<p>To lock flavour and nutrients, safely and hygienically.<\/p>",
+            "easyIcon": "shopify:\/\/shop_images\/freez.png"
           }
         },
         "9de21d76-1d03-432d-b55d-ff3a7fe54dee": {
@@ -100,7 +102,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Rectangle_25.png",
             "imageHeading": "3. You Heat it",
-            "imageDescription": "<p>From freezer to oven. So you can spend your time where it matters<\/p>"
+            "imageDescription": "<p>From freezer to oven. So you can spend your time where it matters<\/p>",
+            "easyIcon": "shopify:\/\/shop_images\/heat.png"
           }
         },
         "5be7810d-809c-43a8-8ed8-fdcefbcf2191": {
@@ -108,7 +111,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Rectangle_45.png",
             "imageHeading": "4. You Enjoy it",
-            "imageDescription": "<p>Fresh as the day it was made - because it is!<\/p>"
+            "imageDescription": "<p>Fresh as the day it was made - because it is!<\/p>",
+            "easyIcon": "shopify:\/\/shop_images\/enjoy.png"
           }
         }
       },
