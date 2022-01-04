@@ -1181,10 +1181,10 @@ deferred-media {
   align-items: center;
   box-sizing: border-box;
   font: inherit;
-  padding: 0.9rem 3rem 1.1rem;
+  padding: 0.5rem 3rem;
   text-decoration: none;
   border: 0.1rem solid transparent;
-  border-radius: 0;
+  border-radius: 46px;
   background-color: rgba(var(--color-button), var(--alpha-button-background));
   box-shadow: 0 0 0 0.1rem rgba(var(--color-button), var(--alpha-button-border));
   color: rgb(var(--color-button-text));
@@ -1193,6 +1193,8 @@ deferred-media {
   transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
   appearance: none;
+  font-family:var(--font-heading-family);
+  font-size: 24px;
 }
 
 .button:focus-visible {
@@ -1221,9 +1223,10 @@ deferred-media {
 .button-label,
 .shopify-challenge__button,
 .customer button {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   letter-spacing: 0.1rem;
   line-height: calc(1 + 0.2 / var(--font-body-scale));
+  text-transform: uppercase;
 }
 
 .button--tertiary {

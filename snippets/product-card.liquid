@@ -75,8 +75,8 @@
         </p>
       {%- endif -%}
       {% render 'price', product: product_card_product, price_class: '' %}
-      {% if template.name == "index" %}
-        <button class="btn btn-dl-primary">Order Now</button>
+      {%- if show_button -%}
+        <button class="btn btn-dl-primary button button--primary">Order Now</button>
       {%- endif -%}
     </div>
     </div>
