@@ -34,9 +34,9 @@
 
         {% if enable_filtering %}
           <div id="FacetsWrapperDesktop" class="facets__wrapper">
-            {%- unless results.filters == empty -%}
-              <h2 class="facets__heading caption-large text-body">{{ 'products.facets.filter_by_label' | t }}</h2>
-            {%- endunless -%}
+              {% comment %} {%- unless results.filters == empty -%}
+                <h2 class="facets__heading caption-large text-body">{{ 'products.facets.filter_by_label' | t }}</h2>
+              {%- endunless -%} {% endcomment %}
 
             {%- for filter in results.filters -%}
               {%- assign total_active_values = total_active_values | plus: filter.active_values.size -%}
@@ -228,7 +228,7 @@
           </div>
         {%- endif -%}
 
-        <div class="product-count light" role="status">
+        {% comment %} <div class="product-count light" role="status">
           <h2 class="product-count__text text-body">
             <span id="ProductCountDesktop">
               {%- if results.results_count -%}
@@ -245,7 +245,7 @@
               <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
             </svg>
           </div>
-        </div>          
+        </div>  {% endcomment %}         
       </form>
     </facet-filters-form>
   {%- endunless -%}

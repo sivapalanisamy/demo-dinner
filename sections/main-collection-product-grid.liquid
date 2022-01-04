@@ -7,21 +7,24 @@
 <link rel="preload" href="{{ 'component-rte.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
-
+<div class="page-container">
+<div class="page-border">
+<div class="page-width">
+ <h2 class="page-title">{{ 'sections.collection_template.title' | t }}</h2>
 {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
   {{ 'component-facets.css' | asset_url | stylesheet_tag }}
   <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
 
-  <div class="page-width" id="main-collection-filters" data-id="{{ section.id }}">
+  <div class="" id="main-collection-filters" data-id="{{ section.id }}">
     {% render 'facets', results: collection, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, collapse_on_larger_devices: section.settings.collapse_on_larger_devices %}
   </div>
 {%- endif -%}
 
 <div id="ProductGridContainer">
-  {{ 'sections.collection_template.title' | t }}
+  
   {%- paginate collection.products by section.settings.products_per_page -%}
     {%- if collection.products.size == 0 -%}
-      <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
+      <div class="collection collection--empty" id="product-grid" data-id="{{ section.id }}">
         <div class="loading-overlay gradient"></div>
         <div class="title-wrapper center">
           <h2 class="title title--primary">
@@ -32,7 +35,7 @@
         </div>
       </div>
     {%- else -%}
-      <div class="collection page-width">
+      <div class="collection">
         <div class="loading-overlay gradient"></div>
 
         <ul id="product-grid" data-id="{{ section.id }}" class="product-card 
@@ -62,7 +65,9 @@
     {%- endif -%}
   {%- endpaginate -%}
 </div>
-
+</div>
+</div>
+</div>
 {% schema %}
 {
   "name": "t:sections.main-collection-product-grid.name",

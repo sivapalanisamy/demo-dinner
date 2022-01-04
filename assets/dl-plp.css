@@ -1,0 +1,40 @@
+.page-container h2.page-title{
+    font-size: 60px;
+    line-height: 100px;
+    color: #344E38;
+    margin: 0;
+
+}
+
+#main-collection-filters #FacetFiltersForm .facets__summary{
+    border: 1px solid #BBCEB9;
+    background: #FFF;
+    font-size: 16px;
+    padding: 10px 50px 10px 15px;
+    border-radius: 10px;
+    color: #405343;
+
+}
+#main-collection-filters #FacetFiltersForm .facets__summary:hover span{
+    text-decoration: none;
+}
+#main-collection-filters #FacetFiltersForm .facets__summary .icon-caret{
+    right: 12px;
+}
+#main-collection-filters #FacetFiltersForm .facet-filters__sort:focus-visible{
+    outline: 0;
+    background: transparent;
+    outline-offset: 0;
+    box-shadow: 0 0 0 0;
+}
+#main-collection-filters .facets__form{
+    gap: 0;
+}
+#main-collection-filters #FacetFiltersForm .facets__display{
+    border: 2px solid #BBCEB9;
+    border-radius:10px;
+}
+#main-collection-filters #FacetFiltersForm .facets__display .facets__header,
+#main-collection-filters #FacetFiltersForm .facets__display .facet-checkbox{
+    color: #405343;
+}
