@@ -5,6 +5,7 @@
       "blocks": {
         "164016375065f7ecc9-0": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Image banner",
             "heading_size": "medium"
