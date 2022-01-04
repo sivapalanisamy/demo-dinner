@@ -76,7 +76,9 @@
       {%- endif -%}
       {% render 'price', product: product_card_product, price_class: '' %}
       {%- if show_button -%}
-        <button class="btn btn-dl-primary button button--primary">Order Now</button>
+        <div class="productbtn">
+        <a  href="{{ product_card_product.url | default: '#' }}" class="btn btn-dl-primary button button--primary">Order Now</a>
+        </div>
       {%- endif -%}
     </div>
     </div>

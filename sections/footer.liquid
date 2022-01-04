@@ -17,7 +17,7 @@
 <footer class="footer color-{{ section.settings.color_scheme }} gradient">
   {%- if section.blocks.size > 0 or section.settings.newsletter_enable or section.settings.show_social -%}
     <div class="footer__content-top page-width">
-      <div class="grid grid--1-col grid--2-col grid--8-col-tablet">
+      <div class="grid grid--1-col  grid--1-col-tablet grid--2-col-desktop">
         <div class="grid__item footer-menu-links">
       {%- if section.blocks.size > 0 -%}
         {%- liquid
@@ -29,7 +29,7 @@
             assign footer_grid_class = 'grid--3-col-tablet'
           endif
         -%}
-        <div class="footer__blocks-wrapper grid grid--2-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
+        <div class="footer__blocks-wrapper grid grid--2-col grid--2-col grid--4-col-tablet  {{ footer_grid_class }}">
           {%- for block in section.blocks -%}
             <div class="footer-block grid__item{% if block.type == 'link_list' and block.settings.heading != blank %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
               {%- if block.settings.heading != blank -%}

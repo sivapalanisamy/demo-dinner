@@ -18,12 +18,14 @@
 {%- endif -%}
 
 <div id="ProductGridContainer">
+  {{ 'sections.collection_template.title' | t }}
   {%- paginate collection.products by section.settings.products_per_page -%}
     {%- if collection.products.size == 0 -%}
       <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
         <div class="loading-overlay gradient"></div>
         <div class="title-wrapper center">
           <h2 class="title title--primary">
+            {{ 'sections.collection_template.empty' | t }} 
             {{ 'sections.collection_template.empty' | t }}<br>
             {{ 'sections.collection_template.use_fewer_filters_html' | t: link: collection.url, class: "underlined-link link" }}
           </h2>
@@ -33,13 +35,13 @@
       <div class="collection page-width">
         <div class="loading-overlay gradient"></div>
 
-        <ul id="product-grid" data-id="{{ section.id }}" class="
+        <ul id="product-grid" data-id="{{ section.id }}" class="product-card 
           grid grid--2-col negative-margin product-grid
           {% if collection.products_count < 4 %} grid--{{ collection.products_count }}-col-tablet{% else %}
             {% if collection.products_count == 4 %} grid--4-col-desktop{% else %} grid--3-col-tablet grid--one-third-max grid--4-col-desktop grid--quarter-max{% endif %}
           {% endif %}">
           {%- for product in collection.products -%}
-            <li class="grid__item">
+            <li class="product-list grid__item">
               {% render 'product-card',
                 product_card_product: product,
                 media_size: section.settings.image_ratio,
