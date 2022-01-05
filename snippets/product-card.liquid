@@ -83,6 +83,7 @@
       {%- endif -%}
       
       {% comment %} Qty Slector {% endcomment %}
+      {%- if show_button == false -%}
       <div class="product-variant-wrap">
 
           {%- if product_card_product.has_only_default_variant -%}
@@ -145,7 +146,7 @@
               {%- endfor -%}
           {%- endif -%}
       </div>
-
+      {%- endif -%}
   {% comment %} Qty Slector Ends Here {% endcomment %}
 
     </div>
