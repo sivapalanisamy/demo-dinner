@@ -327,9 +327,9 @@
       </details-modal>
     {%- endif -%}
 
-    {%- if request.page_type == 'index' -%}
+   
       <h1 class="header__heading">
-    {%- endif -%}
+    
         <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
           {%- if section.settings.logo != blank -%}
             <img class="header__heading-logo" src="{{ 'logo.svg' | asset_url }}" alt="{{ shop.name }}" itemprop="logo"> 
@@ -337,9 +337,7 @@
             <span class="h2">Dinner Ladies </span>
           {%- endif -%}
         </a>
-    {%- if request.page_type == 'index' -%}
       </h1>
-    {%- endif -%}
 
     {%- if section.settings.menu != blank -%}
       <nav class="header__inline-menu">
