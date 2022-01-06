@@ -107,7 +107,7 @@
 #product-varient .variant-row .variant-info label{
     font-family:var(--font-heading-family);
     display: inline-block;
-    margin-right: 15;
+    margin-right: 15px;
     font-size: 24px;
     text-transform: uppercase;
 }
