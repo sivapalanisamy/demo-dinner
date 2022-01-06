@@ -104,6 +104,10 @@
 #product-varient .variant-row .variant-qty-blk{
     width: 48%;
 }
+#product-varient .variant-row .variant-info{
+    display: flex;
+    align-items: center;
+}
 #product-varient .variant-row .variant-info label{
     font-family:var(--font-heading-family);
     display: inline-block;
