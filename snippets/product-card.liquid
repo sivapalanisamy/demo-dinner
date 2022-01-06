@@ -83,70 +83,66 @@
       {%- endif -%}
       
       {% comment %} Qty Slector {% endcomment %}
-      {%- if show_button == false -%}
-      <div class="product-variant-wrap">
+      {%- if show_button == false -%}        
 
+        <div id="product-varient" class="product-variant-wrap">
           {%- if product_card_product.has_only_default_variant -%}
               <div>This product has no variant</div>
           {%- else -%}
-
-              {%- for variant in product_card_product.variants -%}
-                  {% assign variant_quantity = 0 %}
-                  {% for cartLineItem in cart.items %}
-                      {% if cartLineItem.variant.id == variant.id %}
-                          {% assign variant_quantity = cartLineItem.quantity %}
-                      {% endif %}
-                  {% endfor %}
-                  <div class="menu-price-wrap clearfix" style="display: inline-block; width: 100%;">
-                      <div class="menu-type-wrap" style="float: left; width: 50%;">
-                          <div class="menu-type-price clearfix">
-                              <div class="order-type">{{ variant.title }}</div>
-                              <div class="menu-base-price">
-                                  {% render 'price', product: variant, price_class: '' %}
-                              </div>
-                          </div>
-                      </div>
-                      <div class="snipper-wrap" style="float: right; width: 50%;">
-                          <div class="clearfix" style="text-align: right;">
-                              <div class="info">
-                                  <input class="field__input"
-                                        style="height: 30px; padding: 10px"
-                                        id="{{ variant.id }}_quantity"
-                                        type="text" value="{{ variant_quantity }}" disabled="disabled">
-                              </div>
-                              <div class="action-buttons">
-                                  <button type="button" class="btn cart-btn next-step"
+          {%- for variant in product_card_product.variants -%}
+            {% assign variant_quantity = 0 %}
+            {% for cartLineItem in cart.items %}
+                {% if cartLineItem.variant.id == variant.id %}
+                    {% assign variant_quantity = cartLineItem.quantity %}
+                {% endif %}
+            {% endfor %}
+            <div class="variant-row">
+                <div class="variant-info">
+                  <label>{{ variant.title }}</label>
+                  <span class="price">{% render 'price', product: variant, price_class: '' %}</span>
+                </div>
+                <div class="variant-qty-blk">
+                  <quantity-card>
+                  <form id="{{ variant.id }}_form" class="quantity-form">
+                    <input type="hidden" name="id" value="{{ variant.id}}" />
+                    <div id="{{ variant.id }}_button" {% if variant_quantity != 0 %} style="display:none" {% endif %}>                      
+                        
+                      <button class="btn btn-dl-primary button button--primary" data-qty="0"
+                                    id="{{ variant.id }}_add_button" name="add"                                   
+                                    >ADD</button>                      
+                    </div>
+                  
+                  
+                  <div id="{{ variant.id }}_selector" class="qty-selector" {% if variant_quantity == 0 %} style="display:none" {% endif %}>
+                        <button type="button" class="btn cart-btn next-step"
                                           data-sizeid="60713"
                                           id="{{ variant.id }}_minus_button"
+                                          name="minus"
                                           {% if variant_quantity == 0 %}
                                               disabled="disabled"
                                           {% endif %}
-                                          onclick="minusProductVariantQuantity({{ variant.id }});">
+                                          >
                                       -
                                   </button>
-                                  <button class="btn cart-btn qty next-step" data-qty="0"
-                                          id="{{ variant.id }}_add_button"
-                                          {% if variant_quantity > 0 %}
-                                              disabled="disabled"
-                                          {% endif %}
-                                          onclick="addToCart({{ variant.id }});">
-                                      ADD
-                                  </button>
+                        <input class="field__input"                                        
+                                        id="{{ variant.id }}_quantity"
+                                        type="text" value="{{ variant_quantity }}" disabled="disabled">
                                   <button type="button" class="btn cart-btn next-step"
                                           id="{{ variant.id }}_plus_button"
                                           data-sizeid="60713" data-state="FROZEN"
-                                          onclick="plusProductVariantQuantity({{ variant.id }});">
+                                          name="plus">
                                       +
                                   </button>
-                              </div>
-
-                          </div>
-                      </div>
-                  </div>
-              {%- endfor -%}
-          {%- endif -%}
-      </div>
-      {%- endif -%}
+                    </div>
+                  </quantity-card>
+                    </form>
+                </div>
+            </div>
+            {% endfor %}
+            {%- endif -%}
+        </div>
+        {%- endif -%}
+      
   {% comment %} Qty Slector Ends Here {% endcomment %}
 
     </div>
@@ -230,7 +226,7 @@
 
 
 {% if template.name != "index" %} 
-<div class="product-card-quantity">
+<div class="product-card-quantitys">
 {% for variant in product_card_product.variants %}
   <div class="qty-row" id="qty-{{ variant.id}}">
       <label>{{ variant.title}}</label>
@@ -266,121 +262,15 @@
 
 <script type="text/javascript">
 
-    function addToCart(id) {
-        addProductVariantToCart(id);
-    }
-
-    function plusProductVariantQuantity(variantID) {
-        console.log('Plus quantity [' + variantID + ']');
-        var currentQuantity = parseInt(jQuery('#' + variantID + '_quantity').val().trim());
-        console.log('Current quantity of [' + variantID + '] = [' + currentQuantity + ']');
-        if (currentQuantity > 0) {
-            var updateData = {
-                'id': String(variantID),
-                'quantity': String(currentQuantity + 1)
-            };
-            console.log(updateData);
-            fetch('/cart/change.js', {
-                method: 'POST',
-                credentials: 'same-origin',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(updateData),
-            }).then(response => {
-                jQuery('#' + variantID + '_quantity').val(currentQuantity + 1);
-                alert('Successfully plus quantity to product variant: [' + variantID + '] !');
-                jQuery('#' + variantID + '_minus_button').removeAttr('disabled');
-                var jsonResponse = response.json();
-                console.log(jsonResponse);
-                return jsonResponse;
-            }).catch((error) => {
-                console.error('Error:', error);
-            });
-        } else {
-            //The current variant is not added to cart, added to cart
-            //console.log('The current quantity is 0, this action is aborted');
-            addProductVariantToCart(variantID);
-        }
-    }
-
-    function minusProductVariantQuantity(variantID) {
-
-        console.log('Minus quantity [' + variantID + ']');
-        var currentQuantity = parseInt(jQuery('#' + variantID + '_quantity').val().trim());
-        console.log('Current quantity of [' + variantID + '] = [' + currentQuantity + ']');
-        if (currentQuantity > 1) {
-            var updateData = {
-                'id': String(variantID),
-                'quantity': String(currentQuantity - 1)
-            };
-        } else {
-            var updateData = {
-                'id': String(variantID),
-                'quantity': String(0)
-            };
-        }
-
-        console.log(updateData);
-        fetch('/cart/change.js', {
-            method: 'POST',
-            credentials: 'same-origin',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(updateData),
-        }).then(response => {
-            jQuery('#' + variantID + '_quantity').val(currentQuantity - 1);
-            if (currentQuantity - 1 === 0) {
-                jQuery('#' + variantID + '_minus_button').attr('disabled', true);
-                jQuery('#' + variantID + '_add_button').removeAttr('disabled');
-            }
-            alert('Successfully minus quantity to product variant: [' + variantID + '] !');
-            var jsonResponse = response.json();
-            console.log(jsonResponse);
-            return jsonResponse;
-        }).catch((error) => {
-            console.error('Error:', error);
-        });
-    }
-
-    function addProductVariantToCart(variantID) {
-
-        console.log('Adding product variant [' + variantID + '] to cart...');
-
-        // Add to cart data
-        var items = {
-            'items': [
-                {
-                    'id': parseInt(variantID),
-                    'quantity': 1
-                }
-            ]
-        };
-
-        fetch('/cart/add.js', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(items)
-        }).then(response => {
-            jQuery('#' + variantID + '_minus_button').removeAttr('disabled');
-            jQuery('#' + variantID + '_add_button').attr('disabled', true);
-            jQuery('#' + variantID + '_quantity').val(1);
-            alert('Successfully add product variant: [' + variantID + '] to cart !');
-            return response.json();
-        }).catch((error) => {
-            console.error('Error:', error);
-        });
-    }
+    
 
     function fetchDataFromCart() {
         var cartContents = fetch('/cart.js')
             .then(response => response.json())
             .then(data => {
-                console.log(data);
-                return data
+              console.log(data);
+              this.cartNotification.renderContents(data);
+              return data
             });
         return false;
     }

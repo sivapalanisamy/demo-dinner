@@ -19,7 +19,7 @@
 .product-tags-wrap{
     width: 100%;
     background: #FCF7ED;
-    padding: 10px 30px;
+    padding: 10px 1.5rem;
 
 }
 .product-tags-wrap ul.tags-list{
@@ -52,7 +52,7 @@
     color: #FFFFFF;
 }
 .product-card li.product-list .card-wrapper .card-information .product-info{
-    padding: 25px 30px 35px;
+    padding: 25px 1.5rem 35px;
     margin-top: 0;
 }
 .product-card li.product-list .card-wrapper .card-information h3{
@@ -89,4 +89,55 @@
     .featured-section .collection-slider .slick-list {
         padding:0 10% 0 0 !important;
     }
+}
+
+#product-varient{
+    width: 100%;
+    display: inline-block;
+    padding-top: 8px;
+}
+#product-varient .variant-row{
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+}
+#product-varient .variant-row .variant-qty-blk{
+    width: 48%;
+}
+#product-varient .variant-row .variant-info label{
+    font-family:var(--font-heading-family);
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+#product-varient .variant-row .variant-info .price{
+    font-family:var(--font-heading-family);
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    padding-right: 10px;
+}
+#product-varient .variant-row .variant-qty-blk .btn-dl-primary{
+    padding: 3px 5px;
+    min-height: 1.5rem;
+}
+#product-varient .variant-row .variant-qty-blk .qty-selector{
+    background: #E8D4B0;
+    border-radius: 46px;
+    display: flex;
+}
+#product-varient .variant-row .variant-qty-blk .qty-selector .btn{
+    background: transparent;
+    border: 0;
+    font-size: 24px;
+    padding: 0px 15px;
+    cursor: pointer;
+}
+#product-varient .variant-row .variant-qty-blk .qty-selector .field__input{
+    border: 0;
+    padding: 6px 5px;
+    height: auto;
+    box-shadow: 0 0 0 0 ;
+    text-align: center;
 }

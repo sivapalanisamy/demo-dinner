@@ -747,23 +747,15 @@ class ProductQuantityInput extends HTMLElement {
   }
 
   onButtonClick(event) {
-    console.log(event);
     event.preventDefault();
-    const previousValue = this.input.value;
+    //console.log();
 
-    event.target.name === "plus" ? this.input.stepUp() : this.input.stepDown();
+    const previousValue = this.input.value;
+    console.log(this.input);
+
+    //event.target.name === "plus" ? this.input.stepUp() : this.input.stepDown();
     if (previousValue !== this.input.value)
       this.input.dispatchEvent(this.changeEvent);
-
-    const productID = event.target.dataset.product;
-    var items = {
-      items: [
-        {
-          id: productID,
-          quantity: 1,
-        },
-      ],
-    };
 
     const config = fetchConfig("javascript");
     config.headers["X-Requested-With"] = "XMLHttpRequest";
@@ -778,17 +770,94 @@ class ProductQuantityInput extends HTMLElement {
     formData.append("sections_url", window.location.pathname);
     config.body = formData;
 
-    fetch(`${routes.cart_add_url}`, config)
-      .then((response) => response.json())
-      .then((response) => {
-        console.log(response);
-        this.cartNotification.renderContents(response);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+    if (event.target.name === "add") {
+      fetch(`${routes.cart_add_url}`, config)
+        .then((response) => response.json())
+        .then((response) => {
+          console.log(response);
+          this.cartNotification.renderContents(response);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    }else{
+      if (event.target.name === "plus") {
+        var currentQuantity = Number( document.getElementById(event.target.previousElementSibling.id).value );
+        //currentQuantity +=1;
+        console.log(currentQuantity);
+        var productCode = this.input.value;
+        if (currentQuantity > 0) {
+
+          var updateData = {
+            id: String(this.input.value),
+            quantity: String(currentQuantity + 1),
+          };
+          fetch("/cart/change.js", {
+            method: "POST",
+            credentials: "same-origin",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(updateData),
+          })
+            .then((response) => {
+              console.log(response );
+              jQuery("#" + this.input.value + "_quantity").val(
+                currentQuantity + 1
+              );
+              jQuery("#" + this.input.value + "_minus_button").removeAttr(
+                "disabled"
+              );
+              var jsonResponse = response.json();
+              console.log(jsonResponse);
+              return jsonResponse;
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+            });
+
+
+
+          /* var updateData = {
+            id: String(this.input.value),
+            quantity: String(currentQuantity + 1),
+          };
+          console.log(updateData);
+
+          
+
+          const body = JSON.stringify({
+            productCode,
+            currentQuantity
+          });
+
+          fetch(`${routes.cart_change_url}`, { ...fetchConfig(), ...{ body } })
+            .then((response) => {
+              return response.text();
+            })
+            .then((state) => {
+              console.log(state);
+            })
+            .catch(() => {
+              this.querySelectorAll(".loading-overlay").forEach((overlay) =>
+                overlay.classList.add("hidden")
+              );
+              document.getElementById("cart-errors").textContent =
+                window.cartStrings.error;
+              this.disableLoading();
+            }); */
+
+
+
+
+
+        }
+
+      }
+    }
   }
   getMiniCartSectionInnerHTML(html, selector = ".shopify-section") {
+    debugger;
     return new DOMParser()
       .parseFromString(html, "text/html")
       .querySelector(selector).innerHTML;
