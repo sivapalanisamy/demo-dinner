@@ -495,7 +495,7 @@ summary .icon-dl{
     background: #FEF9F0;
     width: 100%;
     display: inline-block;
-    padding: 75px 0px;
+    padding: 62px 0px;
     border-top:2px solid #bbceb9;
 }
 
@@ -506,6 +506,7 @@ summary .icon-dl{
      width: 100%;
     display: block;
     text-align: center;
+    margin: 0;
 }
 .shopify-section .share-love-blk .share-love-section .social-widget-wrapper .sw-instagram-container{
         background: transparent;
@@ -515,6 +516,19 @@ summary .icon-dl{
 }
 .share-love-section .social-widget-wrapper .sw-instagram-container .sw-instagram-header-title a{
     font-weight: 700;
+}
+.share-love-section .social-widget-wrapper .sw-instagram-container .sw-instagram-footer-load-more > div{
+    background: #344E38 !important;
+    border-radius: 46px !important;
+    font-size: 24px;
+    font-family: var(--font-heading-family);
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 12px 64px !important;
+    margin-top: 30px;
+}
+.share-love-section .social-widget-wrapper .sw-instagram-container .sw-instagram-footer-load-more > div strong{
+    font-weight: 400;
 }
 .shopify-section .share-love-blk .share-love-section .share-slider .slick-prev{
         left:48%;
@@ -559,6 +573,6 @@ summary .icon-dl{
 
 }
 
-.sw-instagram-container .sw-instagram-col img{
-    border-radius: 20px;
+.sw-instagram-container .sw-instagram-col .sw-instagram-item{
+    border-radius: 5px;
 }
