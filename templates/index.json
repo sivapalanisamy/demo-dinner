@@ -47,22 +47,22 @@
         "68b038e2-b86c-40ce-8f4d-7ef170814940": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/what-icon-1_5e2a60a0-e72f-45c0-ae10-de1aea23841c.png",
+            "image": "shopify:\/\/shop_images\/what-icon-1_ee34ed3c-d949-443c-b5b9-33936fcebd70.png",
             "imageHeading": "minimal prep – <br> maximum flavour"
           }
         },
         "a618b6a6-fce7-4b1d-8b1a-c7031af1993c": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/what-icon-3_fd83c178-6682-45db-a45f-9bc1df7e7853.png",
+            "image": "shopify:\/\/shop_images\/what-icon-2_b15df534-be6d-45bd-a193-dfafb084b50f.png",
             "imageHeading": "delivered to your door"
           }
         },
         "7633831b-d17d-4ff5-8021-46a07458d5c2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/what-icon-2_ff78848c-3ffa-4c72-bb37-9b99bd944f57.png",
-            "imageHeading": "no lock-in contracts"
+            "image": "shopify:\/\/shop_images\/what-icon-3_75d88308-74fb-4eff-be22-e7855c5d1433.png",
+            "imageHeading": "SNAP-FROZEN"
           }
         }
       },
@@ -72,7 +72,7 @@
         "7633831b-d17d-4ff5-8021-46a07458d5c2"
       ],
       "settings": {
-        "headinglabel": "WHAT WE DO",
+        "headinglabel": "",
         "headingtag": "<p>You Live. We’ll Cook. We Know Life Is Busy. We’ve Got You Covered<\/p>"
       }
     },
@@ -124,7 +124,7 @@
       ],
       "settings": {
         "titleimage": "shopify:\/\/shop_images\/title-easy.png",
-        "headinglabel": "HOW IT WORKS"
+        "headinglabel": ""
       }
     },
     "1640693323a1800638": {
@@ -365,7 +365,9 @@
     "social_widget_36721": {
       "type": "social-widget",
       "settings": {
-        "social_widget_id": "36721"
+        "social_widget_id": "36721",
+        "social_product_id": "none",
+        "social_widget_type": "none"
       }
     }
   },
