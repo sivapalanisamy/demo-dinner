@@ -5,6 +5,11 @@
     margin: 0;
 
 }
+@media screen and (max-width: 749px) {
+    .page-container h2.page-title{
+        text-align: center;
+    }
+}
 
 #main-collection-filters #FacetFiltersForm .facets__summary{
     border: 1px solid #BBCEB9;
@@ -37,4 +42,9 @@
 #main-collection-filters #FacetFiltersForm .facets__display .facets__header,
 #main-collection-filters #FacetFiltersForm .facets__display .facet-checkbox{
     color: #405343;
+}
+
+.mobile-facets__open-wrapper .mobile-facets__open-label{
+    font-size: 16px;
+    font-weight: 700;
 }

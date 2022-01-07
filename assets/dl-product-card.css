@@ -2,6 +2,11 @@
     padding:  0px 10px;
     margin-bottom: 50px;
 }
+@media screen and (max-width: 749px) {
+    .product-card li.product-list{
+        padding: 0;
+    }
+}
 .product-card li.product-list .card-wrapper{
     background: #FFFFFF; 
     border: 2px solid #BBCEB9;
@@ -107,6 +112,7 @@
 #product-varient .variant-row .variant-info{
     display: flex;
     align-items: center;
+    width: 50%;
 }
 #product-varient .variant-row .variant-info label{
     font-family:var(--font-heading-family);
@@ -125,6 +131,7 @@
 #product-varient .variant-row .variant-qty-blk .btn-dl-primary{
     padding: 3px 5px;
     min-height: 1.5rem;
+    width: 100%;
 }
 #product-varient .variant-row .variant-qty-blk .qty-selector{
     background: #E8D4B0;

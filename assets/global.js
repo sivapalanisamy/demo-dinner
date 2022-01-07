@@ -787,31 +787,31 @@ class ProductQuantityInput extends HTMLElement {
         .catch((error) => {
           console.error("Error:", error);
         });
-    }else{
+    } else {
       if (event.target.name === "plus") {
-        var currentQuantity = Number( document.getElementById(event.target.previousElementSibling.id).value );
+        var currentQuantity = Number(
+          document.getElementById(event.target.previousElementSibling.id).value
+        );
         //currentQuantity +=1;
         var productCode = this.input.value;
 
         let content = document.querySelector(".cart-count-bubble");
-        console.log(content.firstChild.innerText);
-        
-
+        let currentCount = Number(content.firstChild.innerText);
+        currentCount++;
+        content.firstChild.innerText = currentCount;
 
         if (currentQuantity > 0) {
           fetch(`${routes.cart_add_url}`, config)
             .then((response) => response.json())
             .then((response) => {
-
               console.log(response);
 
-              document.getElementById(
-                `${this.input.value}_quantity`
-              ).value = response.quantity;
+              document.getElementById(`${this.input.value}_quantity`).value =
+                response.quantity;
 
-               document
-                 .getElementById(`${this.input.value}_minus_button`)
-                 .removeAttribute("disabled");                  
+              document
+                .getElementById(`${this.input.value}_minus_button`)
+                .removeAttribute("disabled");
 
               if (response.status) {
                 this.handleErrorMessage(response.description);
@@ -824,15 +824,14 @@ class ProductQuantityInput extends HTMLElement {
               console.error(e);
             });
         }
-
-      }else if (event.target.name === "minus") {
-        let productID = document.getElementById(
-          `${this.input.value}`
+      } else if (event.target.name === "minus") {
+        let productID = document.getElementById(`${this.input.value}`).value;
+        let productCount = document.getElementById(
+          `${this.input.value}_quantity`
         ).value;
-        let productCount = document.getElementById(`${this.input.value}_quantity`).value;
-        productCount -=1;
+        productCount -= 1;
         console.log(productCount);
-        
+
         var updateData = {
           id: productID,
           quantity: productCount,
@@ -840,7 +839,7 @@ class ProductQuantityInput extends HTMLElement {
 
         console.log(productCount);
 
-        if(productCount == 0){
+        if (productCount == 0) {
           document.getElementById(`${this.input.value}_button`).style.display =
             "block";
           document.getElementById(
@@ -864,51 +863,59 @@ class ProductQuantityInput extends HTMLElement {
         formDatas.append("sections_url", window.location.pathname);
         configs.body = formDatas;
 
-
-         
-
-         fetch(`${routes.cart_change_url}`, configs)
-           .then((response) => response.json())
-           .then((response) => {
+        fetch(`${routes.cart_change_url}`, configs)
+          .then((response) => response.json())
+          .then((response) => {
             console.log(response);
             let content = document.querySelector(".cart-count-bubble");
             content.firstChild.innerText = response.item_count;
 
-             for (let i = 0; i <= response.items.length; i++) {
+            for (let i = 0; i <= response.items.length; i++) {
+              if (response.items[i].id == this.input.value) {
+                console.log(response.items[i]);
+                document.getElementById(`${this.input.value}_quantity`).value =
+                  response.items[i].quantity;
 
-               if (response.items[i].id == this.input.value) {
-                   console.log(response.items[i]);
-                   document.getElementById(
-                     `${this.input.value}_quantity`
-                   ).value = response.items[i].quantity;
+                document
+                  .getElementById(`${this.input.value}_minus_button`)
+                  .removeAttribute("disabled");
 
-                  document
-                    .getElementById(`${this.input.value}_minus_button`)
-                    .removeAttribute("disabled");
+                if (response.status) {
+                  this.handleErrorMessage(response.description);
+                  return;
+                }
 
-                  if (response.status) {
-                    this.handleErrorMessage(response.description);
-                    return;
-                  }
-
-                  //this.cartNotification.renderContents(response.items[i]);
-               }
-
-             }
-             
-           })
-           .catch((e) => {
-             console.error(e);
-           }); 
-
+                //this.cartNotification.renderContents(response.items[i]);
+              }
+            }
+          })
+          .catch((e) => {
+            console.error(e);
+          });
       }
     }
   }
+
   getMiniCartSectionInnerHTML(html, selector = ".shopify-section") {
     debugger;
     return new DOMParser()
       .parseFromString(html, "text/html")
       .querySelector(selector).innerHTML;
+  }
+  handleErrorMessage(errorMessage = false) {
+    console.log(this);
+    this.errorMessageWrapper =
+      this.errorMessageWrapper ||
+      this.querySelector(".product-card__error-message-wrapper");
+    this.errorMessage =
+      this.errorMessage ||
+      this.errorMessageWrapper.querySelector(".product-card__error-message");
+
+    this.errorMessageWrapper.toggleAttribute("hidden", !errorMessage);
+
+    if (errorMessage) {
+      this.errorMessage.textContent = errorMessage;
+    }
   }
 }
 
