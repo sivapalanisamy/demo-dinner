@@ -72,7 +72,7 @@
         "7633831b-d17d-4ff5-8021-46a07458d5c2"
       ],
       "settings": {
-        "headinglabel": "WHAT WE DO",
+        "headinglabel": "",
         "headingtag": "<p>You Live. We’ll Cook. We Know Life Is Busy. We’ve Got You Covered<\/p>"
       }
     },
@@ -124,7 +124,7 @@
       ],
       "settings": {
         "titleimage": "shopify:\/\/shop_images\/title-easy.png",
-        "headinglabel": "HOW IT WORKS"
+        "headinglabel": ""
       }
     },
     "1640693323a1800638": {
@@ -365,7 +365,9 @@
     "social_widget_36721": {
       "type": "social-widget",
       "settings": {
-        "social_widget_id": "36721"
+        "social_widget_id": "36721",
+        "social_product_id": "none",
+        "social_widget_type": "none"
       }
     }
   },
