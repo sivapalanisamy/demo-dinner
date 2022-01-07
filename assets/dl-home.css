@@ -145,11 +145,16 @@ nav ul li .list-menu__item{
     }
 }
 .banner__heading{
-    font-size: 58px;
+    font-size: 64px;
     line-height: 64px;
+    color: #344E38;
+;
 }
 .banner{
     position: relative;
+}
+.banner .banner__box{
+    opacity: 1;
 }
 .banner .banner-circle-1{
     width: 527px;
