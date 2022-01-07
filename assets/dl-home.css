@@ -243,8 +243,8 @@ summary .icon-dl{
 .shopify-section .whatWeDo-section{
     background: #F1ECE1;
     margin: 0;
-    padding-top: 70px;
-    padding-bottom: 85px;
+    padding-top: 65px;
+    padding-bottom: 80px;
     text-align: center;
     z-index: 99;
     position: relative;
@@ -293,8 +293,8 @@ summary .icon-dl{
 .shopify-section .easy-pea-section{
     border-bottom:2px solid #bbceb9;
     margin: 0;
-    padding-bottom: 80px;
-    padding-top: 80px;
+    padding-bottom: 75px;
+    padding-top: 75px;
     
 }
 .shopify-section.easy-pea-section .title-img{
@@ -330,10 +330,10 @@ summary .icon-dl{
 .shopify-section.easy-pea-section .easy-blk p{
     padding-bottom: 25px;
     margin: 0;
-    font-size: 18px;
+    font-size: 20px;
     font-family: 'ruffle_beautyregular';
     line-height: 24px;
-    font-weight: 400;
+    font-weight: 600;
 }
 .shopify-section.easy-pea-section .easy-blk .content-blk{
     display: flex;
@@ -349,7 +349,7 @@ summary .icon-dl{
 .shopify-section .delicious-section{
     width: 100%;
     display: inline-block;
-    padding: 75px 0px 105px;
+    padding: 65px 0px 115px;
     border: 2px solid #BBCEB9;
     border-width: 2px 0px;
 }
@@ -410,7 +410,7 @@ summary .icon-dl{
 .featured-section{
     width: 100%;
     display: inline-block;
-    padding: 72px 0px 82px;
+    padding: 70px 0px 75px;
 }
 .featured-section .title-wrapper-with-link{
     margin: 0;
@@ -438,6 +438,9 @@ summary .icon-dl{
     max-width: 1200px;
     margin: 0 auto;
     align-items: center;
+}
+.shopify-section .about-section .aboutgrid .grid__item{
+    padding-bottom: 0;
 }
 .shopify-section .about-section .aboutgrid img{
     max-width: 100%;
