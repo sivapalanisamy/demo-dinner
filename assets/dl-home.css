@@ -20,6 +20,14 @@
     top: -75px;
     max-width: 13em;
 }
+.shopify-section-header-hidden .header__heading-logo{
+    display: none;
+}
+#shopify-section-header.header-sticky-custom .header__heading-logo{
+    left: 40px;
+    top: -37px;
+    max-width: 8em;
+}
 @media screen and (max-width: 749px) {
     #shopify-section-header .header .header__heading-logo{
         max-width: 8em;
