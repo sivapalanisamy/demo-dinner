@@ -199,6 +199,9 @@ nav ul li .list-menu__item{
 /* .shopify-section{
     position: relative;
 } */
+.spaced-section{
+    margin: 0;
+}
 summary .icon-dl{
     position: absolute;
     height: 0.6rem;
@@ -240,8 +243,8 @@ summary .icon-dl{
 .shopify-section .whatWeDo-section{
     background: #F1ECE1;
     margin: 0;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 70px;
+    padding-bottom: 85px;
     text-align: center;
     z-index: 99;
     position: relative;
@@ -269,7 +272,7 @@ summary .icon-dl{
     font-size: 58px;
     font-weight: 400;
     max-width: 745px;
-    margin: 0 auto 80px;
+    margin: 0 auto 40px;
     line-height: 64px;
 
 }
@@ -280,9 +283,12 @@ summary .icon-dl{
 .shopify-section .whatWeDo-section h2{
     font-size: 30px;
     font-weight: 400;
-    line-height: 22px;
-    margin: 0;
+    line-height: 26px;
+    margin: 15px 0px 0px;
     text-transform: uppercase;
+}
+.shopify-section .whatWeDo-section ul li{
+    padding-bottom: 0;
 }
 .shopify-section .easy-pea-section{
     border-bottom:2px solid #bbceb9;
@@ -298,6 +304,12 @@ summary .icon-dl{
 }
 .shopify-section.easy-pea-section h5{
     margin-top: 0px;
+}
+.shopify-section.easy-pea-section ul{
+    margin-bottom: 0;
+}
+.shopify-section.easy-pea-section .easy-col{
+    padding-bottom: 0;
 }
 
 .shopify-section.easy-pea-section .easy-blk{
@@ -398,7 +410,7 @@ summary .icon-dl{
 .featured-section{
     width: 100%;
     display: inline-block;
-    padding-bottom: 75px;
+    padding: 72px 0px 82px;
 }
 .featured-section .title-wrapper-with-link{
     margin: 0;
