@@ -104,7 +104,7 @@
                 <div class="variant-qty-blk">
                   <quantity-card>
                   <form id="{{ variant.id }}_form" class="quantity-form">
-                    <input type="hidden" name="id" value="{{ variant.id}}" />
+                    <input type="hidden" id="{{ variant.id}}" name="id" value="{{ variant.id}}" />
                     <div id="{{ variant.id }}_button" {% if variant_quantity != 0 %} style="display:none" {% endif %}>                      
                         
                       <button class="btn btn-dl-primary button button--primary" data-qty="0"

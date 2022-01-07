@@ -751,7 +751,6 @@ class ProductQuantityInput extends HTMLElement {
     //console.log();
 
     const previousValue = this.input.value;
-    console.log(this.input);
 
     //event.target.name === "plus" ? this.input.stepUp() : this.input.stepDown();
     if (previousValue !== this.input.value)
@@ -760,7 +759,6 @@ class ProductQuantityInput extends HTMLElement {
     const config = fetchConfig("javascript");
     config.headers["X-Requested-With"] = "XMLHttpRequest";
     delete config.headers["Content-Type"];
-    console.log(this.form);
 
     const formData = new FormData(this.form);
     formData.append(
@@ -774,7 +772,16 @@ class ProductQuantityInput extends HTMLElement {
       fetch(`${routes.cart_add_url}`, config)
         .then((response) => response.json())
         .then((response) => {
-          console.log(response);
+          if (response.quantity > 0) {
+            document.getElementById(
+              `${this.input.value}_button`
+            ).style.display = "none";
+            document.getElementById(
+              `${this.input.value}_selector`
+            ).style.display = "flex";
+          }
+          document.getElementById(`${this.input.value}_quantity`).value =
+            response.quantity;
           this.cartNotification.renderContents(response);
         })
         .catch((error) => {
@@ -784,74 +791,115 @@ class ProductQuantityInput extends HTMLElement {
       if (event.target.name === "plus") {
         var currentQuantity = Number( document.getElementById(event.target.previousElementSibling.id).value );
         //currentQuantity +=1;
-        console.log(currentQuantity);
         var productCode = this.input.value;
+
+        let content = document.querySelector(".cart-count-bubble");
+        console.log(content.firstChild.innerText);
+        
+
+
         if (currentQuantity > 0) {
-
-          var updateData = {
-            id: String(this.input.value),
-            quantity: String(currentQuantity + 1),
-          };
-          fetch("/cart/change.js", {
-            method: "POST",
-            credentials: "same-origin",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(updateData),
-          })
+          fetch(`${routes.cart_add_url}`, config)
+            .then((response) => response.json())
             .then((response) => {
-              console.log(response );
-              jQuery("#" + this.input.value + "_quantity").val(
-                currentQuantity + 1
-              );
-              jQuery("#" + this.input.value + "_minus_button").removeAttr(
-                "disabled"
-              );
-              var jsonResponse = response.json();
-              console.log(jsonResponse);
-              return jsonResponse;
+
+              console.log(response);
+
+              document.getElementById(
+                `${this.input.value}_quantity`
+              ).value = response.quantity;
+
+               document
+                 .getElementById(`${this.input.value}_minus_button`)
+                 .removeAttribute("disabled");                  
+
+              if (response.status) {
+                this.handleErrorMessage(response.description);
+                return;
+              }
+
+              //this.cartNotification.renderContents(response);
             })
-            .catch((error) => {
-              console.error("Error:", error);
+            .catch((e) => {
+              console.error(e);
             });
-
-
-
-          /* var updateData = {
-            id: String(this.input.value),
-            quantity: String(currentQuantity + 1),
-          };
-          console.log(updateData);
-
-          
-
-          const body = JSON.stringify({
-            productCode,
-            currentQuantity
-          });
-
-          fetch(`${routes.cart_change_url}`, { ...fetchConfig(), ...{ body } })
-            .then((response) => {
-              return response.text();
-            })
-            .then((state) => {
-              console.log(state);
-            })
-            .catch(() => {
-              this.querySelectorAll(".loading-overlay").forEach((overlay) =>
-                overlay.classList.add("hidden")
-              );
-              document.getElementById("cart-errors").textContent =
-                window.cartStrings.error;
-              this.disableLoading();
-            }); */
-
-
-
-
-
         }
+
+      }else if (event.target.name === "minus") {
+        let productID = document.getElementById(
+          `${this.input.value}`
+        ).value;
+        let productCount = document.getElementById(`${this.input.value}_quantity`).value;
+        productCount -=1;
+        console.log(productCount);
+        
+        var updateData = {
+          id: productID,
+          quantity: productCount,
+        };
+
+        console.log(productCount);
+
+        if(productCount == 0){
+          document.getElementById(`${this.input.value}_button`).style.display =
+            "block";
+          document.getElementById(
+            `${this.input.value}_selector`
+          ).style.display = "none";
+        }
+
+        const configs = fetchConfig("javascript");
+        configs.headers["X-Requested-With"] = "XMLHttpRequest";
+        delete configs.headers["Content-Type"];
+
+        const formDatas = new FormData();
+        formDatas.append("id", productID);
+        formDatas.append("quantity", productCount);
+        formDatas.append(
+          "sections",
+          this.cartNotification
+            .getSectionsToRender()
+            .map((section) => section.id)
+        );
+        formDatas.append("sections_url", window.location.pathname);
+        configs.body = formDatas;
+
+
+         
+
+         fetch(`${routes.cart_change_url}`, configs)
+           .then((response) => response.json())
+           .then((response) => {
+            console.log(response);
+            let content = document.querySelector(".cart-count-bubble");
+            content.firstChild.innerText = response.item_count;
+
+             for (let i = 0; i <= response.items.length; i++) {
+
+               if (response.items[i].id == this.input.value) {
+                   console.log(response.items[i]);
+                   document.getElementById(
+                     `${this.input.value}_quantity`
+                   ).value = response.items[i].quantity;
+
+                  document
+                    .getElementById(`${this.input.value}_minus_button`)
+                    .removeAttribute("disabled");
+
+                  if (response.status) {
+                    this.handleErrorMessage(response.description);
+                    return;
+                  }
+
+                  //this.cartNotification.renderContents(response.items[i]);
+               }
+
+             }
+             
+           })
+           .catch((e) => {
+             console.error(e);
+           }); 
 
       }
     }
