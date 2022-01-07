@@ -365,6 +365,7 @@
     "social_widget_36721": {
       "type": "social-widget",
       "settings": {
+        "titleimage": "shopify:\/\/shop_images\/Group.png",
         "social_widget_id": "36721",
         "social_product_id": "none",
         "social_widget_type": "none"
