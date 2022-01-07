@@ -47,6 +47,7 @@ nav ul li .list-menu__item{
 .header__submenu.list-menu:hover{
     opacity: 1;
 }
+.header__icon--cart .icon,
 .header__icon--cart .icon-cart{
     height: 1.9rem;
     width: 3.9rem;
