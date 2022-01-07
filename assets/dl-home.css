@@ -187,9 +187,9 @@ nav ul li .list-menu__item{
     text-transform: uppercase;
 }
 }
-.shopify-section{
+/* .shopify-section{
     position: relative;
-}
+} */
 summary .icon-dl{
     position: absolute;
     height: 0.6rem;

@@ -806,8 +806,11 @@ class ProductQuantityInput extends HTMLElement {
             .then((response) => {
               console.log(response);
 
-              document.getElementById(`${this.input.value}_quantity`).value =
-                response.quantity;
+              if (response.message != "Cart Error") {
+                   document.getElementById(
+                     `${this.input.value}_quantity`
+                   ).value = response.quantity;
+                }
 
               document
                 .getElementById(`${this.input.value}_minus_button`)
@@ -873,8 +876,13 @@ class ProductQuantityInput extends HTMLElement {
             for (let i = 0; i <= response.items.length; i++) {
               if (response.items[i].id == this.input.value) {
                 console.log(response.items[i]);
-                document.getElementById(`${this.input.value}_quantity`).value =
-                  response.items[i].quantity;
+
+                if (response.message != "Cart Error") {
+                   document.getElementById(
+                     `${this.input.value}_quantity`
+                   ).value = response.items[i].quantity;
+                }
+               
 
                 document
                   .getElementById(`${this.input.value}_minus_button`)
@@ -903,18 +911,17 @@ class ProductQuantityInput extends HTMLElement {
       .querySelector(selector).innerHTML;
   }
   handleErrorMessage(errorMessage = false) {
-    console.log(this);
-    this.errorMessageWrapper =
-      this.errorMessageWrapper ||
-      this.querySelector(".product-card__error-message-wrapper");
-    this.errorMessage =
-      this.errorMessage ||
-      this.errorMessageWrapper.querySelector(".product-card__error-message");
+    let errorMessageWrapper = document.getElementById(`${this.input.value}_error`);
+    errorMessage = errorMessage || errorMessageWrapper.querySelector(
+      ".product-card__error-message"
+    );
 
-    this.errorMessageWrapper.toggleAttribute("hidden", !errorMessage);
+    errorMessageWrapper.toggleAttribute("hidden", !errorMessage);
 
     if (errorMessage) {
-      this.errorMessage.textContent = errorMessage;
+      errorMessageWrapper.querySelector(
+        ".product-card__error-message"
+      ).innerHTML = errorMessage;
     }
   }
 }
