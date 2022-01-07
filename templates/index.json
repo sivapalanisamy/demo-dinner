@@ -361,6 +361,12 @@
         "headinglabel": "@thedinnerladies",
         "description": "<p>Follow us and share your #dinnerladies moment to have a chance to be featured<\/p>"
       }
+    },
+    "social_widget_36721": {
+      "type": "social-widget",
+      "settings": {
+        "social_widget_id": "36721"
+      }
     }
   },
   "order": [
@@ -371,6 +377,7 @@
     "categories-slider",
     "featured_products",
     "1640686378b055bb34",
-    "share-love"
+    "share-love",
+    "social_widget_36721"
   ]
 }
