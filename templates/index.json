@@ -272,6 +272,7 @@
     },
     "share-love": {
       "type": "share-love",
+      "disabled": true,
       "blocks": {
         "1b4d67bb-c3ad-4182-b58a-7042de035d7c": {
           "type": "image",
