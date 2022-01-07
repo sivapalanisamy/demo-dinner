@@ -155,6 +155,12 @@ nav ul li .list-menu__item{
 }
 .banner .banner__box{
     opacity: 1;
+    padding: 2rem 4rem 3rem;
+}
+.banner .banner__box .banner__buttons .button--primary{
+    background: #344E38;
+    color: #FFFFFF;
+    padding: 15px 54px;
 }
 .banner .banner-circle-1{
     width: 527px;
