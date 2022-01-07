@@ -507,7 +507,15 @@ summary .icon-dl{
     display: block;
     text-align: center;
 }
-
+.shopify-section .share-love-blk .share-love-section .social-widget-wrapper .sw-instagram-container{
+        background: transparent;
+}
+.share-love-section .social-widget-wrapper .sw-instagram-container .sw-instagram-header-title{
+    font-size: 20px;
+}
+.share-love-section .social-widget-wrapper .sw-instagram-container .sw-instagram-header-title a{
+    font-weight: 700;
+}
 .shopify-section .share-love-blk .share-love-section .share-slider .slick-prev{
         left:48%;
         bottom:-60px;

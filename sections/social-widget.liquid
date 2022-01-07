@@ -2,6 +2,11 @@
   {
     "name": "Section name",
     "settings": [
+      {
+           "type": "image_picker",
+           "id": "titleimage",
+           "label": "Image"
+      },
 		{
           	"id": "social_widget_id",
             "type": "text",
@@ -37,5 +42,12 @@
 {% if section.settings.social_widget_type == "product" %}
 <div class="social-widget-product-wrapper" data-product-id="{{ product.id }}"></div>
 {% else %}
-<div class="social-widget-wrapper" data-widget-id="{{ section.settings.social_widget_id }}"></div>
+<div class="share-love-blk">
+    <div class="shopify-section spaced-section page-width share-love-section">
+        <div class="title-img">
+          <img src="{{section.settings.titleimage | img_url: 'master'}}"  loading="lazy" width=""   height="">
+        </div>
+        <div class="social-widget-wrapper" data-widget-id="{{ section.settings.social_widget_id }}"></div>
+    </div>
+  </div>
 {% endif %}
