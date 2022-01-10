@@ -210,6 +210,11 @@ nav ul li .list-menu__item{
 /* .shopify-section{
     position: relative;
 } */
+
+.button--green{
+    background: #344E38;
+    color: #FFFFFF;
+}
 .spaced-section{
     margin: 0;
 }
