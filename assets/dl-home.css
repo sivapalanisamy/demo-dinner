@@ -126,7 +126,7 @@ nav ul li .list-menu__item{
     right: 8px;
     top: 8px;
 }
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 1024px) {
     .footer .footer-menu-links,
     .footer .footer-menu-news{
         width: 100%;
