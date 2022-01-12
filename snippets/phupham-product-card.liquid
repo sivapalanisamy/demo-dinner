@@ -371,7 +371,7 @@
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(shippingAddressAttrObj),
+            body: shippingAddressAttrObj,
         }).then(response => {
             alert('Successfully add the shipping address to the cart\'s attributes !');
             var jsonResponse = response.json();
