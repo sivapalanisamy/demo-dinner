@@ -353,8 +353,8 @@
 
         // Add shipping address to cart's attribute
         var shippingAddressAttrObj = {
-            'attributes': [
-                {
+            'attributes': {
+                'shipping_address': {
                     'country': 'Vietnam',
                     'firstName': 'Phu',
                     'lastName': 'Pham',
@@ -362,7 +362,7 @@
                     'city': 'Ho Chi Minh',
                     'postalCode': '700000'
                 }
-            ]
+            }
         };
 
         fetch('/cart/update.js', {
