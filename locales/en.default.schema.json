@@ -876,6 +876,9 @@
         "image_2": {
           "label": "Second image"
         },
+        "image_3": {
+          "label": "Third image"
+        },
         "image_height": {
           "label": "Banner height",
           "options__1": {
