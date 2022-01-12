@@ -782,19 +782,19 @@ class ProductQuantityInput extends HTMLElement {
                         ).style.display = "flex";
                     }
 
+                    document.getElementById(`${this.input.value}_quantity`).value = response.quantity;
+                    this.cartNotification.renderContents(response);
+
+                    //Checking if there is any existing shipping address
                     var cartContents = fetch('/cart.js')
                         .then((response) => response.json())
                         .then((cartData) => {
-                            console.log('Checking if there is any existing shipping address...');
-                            console.log('Cart data:')
                             if ('shipping_address' in cartData['attributes']) {
                                 //already existed shipping address attribute - do nothing
                                 //const shippingAddress = JSON.parse(cartData['attributes']['shipping_address']);
                                 //console.log(shippingAddress);
                             } else {
                                 //no shipping address attribute is set, show the shipping address popup modal
-                                document.getElementById(`${this.input.value}_quantity`).value = response.quantity;
-                                this.cartNotification.renderContents(response);
                                 $('#shipping_address_modal').show();
                             }
                         });
