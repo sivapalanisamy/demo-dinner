@@ -788,9 +788,9 @@ class ProductQuantityInput extends HTMLElement {
                             console.log('Checking if there is any existing shipping address...');
                             console.log('Cart data:')
                             if ('shipping_address' in cartData['attributes']) {
-                                //already existed shipping address attribute
-                                const shippingAddress = JSON.parse(cartData['attributes']['shipping_address']);
-                                console.log(shippingAddress);
+                                //already existed shipping address attribute - do nothing
+                                //const shippingAddress = JSON.parse(cartData['attributes']['shipping_address']);
+                                //console.log(shippingAddress);
                             } else {
                                 //no shipping address attribute is set, show the shipping address popup modal
                                 document.getElementById(`${this.input.value}_quantity`).value = response.quantity;
