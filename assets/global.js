@@ -960,4 +960,13 @@ function fetchDataFromCart() {
     console.log(cartContents);
 }
 
-
+function fetchCurrentShippingAddressAttrInCart() {
+    var cartContents = fetch('/cart.js')
+        .then((response) => response.json())
+        .then((cartData) => {
+            if ('shipping_address' in cartData['attributes']) {
+                const shippingAddress = JSON.parse(cartData['attributes']['shipping_address'].replace('=>', ':'));
+                console.log(shippingAddress);
+            }
+        });
+}
