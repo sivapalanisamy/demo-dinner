@@ -965,7 +965,7 @@ function fetchCurrentShippingAddressAttrInCart() {
         .then((response) => response.json())
         .then((cartData) => {
             if ('shipping_address' in cartData['attributes']) {
-                const shippingAddress = JSON.parse(cartData['attributes']['shipping_address'].replace('=>', ':'));
+                const shippingAddress = JSON.parse(cartData['attributes']['shipping_address'].replace(/=>/g, ':'));
                 console.log(shippingAddress);
             }
         });
