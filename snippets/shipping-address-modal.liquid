@@ -436,13 +436,13 @@
         var shippingAddressAttrObj = {
             'attributes': {
                 'shipping_address': {
-                    'country': $('#checkout_shipping_address_country').val(),
-                    'firstName': $('#checkout_shipping_address_first_name').val(),
-                    'lastName': $('#checkout_shipping_address_last_name').val(),
-                    'address': $('#checkout_shipping_address_address').val(),
-                    'address2': $('#checkout_shipping_address_address2').val(),
-                    'city': $('#checkout_shipping_address_city').val(),
-                    'postalCode': $('#checkout_shipping_address_zip').val()
+                    'country': $('#checkout_shipping_address_country').val().trim(),
+                    'firstName': $('#checkout_shipping_address_first_name').val().trim(),
+                    'lastName': $('#checkout_shipping_address_last_name').val().trim(),
+                    'address': $('#checkout_shipping_address_address').val().trim(),
+                    'address2': $('#checkout_shipping_address_address2').val().trim(),
+                    'city': $('#checkout_shipping_address_city').val().trim(),
+                    'postalCode': $('#checkout_shipping_address_zip').val().trim()
                 }
             }
         };
