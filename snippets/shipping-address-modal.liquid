@@ -76,7 +76,6 @@
     }
 </style>
 
-
 <div id="shipping_address_modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <!-- Modal content-->
@@ -458,7 +457,6 @@
         }).then(response => {
             hideShippingAddressModal();
             alert('Successfully add the shipping address to the cart\'s attributes !');
-            this.cartNotification.renderContents(response);
         }).catch((error) => {
             console.error('Error:', error);
         });
