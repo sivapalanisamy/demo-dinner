@@ -946,13 +946,6 @@ class ProductQuantityInput extends HTMLElement {
 
 customElements.define("quantity-card", ProductQuantityInput);
 
-$(document).ready(function () {
-    if ($('.section--shipping-address').length) {
-        console.log('Current page is checkout page - shipping information');
-    }
-});
-
-
 function fetchDataFromCart() {
     var cartContents = fetch("/cart.js")
         .then((response) => response.json())
