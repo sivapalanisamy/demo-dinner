@@ -86,7 +86,7 @@
                     &times;
                 </button>
                 <h4 class="modal-title">
-                    Shipping Address
+                    Please enter your shipping address
                 </h4>
             </div>
             <div class="modal-body">
@@ -426,12 +426,42 @@
 
 
 <script type="text/javascript">
+
     function hideShippingAddressModal() {
         $('#shipping_address_modal').hide();
     }
 
     function saveShippingAddressToCart() {
 
+        // Add shipping address to cart's attribute
+        var shippingAddressAttrObj = {
+            'attributes': {
+                'shipping_address': {
+                    'country': $('#checkout_shipping_address_country').val(),
+                    'firstName': $('#checkout_shipping_address_first_name').val(),
+                    'lastName': $('#checkout_shipping_address_last_name').val(),
+                    'address': $('#checkout_shipping_address_address').val(),
+                    'address2': $('#checkout_shipping_address_address2').val(),
+                    'city': $('#checkout_shipping_address_city').val(),
+                    'postalCode': $('#checkout_shipping_address_zip').val()
+                }
+            }
+        };
+
+        fetch('/cart/update.js', {
+            method: 'POST',
+            credentials: 'same-origin',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(shippingAddressAttrObj),
+        }).then(response => {
+            hideShippingAddressModal();
+            alert('Successfully add the shipping address to the cart\'s attributes !');
+            this.cartNotification.renderContents(response);
+        }).catch((error) => {
+            console.error('Error:', error);
+        });
     }
 
 </script>
