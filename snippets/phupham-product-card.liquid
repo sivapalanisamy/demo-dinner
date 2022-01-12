@@ -349,4 +349,39 @@
         return false;
     }
 
+    function addShippingAddressToCartAttribute() {
+
+        // Add shipping address to cart's attribute
+        var shippingAddressAttrObj = {
+            'attributes': [
+                {
+                    'country': 'Vietnam',
+                    'firstName': 'Phu',
+                    'lastName': 'Pham',
+                    'address': 'SAI-Digital',
+                    'city': 'Ho Chi Minh',
+                    'postalCode': '700000'
+                }
+            ]
+        };
+
+        fetch('/cart/change.js', {
+            method: 'POST',
+            credentials: 'same-origin',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(shippingAddressAttrObj),
+        }).then(response => {
+            alert('Successfully add the shipping address to the cart\'s attributes !');
+            var jsonResponse = response.json();
+            console.log(jsonResponse);
+            return jsonResponse;
+        }).catch((error) => {
+            console.error('Error:', error);
+        });
+
+    }
+
+
 </script>
