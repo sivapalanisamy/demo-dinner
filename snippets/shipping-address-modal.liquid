@@ -121,6 +121,22 @@
 
 <script type="text/javascript">
 
+    function handlingShippingAddressData() {
+        fetch('/cart.js')
+            .then((response) => response.json())
+            .then((cartData) => {
+                //Checking if there is any existing shipping address
+                if ('shipping_address' in cartData['attributes']) {
+                    //already existed shipping address attribute - do nothing
+                    //const shippingAddress = JSON.parse(cartData['attributes']['shipping_address']);
+                    //console.log(shippingAddress);
+                } else {
+                    //no shipping address attribute is set, show the shipping address popup modal
+                    showShippingAddressModal();
+                }
+            });
+    }
+
     function showShippingAddressModal() {
         $('#shipping_address_modal').show();
     }
@@ -129,7 +145,7 @@
         //Resetting all form data
         $('#shipping_address_modal').find('input').val();
         $('#shipping_address_modal').find('.error-msg').hide();
-        
+
         $('#shipping_address_modal').hide();
     }
 
@@ -189,6 +205,18 @@
         }).catch((error) => {
             console.error('Error:', error);
         });
+    }
+
+    function fetchCurrentShippingAddressAttrInCart() {
+        fetch('/cart.js')
+            .then((response) => response.json())
+            .then((cartData) => {
+                if ('shipping_address' in cartData['attributes']) {
+                    const shippingAddress = JSON.parse(cartData['attributes']['shipping_address'].replace(/=>/g, ':'));
+                    console.log(shippingAddress);
+                    return shippingAddress;
+                }
+            });
     }
 
 </script>
