@@ -938,17 +938,3 @@ class ProductQuantityInput extends HTMLElement {
 }
 
 customElements.define("quantity-card", ProductQuantityInput);
-
-function fetchDataFromCart() {
-    var cartContents = fetch("/cart.js")
-        .then((response) => response.json())
-        .then((data) => {
-            this.cartNotification.renderContents(data);
-            //$("#cart-count-bubble").load();
-            //var $cartLinkText = $(".cart-count-bubble").html(data.item_count);
-            return data;
-        });
-    return false;
-
-    console.log(cartContents);
-}
