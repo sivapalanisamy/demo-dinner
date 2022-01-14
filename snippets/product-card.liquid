@@ -277,25 +277,3 @@
         {% endfor %}
     </div>
 {% endif %}
-
-{% comment %}
-    Renders the shipping address modal for each product card
-{% endcomment %}
-{% render 'shipping-address-modal' %}
-
-<script type="text/javascript">
-
-
-    function fetchDataFromCart() {
-        var cartContents = fetch('/cart.js')
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                this.cartNotification.renderContents(data);
-                return data
-            });
-        return false;
-    }
-
-</script>
-
