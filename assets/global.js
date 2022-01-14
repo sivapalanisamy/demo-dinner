@@ -795,7 +795,7 @@ class ProductQuantityInput extends HTMLElement {
                                 //console.log(shippingAddress);
                             } else {
                                 //no shipping address attribute is set, show the shipping address popup modal
-                                $('#shipping_address_modal').show();
+                                showShippingAddressModal();
                             }
                         });
 
@@ -850,7 +850,7 @@ class ProductQuantityInput extends HTMLElement {
                                         //console.log(shippingAddress);
                                     } else {
                                         //no shipping address attribute is set, show the shipping address popup modal
-                                        $('#shipping_address_modal').show();
+                                        showShippingAddressModal();
                                     }
                                 });
 
@@ -935,7 +935,7 @@ class ProductQuantityInput extends HTMLElement {
                                             //console.log(shippingAddress);
                                         } else {
                                             //no shipping address attribute is set, show the shipping address popup modal
-                                            $('#shipping_address_modal').show();
+                                            showShippingAddressModal();
                                         }
                                     });
 
