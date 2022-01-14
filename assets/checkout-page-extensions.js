@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     document.getElementById('checkout_shipping_address_first_name').value = 'LadyDinner';
                     document.getElementById('checkout_shipping_address_last_name').value = 'SAI-Digital';
                     document.getElementById('checkout_shipping_address_address1').value = 'Level 14, 275 Alfred Street N, North Sydney NSW 2060';
+                    document.getElementById('checkout_shipping_address_city').value = 'Matraville';
+                    document.getElementById('checkout_shipping_address_province').value = 'New South Wales';
 
                     const postalCodeElement = document.getElementById('checkout_shipping_address_zip');
                     postalCodeElement.setAttribute("disabled", "disabled");
