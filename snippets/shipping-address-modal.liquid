@@ -122,11 +122,14 @@
 <script type="text/javascript">
 
     function showShippingAddressModal() {
-        $('#shipping_address_modal').find('.error-msg').hide();
         $('#shipping_address_modal').show();
     }
 
     function hideShippingAddressModal() {
+        //Resetting all form data
+        $('#shipping_address_modal').find('input').val();
+        $('#shipping_address_modal').find('.error-msg').hide();
+        
         $('#shipping_address_modal').hide();
     }
 
