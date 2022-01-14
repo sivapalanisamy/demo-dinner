@@ -90,6 +90,8 @@
                         <input placeholder="Postal code" type="text"
                                name="checkout[shipping_address][zip]"
                                id="checkout_shipping_address_zip">
+                        <span class="error-msg" style="display: none;"
+                              id="checkout_shipping_address_zip_error_msg"></span>
                     </div>
 
                 </div>
@@ -121,6 +123,17 @@
     }
 
     function saveShippingAddressToCart() {
+
+        //Hide all form's validation messages
+        $('.error-msg').hide();
+
+        //Form validations
+        var postalCodeElement = $('#checkout_shipping_address_zip');
+        if (postalCodeElement.val().trim().length === 0) {
+            $('#checkout_shipping_address_zip_error_msg').val('Please input a valid postal code value !');
+            $('#checkout_shipping_address_zip_error_msg').show();
+            return false;
+        }
 
         // Add shipping address to cart's attribute
         var shippingAddressAttrObj = {
