@@ -1,3 +1,4 @@
+/*
 (function ($) {
     $(function () {//document.ready
         if ($('.section--shipping-address').length) {
@@ -9,3 +10,12 @@
     //(does not wait for DOM READY STATE)
 
 })(jQuery);
+*/
+
+
+jQuery(window).load(function () { // < remove the $ here
+    console.log('Everything loaded');
+    if (jQuery('.section--shipping-address').length) {
+        
+    }
+});
