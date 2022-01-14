@@ -785,19 +785,8 @@ class ProductQuantityInput extends HTMLElement {
                     document.getElementById(`${this.input.value}_quantity`).value = response.quantity;
                     this.cartNotification.renderContents(response);
 
-                    //Checking if there is any existing shipping address
-                    var cartContents = fetch('/cart.js')
-                        .then((response) => response.json())
-                        .then((cartData) => {
-                            if ('shipping_address' in cartData['attributes']) {
-                                //already existed shipping address attribute - do nothing
-                                //const shippingAddress = JSON.parse(cartData['attributes']['shipping_address']);
-                                //console.log(shippingAddress);
-                            } else {
-                                //no shipping address attribute is set, show the shipping address popup modal
-                                showShippingAddressModal();
-                            }
-                        });
+                    //Handling the shipping address information
+                    handlingShippingAddressData();
 
                 })
                 .catch((error) => {
@@ -840,19 +829,8 @@ class ProductQuantityInput extends HTMLElement {
 
                             //this.cartNotification.renderContents(response);
 
-                            //Checking if there is any existing shipping address
-                            var cartContents = fetch('/cart.js')
-                                .then((response) => response.json())
-                                .then((cartData) => {
-                                    if ('shipping_address' in cartData['attributes']) {
-                                        //already existed shipping address attribute - do nothing
-                                        //const shippingAddress = JSON.parse(cartData['attributes']['shipping_address']);
-                                        //console.log(shippingAddress);
-                                    } else {
-                                        //no shipping address attribute is set, show the shipping address popup modal
-                                        showShippingAddressModal();
-                                    }
-                                });
+                            //Handling the shipping address information
+                            handlingShippingAddressData();
 
                         })
                         .catch((e) => {
@@ -924,20 +902,6 @@ class ProductQuantityInput extends HTMLElement {
                                     this.handleErrorMessage(response.description);
                                     return;
                                 }
-
-                                //Checking if there is any existing shipping address
-                                var cartContents = fetch('/cart.js')
-                                    .then((response) => response.json())
-                                    .then((cartData) => {
-                                        if ('shipping_address' in cartData['attributes']) {
-                                            //already existed shipping address attribute - do nothing
-                                            //const shippingAddress = JSON.parse(cartData['attributes']['shipping_address']);
-                                            //console.log(shippingAddress);
-                                        } else {
-                                            //no shipping address attribute is set, show the shipping address popup modal
-                                            showShippingAddressModal();
-                                        }
-                                    });
 
                                 //this.cartNotification.renderContents(response.items[i]);
                             }
