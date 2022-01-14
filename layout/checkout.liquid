@@ -52,14 +52,8 @@
 
 {{ tracking_code }}
 
-<script type="text/javascript">
-    (function ($) {
-        //Checking if current page is shipping address information section
-        if (jQuery('.section--shipping-address').length) {
-            console.log('In shipping address page...');
-        }
-    })(jQuery);
-</script>
+<!-- Adding extension javascript code for populating the shipping address information to form -->
+<script src="{{ 'checkout-page-extensions.js' | asset_url }}" defer="defer"></script>
 
 </body>
 </html>
