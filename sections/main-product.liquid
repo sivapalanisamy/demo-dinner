@@ -156,10 +156,11 @@
               </quantity-input>
             </div>
         
-        	<div class="product-form__input product-form__gift_card_message">
-                <label for="your-gift-card-message">Your gift card message</label>
-                <textarea id="your-gift-card-message" name="properties[_Your gift card message]"></textarea>
-            </div>
+          {%- when 'your_gift_card_message' -%}
+          <div class="product-form__input product-form__gift_card_message">
+              <label class="form__label" for="your-gift-card-message">Your gift card message</label>
+              <textarea class="form__message" id="your-gift-card-message" name="properties[_Your gift card message]"></textarea>
+          </div>
         
           {%- when 'popup' -%}
               <modal-opener class="product-popup-modal__opener no-js-hidden" data-modal="#PopupModal-{{ block.id }}" {{ block.shopify_attributes }}>
