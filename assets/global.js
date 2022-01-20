@@ -585,7 +585,8 @@ class VariantSelects extends HTMLElement {
             this.updateShareUrl();
         }
 
-        console.log('Change product variant to: ['+this.currentVariant+']');
+        console.log('Change product variant...');
+        console.log(this.currentVariant);
     }
 
     updateOptions() {
