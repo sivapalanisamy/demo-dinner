@@ -156,18 +156,20 @@
               </quantity-input>
             </div>
         
-           <h1>{{ product.type }}</h1>
-                        <div class="product-form__input product-form__gift_card_message" style="max-width: 100%">
-                            <label class="form__label" for="your-gift-card-message">Your gift card message</label>
-                            <textarea class="form__message--large"
-                                      style="width: 100%;
-                                      min-height: 100px;
-                                      padding: 10px;
-                                      font-family: var(--font-heading-family);
-                                      font-size: 18px;
-                                      border-radius: 15px;"
-                                      id="your-gift-card-message"
-                                      name="properties[_Your gift card message]"></textarea>
+           {%- if product.type == "Gift Cards" -%}
+              <div class="product-form__input product-form__gift_card_message" style="max-width: 100%">
+                <label class="form__label" for="your-gift-card-message">Your gift card message</label>
+                <textarea class="form__message--large"
+                          style="width: 100%;
+                                 min-height: 100px;
+                                 padding: 10px;
+                                 font-family: var(--font-heading-family);
+                                 font-size: 18px;
+                                 border-radius: 15px;"
+                          id="your-gift-card-message"
+                          name="properties[_Your gift card message]"></textarea>
+              </div>
+            {%- endif -%}
         
           {%- when 'popup' -%}
               <modal-opener class="product-popup-modal__opener no-js-hidden" data-modal="#PopupModal-{{ block.id }}" {{ block.shopify_attributes }}>
