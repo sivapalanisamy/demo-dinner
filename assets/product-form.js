@@ -76,13 +76,14 @@ if (!customElements.get('product-form')) {
     });
 }
 
-function mappingProductGiftCardMessageToFieldInPDP(productId, defaultVariantId) {
+function mappingProductGiftCardMessageToFieldInPDP(productId) {
 
-    var currentVariantId = getProductUrlParameter('variant');
-    if (currentVariantId && parseInt(currentVariantId) !== defaultVariantId)
-        defaultVariantId = parseInt(currentVariantId);
+    var defaultVariantId = -1;
+    if (getProductUrlParameter('variant'))
+        defaultVariantId = parseInt(getProductUrlParameter('variant'));
 
-    console.log('Fetching the existed gift card[' + defaultProductId + '][' + defaultVariantId + '] message to field...');
+    console.log('Fetching the existed gift card[' + productId + '][' + defaultVariantId + '] message to field...');
+
     fetch('/cart.js')
         .then((response) => response.json())
         .then((cartData) => {
@@ -95,10 +96,18 @@ function mappingProductGiftCardMessageToFieldInPDP(productId, defaultVariantId) 
                 if (giftCardMsgDataCollection.length > 0) {
                     var isExisted = false;
                     $.each(giftCardMsgDataCollection, function (idx, record) {
-                        if (record['productId'] === productId && record['variantId'] === defaultVariantId) {
-                            $('#your-gift-card-message').val(record['message']);
-                            return false;
+                        if (defaultVariantId !== -1) {
+                            if (record['productId'] === productId && record['variantId'] === defaultVariantId) {
+                                $('#your-gift-card-message').val(record['message']);
+                                return false;
+                            }
+                        } else {
+                            if (record['productId'] === productId) {
+                                $('#your-gift-card-message').val(record['message']);
+                                return false;
+                            }
                         }
+
                     });
                 }
             }
