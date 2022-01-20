@@ -587,6 +587,15 @@ class VariantSelects extends HTMLElement {
 
         console.log('Change product variant...');
         console.log(this.currentVariant);
+
+        //Handling product gift card message data mapping
+        if (typeof processMappingProductGiftCardMessageToFieldInPDP !== 'undefined'
+            && processMappingProductGiftCardMessageToFieldInPDP) {
+            if (typeof needToProcessMappingProductGiftCardId !== 'undefined'
+                && needToProcessMappingProductGiftCardId) {
+                mappingProductGiftCardMessageToFieldInPDP(needToProcessMappingProductGiftCardId);
+            }
+        }
     }
 
     updateOptions() {
