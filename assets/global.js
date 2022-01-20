@@ -567,6 +567,7 @@ class VariantSelects extends HTMLElement {
     }
 
     onVariantChange() {
+
         this.updateOptions();
         this.updateMasterId();
         this.toggleAddButton(true, '', false);
@@ -583,6 +584,8 @@ class VariantSelects extends HTMLElement {
             this.renderProductInfo();
             this.updateShareUrl();
         }
+
+        console.log('Change product variant to: ['+this.currentVariant+']');
     }
 
     updateOptions() {
