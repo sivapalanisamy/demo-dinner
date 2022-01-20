@@ -169,8 +169,8 @@
 
                             {%- if is_added == true -%}
                             <script type="text/javascript">
-                                var defaultProductId = parseInt({{ cart_line_item.product_id }});
-                                var defaultVariantId = parseInt({{ product.selected_variant.id }});
+                                var defaultGiftCardProductId = parseInt({{ product.product_id }});
+                                var defaultGiftCardVariantId = parseInt({{ product.selected_variant.id }});
                                 //mappingProductGiftCardMessageToFieldInPDP(defaultProductId, defaultVariantId);
                             </script>
                             {%- endif -%}
