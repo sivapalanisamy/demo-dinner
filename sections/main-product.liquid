@@ -169,13 +169,9 @@
 
                             {%- if is_added == true -%}
                             <script type="text/javascript">
-                                var currentVariantId = getProductUrlParameter('variant');
-                                if (!currentVariantId || currentVariantId === '') {
-                                    currentVariantId = {{ product.selected_variant.id }};
-                                }
-                                console.log('Fetching the existed gift card message to field...');
-                                mappingProductGiftCardMessageToFieldInPDP(parseInt({{ cart_line_item.product_id }}), parseInt(currentVariantId));
-
+                                var defaultProductId = parseInt({{ cart_line_item.product_id }});
+                                var defaultVariantId = parseInt({{ product.selected_variant.id }});
+                                mappingProductGiftCardMessageToFieldInPDP(defaultProductId, defaultVariantId);
                             </script>
                             {%- endif -%}
                             <div class="product-form__input product-form__gift_card_message" style="max-width: 100%">
