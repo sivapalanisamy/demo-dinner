@@ -76,23 +76,13 @@ if (!customElements.get('product-form')) {
     });
 }
 
-var getProductUrlParameter = function getUrlParameter(sParam) {
-    var sPageURL = window.location.search.substring(1),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
+function mappingProductGiftCardMessageToFieldInPDP(productId, defaultVariantId) {
 
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
+    var currentVariantId = getProductUrlParameter('variant');
+    if (currentVariantId !== '' && parseInt(currentVariantId) !== defaultVariantId)
+        defaultVariantId = parseInt(currentVariantId);
 
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-        }
-    }
-    return false;
-};
-
-function mappingProductGiftCardMessageToFieldInPDP(productId, variantId) {
+    console.log('Fetching the existed gift card[' + defaultProductId + '][' + defaultVariantId + '] message to field...');
     fetch('/cart.js')
         .then((response) => response.json())
         .then((cartData) => {
@@ -105,7 +95,7 @@ function mappingProductGiftCardMessageToFieldInPDP(productId, variantId) {
                 if (giftCardMsgDataCollection.length > 0) {
                     var isExisted = false;
                     $.each(giftCardMsgDataCollection, function (idx, record) {
-                        if (record['productId'] === productId && record['variantId'] === variantId) {
+                        if (record['productId'] === productId && record['variantId'] === defaultVariantId) {
                             $('#your-gift-card-message').val(record['message']);
                             return false;
                         }
@@ -185,6 +175,20 @@ function handlingProductGiftCardWithMessage(addToCartReponse) {
             });
 
     }
-
-
 }
+
+var getProductUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+    return false;
+};
