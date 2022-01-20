@@ -76,8 +76,31 @@ if (!customElements.get('product-form')) {
     });
 }
 
+function mappingProductGiftCardMessageToFieldInPDP(productId, variantId) {
+    fetch('/cart.js')
+        .then((response) => response.json())
+        .then((cartData) => {
+            if ('gift_card_messages' in cartData['attributes']) {
+                const fetchedGiftCardMsgDataObj = JSON.parse(cartData['attributes']['gift_card_messages'].replace(/=>/g, ':'));
+                console.log('Fetching current gift card data in cart...');
+                console.log(fetchedGiftCardMsgDataObj);
+                const giftCardMsgDataCollection = fetchedGiftCardMsgDataObj.data;
+
+                if (giftCardMsgDataCollection.length > 0) {
+                    var isExisted = false;
+                    $.each(giftCardMsgDataCollection, function (idx, record) {
+                        if (record['productId'] === productId && record['variantId'] === variantId) {
+                            $('#your-gift-card-message').val(record['message']);
+                            return false;
+                        }
+                    });
+                }
+            }
+        });
+}
+
 function handlingProductGiftCardWithMessage(addToCartReponse) {
-    
+
     if (!addToCartReponse)
         return;
     const productId = addToCartReponse.id;
