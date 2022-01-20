@@ -32,7 +32,7 @@ if (!customElements.get('product-form')) {
 
             fetch(`${routes.cart_add_url}`, config)
                 .then((response) => response.json())
-                .then((response) => {
+                .then(async (response) => {
                     if (response.status) {
                         this.handleErrorMessage(response.description);
                         return;
@@ -42,8 +42,9 @@ if (!customElements.get('product-form')) {
 
                     console.log('Add to cart in product details page finish...');
                     console.log(response);
+
                     //Handling the shipping address information
-                    handlingShippingAddressData();
+                    await handlingShippingAddressData();
 
                 })
                 .catch((e) => {
