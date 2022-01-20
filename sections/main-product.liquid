@@ -157,8 +157,20 @@
             </div>
         
            {%- if product.type == "Gift Cards" -%}
-                            <h1>{{ product.id }}</h1>
-                            <h1>{{ product.selected_variant.id }}</h1>
+                            {#<h1>{{ product.id }}</h1>
+                            <h1>{{ product.selected_variant.id }}</h1>#}
+
+                            <!-- checking if current gift card is added to cart or not -->
+                            {% assign is_added = false %}
+                            {% for cart_line_item in cart.items %}
+                                {% if cart_line_item.product_id == product.id %}
+                                    {% assign is_added = true %}
+                                {% endif %}
+                            {% endfor %}
+
+                            {%- if is_added == true -%}
+                                <h1>Added</h1>
+                            {%- endif -%}
                             <div class="product-form__input product-form__gift_card_message" style="max-width: 100%">
                                 <label class="form__label" for="your-gift-card-message">Your gift card message</label>
                                 <textarea class="form__message--large"
