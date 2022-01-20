@@ -46,6 +46,12 @@ if (!customElements.get('product-form')) {
                     //Handling the shipping address information
                     await handlingShippingAddressData();
 
+                    //Handling product gift card with message
+                    if (response.product_type === "Gift Cards") {
+                        await handlingProductGiftCardWithMessage(response);
+                    }
+
+
                 })
                 .catch((e) => {
                     console.error(e);
@@ -68,4 +74,78 @@ if (!customElements.get('product-form')) {
             }
         }
     });
+}
+
+function handlingProductGiftCardWithMessage(addToCartReponse) {
+    
+    if (!addToCartReponse)
+        return;
+    const productId = addToCartReponse.id;
+    const variantId = addToCartReponse.variant_id;
+    const giftCardMsgContent = $('#your-gift-card-message').val().trim();
+
+    if (giftCardMsgContent !== 0) {
+
+        const giftCardMsgDataEntry = {
+            'productId': productId,
+            'variantId': variantId,
+            'message': giftCardMsgContent
+        };
+
+        var giftCardMsgDataCollection = [];
+
+        fetch('/cart.js')
+            .then((response) => response.json())
+            .then((cartData) => {
+                if ('gift_card_messages' in cartData['attributes']) {
+                    const fetchedGiftCardMsgDataObj = JSON.parse(cartData['attributes']['gift_card_messages'].replace(/=>/g, ':'));
+                    console.log('Fetching current gift card data in cart...');
+                    console.log(fetchedGiftCardMsgDataObj);
+                    giftCardMsgDataCollection = fetchedGiftCardMsgDataObj.data;
+
+                    if (giftCardMsgDataCollection.length > 0) {
+                        var isExisted = false;
+                        $.each(giftCardMsgDataCollection, function (idx, record) {
+                            if (record['productId'] === productId && record['variantId'] === variantId) {
+                                giftCardMsgDataCollection[idx] = giftCardMsgDataEntry;
+                                isExisted = true;
+                                return false;
+                            }
+                        });
+                        if (!isExisted) {
+                            giftCardMsgDataCollection.push(giftCardMsgDataEntry);
+                        }
+                    } else {
+                        giftCardMsgDataCollection.push(giftCardMsgDataEntry);
+                    }
+                } else {
+                    giftCardMsgDataCollection.push(giftCardMsgDataEntry);
+                }
+
+                const giftCardMsgAttrObj = {
+                    'attributes': {
+                        'gift_card_messages': {
+                            'data': giftCardMsgDataCollection
+                        }
+                    }
+                };
+
+                fetch('/cart/update.js', {
+                    method: 'POST',
+                    credentials: 'same-origin',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(giftCardMsgAttrObj),
+                }).then(response => {
+                    console.info('Successfully add the gift card message address to the cart\'s attributes !')
+                }).catch((error) => {
+                    console.error('Error:', error);
+                });
+
+            });
+
+    }
+
+
 }
