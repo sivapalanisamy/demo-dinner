@@ -79,7 +79,7 @@ if (!customElements.get('product-form')) {
 function mappingProductGiftCardMessageToFieldInPDP(productId, defaultVariantId) {
 
     var currentVariantId = getProductUrlParameter('variant');
-    if (currentVariantId !== '' && parseInt(currentVariantId) !== defaultVariantId)
+    if (currentVariantId && parseInt(currentVariantId) !== defaultVariantId)
         defaultVariantId = parseInt(currentVariantId);
 
     console.log('Fetching the existed gift card[' + defaultProductId + '][' + defaultVariantId + '] message to field...');
@@ -109,7 +109,7 @@ function handlingProductGiftCardWithMessage(addToCartReponse) {
 
     if (!addToCartReponse)
         return;
-    const productId = addToCartReponse.id;
+    const productId = addToCartReponse.product_id;
     const variantId = addToCartReponse.variant_id;
     const giftCardMsgContent = $('#your-gift-card-message').val().trim();
 
