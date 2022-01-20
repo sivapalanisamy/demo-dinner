@@ -41,6 +41,7 @@ if (!customElements.get('product-form')) {
                     this.cartNotification.renderContents(response);
 
                     console.log('Add to cart in product details page finish...');
+                    console.log(response);
                     //Handling the shipping address information
                     handlingShippingAddressData();
 
