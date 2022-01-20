@@ -41,6 +41,8 @@ if (!customElements.get('product-form')) {
                     this.cartNotification.renderContents(response);
 
                     console.log('Add to cart in product details page finish...');
+                    //Handling the shipping address information
+                    handlingShippingAddressData();
 
                 })
                 .catch((e) => {
