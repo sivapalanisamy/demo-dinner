@@ -168,11 +168,9 @@
                             {% endfor %}
 
                             {%- if is_added == true -%}
-                            <script type="text/javascript">
-                                var defaultGiftCardProductId = parseInt({{ product.id }});
-                                var defaultGiftCardVariantId = parseInt({{ product.selected_variant.id }});
-                                //mappingProductGiftCardMessageToFieldInPDP(defaultProductId, defaultVariantId);
-                            </script>
+                                <script type="text/javascript">
+                                    var processMappingProductGiftCardMessageToFieldInPDP = true;
+                                </script>
                             {%- endif -%}
                             <div class="product-form__input product-form__gift_card_message" style="max-width: 100%">
                                 <label class="form__label" for="your-gift-card-message">Your gift card message</label>
