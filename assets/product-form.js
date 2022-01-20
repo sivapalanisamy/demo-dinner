@@ -109,16 +109,21 @@ function mappingProductGiftCardMessageToFieldInPDP(productId) {
                         if (defaultVariantId !== -1) {
                             if (record['productId'] === productId && record['variantId'] === defaultVariantId) {
                                 $('#your-gift-card-message').val(record['message']);
+                                isExisted = true;
                                 return false;
                             }
                         } else {
                             if (record['productId'] === productId) {
                                 $('#your-gift-card-message').val(record['message']);
+                                isExisted = true;
                                 return false;
                             }
                         }
-
                     });
+
+                    if (!isExisted) {
+                        $('#your-gift-card-message').val('');
+                    }
                 }
             }
         });
