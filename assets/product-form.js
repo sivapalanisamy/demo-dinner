@@ -76,6 +76,16 @@ if (!customElements.get('product-form')) {
     });
 }
 
+$(document).ready(function () {
+    if (typeof processMappingProductGiftCardMessageToFieldInPDP !== 'undefined'
+        && processMappingProductGiftCardMessageToFieldInPDP) {
+        if (typeof needToProcessMappingProductGiftCardId !== 'undefined'
+            && needToProcessMappingProductGiftCardId) {
+            mappingProductGiftCardMessageToFieldInPDP(needToProcessMappingProductGiftCardId);
+        }
+    }
+});
+
 function mappingProductGiftCardMessageToFieldInPDP(productId) {
 
     var defaultVariantId = -1;
