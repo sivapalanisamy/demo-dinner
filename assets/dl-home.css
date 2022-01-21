@@ -147,25 +147,28 @@ nav ul li .list-menu__item{
 .banner__heading{
     font-size: 64px;
     line-height: 64px;
-    color: #344E38;
-;
+    color: #FFFFFF;
+    background: url("banner-line.png") no-repeat bottom left;
+    padding-bottom: 20px;
 }
 .banner{
     position: relative;
 }
 .banner .banner__box{
     opacity: 1;
-    padding: 2rem 4rem 3rem;
+    padding: 0;
+    background: transparent;
+    text-align: left;
 }
 .banner .banner__box .banner__buttons .button--primary{
-    background: #344E38;
-    color: #FFFFFF;
+    background: #E8D4B0;
+    color: #000000;
     padding: 15px 54px;
 }
 .banner .banner-circle-1{
     width: 527px;
     height: 486px;
-    background: #F1ECE1;
+    background: transparent;
     display: block;
     border-radius: 50% 50% 0 0;
     position: absolute;
@@ -184,6 +187,16 @@ nav ul li .list-menu__item{
     border-radius: 50% 50% 0 0;
     left: 31%;
     border-top: 1px #000 solid;
+}
+@media screen and (min-width: 750px) {
+    .banner__content--middle-center{
+        justify-content: flex-start !important;
+        padding: 0 !important;
+        margin: 0px !important;
+        text-align: left;
+        bottom:10% ;
+        top: inherit !important;
+    }
 }
 @media screen and (max-width: 749px) {
 .banner .banner-circle-1,
