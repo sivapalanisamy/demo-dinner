@@ -211,13 +211,15 @@ nav ul li .list-menu__item{
     top: inherit;
 }
 .banner .banner__content .banner__box {
-    padding: 2rem;
-    border-radius: 20px;
+    padding: 0;
+    border-radius: 0px;
+    text-align: center;
 }
 .banner .banner__content .banner__heading{
     font-size: 40px;
     line-height: 40px;
     text-transform: uppercase;
+    background: url("banner-line.png") no-repeat bottom center;
 }
 }
 /* .shopify-section{
