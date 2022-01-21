@@ -28,8 +28,6 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/banner_18deeab9-db25-4fc8-801c-fa36e942c8a3.png",
-        "image_2": "shopify:\/\/shop_images\/banner.png",
-        "image_3": "shopify:\/\/shop_images\/banner_933a2745-d117-44fb-8933-50ad660bc950.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "adapt_height_first_image": false,
