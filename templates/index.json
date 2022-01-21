@@ -126,22 +126,6 @@
         "headinglabel": ""
       }
     },
-    "1640693323a1800638": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Monthly Specials",
-        "collection": "monthly-collection",
-        "products_to_show": 12,
-        "show_view_all": true,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "add_image_padding": false,
-        "show_image_outline": false,
-        "show_vendor": false,
-        "show_rating": false
-      }
-    },
     "categories-slider": {
       "type": "categories-slider",
       "blocks": {
@@ -242,6 +226,22 @@
         "carousel_dots": false,
         "carousel_arrows": true,
         "autoplay_speed": "7000"
+      }
+    },
+    "1640693323a1800638": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Monthly Specials",
+        "collection": "monthly-collection",
+        "products_to_show": 12,
+        "show_view_all": true,
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": false,
+        "show_vendor": false,
+        "show_rating": false
       }
     },
     "featured_products": {
@@ -376,8 +376,8 @@
     "image_banner",
     "what-we-do",
     "easy-pea-sy",
-    "1640693323a1800638",
     "categories-slider",
+    "1640693323a1800638",
     "featured_products",
     "1640686378b055bb34",
     "share-love",
