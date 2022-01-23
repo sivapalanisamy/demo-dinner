@@ -250,7 +250,7 @@
         "title": "Dinner Ladies Favourites",
         "collection": "all",
         "products_to_show": 12,
-        "show_view_all": false,
+        "show_view_all": true,
         "swipe_on_mobile": false,
         "image_ratio": "square",
         "show_secondary_image": false,
