@@ -384,8 +384,6 @@ summary .icon-dl{
     width: 100%;
     display: inline-block;
     padding: 65px 0px 115px;
-    border: 2px solid #BBCEB9;
-    border-width: 2px 0px;
 }
 .shopify-section .delicious-section h2{
     text-align: center;
@@ -445,6 +443,7 @@ summary .icon-dl{
     width: 100%;
     display: inline-block;
     padding: 70px 0px 75px;
+    border-top:2px solid #bbceb9
 }
 .featured-section .title-wrapper-with-link{
     margin: 0;
