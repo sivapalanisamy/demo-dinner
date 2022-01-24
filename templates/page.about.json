@@ -5,14 +5,14 @@
       "settings": {
       }
     },
-    "dl-image-with-text": {
-      "type": "dl-image-with-text",
+    "image-with-text": {
+      "type": "image-with-text",
       "settings": {
       }
     }
   },
   "order": [
     "main",
-    "dl-image-with-text"
+    "image-with-text"
   ]
 }
