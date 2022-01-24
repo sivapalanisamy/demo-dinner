@@ -7,7 +7,22 @@
     },
     "image-with-text": {
       "type": "image-with-text",
+      "blocks": {
+        "7322e6a7-b6ca-416a-a1f1-9f55ed5bfdf5": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "7322e6a7-b6ca-416a-a1f1-9f55ed5bfdf5"
+      ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/img1.png",
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "layout": "image_first"
       }
     }
   },
