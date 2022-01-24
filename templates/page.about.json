@@ -3,13 +3,11 @@
     "main": {
       "type": "main-page",
       "settings": {
-
       }
     },
     "dl-image-with-text": {
-      "type": "t:sections.image-with-text.name",
+      "type": "dl-image-with-text",
       "settings": {
-        "heading": ""
       }
     }
   },
