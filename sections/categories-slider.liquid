@@ -12,6 +12,14 @@
       </div>
     {% endfor %}
   </div>
+  <div class="view-collection center{% if section.settings.swipe_on_mobile %} small-hide medium-hide{% endif %}">
+      <a href="/collections/all"
+        class="button button--green"
+        aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
+      >
+        {{ 'sections.featured_collection.view_all' | t }}
+      </a>
+    </div>
 </div>
 {% endif %}
 

@@ -380,6 +380,22 @@ summary .icon-dl{
 .shopify-section.easy-pea-section .easy-blk .content-blk .right{
     max-width: 38%;
 }
+@media screen and (max-width: 749px) {
+    .shopify-section .easy-pea-section{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .shopify-section.easy-pea-section ul{
+        margin: 20px 0px 0px;
+        padding: 0;
+    }
+     .shopify-section.easy-pea-section ul .slick-list{
+         padding: 0px 12% 0 0 !important;
+     }
+     .shopify-section.easy-pea-section .easy-col{
+         padding: 0px 12px;
+     }
+}
 .shopify-section .delicious-section{
     width: 100%;
     display: inline-block;
@@ -424,10 +440,22 @@ summary .icon-dl{
     color:#000000;
 }
 
+.shopify-section .delicious-section  .view-collection{
+    width: 100%;
+    display: inline-block;
+    margin-top: 100px;
+}
+.shopify-section .delicious-section  .view-collection .button{
+    font-size: 24px;
+    font-weight: 400;
+    border: 0;
+    padding: 1.5rem 6rem;
+}
+
 @media screen and (max-width: 749px) {
     .shopify-section .delicious-section h2{
         line-height: 50px;
-        padding: 0px 20px 70px 0px;
+        padding: 0px 20px 70px;
     }
     .shopify-section .delicious-section .category-slider .slick-list {
         padding:0 20% 0 0 !important;
@@ -458,6 +486,17 @@ summary .icon-dl{
     margin-bottom: 40px;
     line-height: 50px;
     padding-bottom: 30px;
+}
+.featured-section .collection .view-collection{
+    width: 100%;
+    display: inline-block;
+    margin-top: 50px;
+}
+.featured-section .collection .view-collection .button{
+    font-size: 24px;
+    font-weight: 400;
+    border: 0;
+    padding: 1.5rem 6rem;
 }
 .shopify-section .about-section{
     background: #FEF9F0;
