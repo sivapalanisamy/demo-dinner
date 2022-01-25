@@ -2,6 +2,22 @@
   "sections": {
     "main": {
       "type": "story-page",
+      "blocks": {
+        "c4ddd51c-f4b8-4078-973a-56df563fc8de": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img1.png",
+            "height": "adapt",
+            "color_scheme": "background-1",
+            "layout": "image_first",
+            "heading": "Image with text",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "c4ddd51c-f4b8-4078-973a-56df563fc8de"
+      ],
       "settings": {
       }
     }
