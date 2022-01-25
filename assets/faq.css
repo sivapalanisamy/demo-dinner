@@ -45,6 +45,11 @@
     font-size: 18px;
     line-height: 30px;
 }
+.faq-page .faq-content .faq-row .faq-right .button{
+    text-transform: uppercase;
+    padding: 9px 62px;
+    margin-top: 30px;
+}
 
 @media screen and (max-width: 749px) {
         .faq-page .faq-content .faq-row{
