@@ -7,28 +7,36 @@
           "type": "question",
           "settings": {
             "question": "DO I NEED TO OPEN AN ACCOUNT?",
-            "answer": "<p>No! Simply start browsing or shopping. We'll ask you for all the information we need when you've added items to your basket and have reached the checkout page.<\/p>"
+            "answer": "<p>No! Simply start browsing or shopping. We'll ask you for all the information we need when you've added items to your basket and have reached the checkout page.<\/p>",
+            "button_link": "shopify:\/\/pages\/contact",
+            "button_label": "DELIVERY INFO"
           }
         },
         "1abf25c2-03c5-4df4-8395-04c8517d7b27": {
           "type": "question",
           "settings": {
             "question": "CAN I ADD ADDITIONAL ITEMS TO AN EXISTING ORDER?",
-            "answer": "<p>Yes! Just go onto the site, log into your account and choose the same delivery slot before ordering the additional item\/s. The system will recognise that you already have an order so we won't charge you again for shipping and will make sure your items are packed together. If your original slot does not appear, unfortunately you've missed the cut off to add to the order.<\/p>"
+            "answer": "<p>Yes! Just go onto the site, log into your account and choose the same delivery slot before ordering the additional item\/s. The system will recognise that you already have an order so we won't charge you again for shipping and will make sure your items are packed together. If your original slot does not appear, unfortunately you've missed the cut off to add to the order.<\/p>",
+            "button_link": "",
+            "button_label": ""
           }
         },
         "0b260837-b68b-4912-a9e1-ca6e2fa4c127": {
           "type": "question",
           "settings": {
             "question": "DO I NEED TO SIGN A CONTRACT OR COMMIT TO WEEKLY ORDERS?",
-            "answer": "<p>No! There’s no lock-in contract and you can place orders as frequently as you’d like.<\/p>"
+            "answer": "<p>No! There’s no lock-in contract and you can place orders as frequently as you’d like.<\/p>",
+            "button_link": "",
+            "button_label": ""
           }
         },
         "7920b1ad-853b-4aa5-a2fd-a18388ec16a4": {
           "type": "question",
           "settings": {
             "question": "WHAT DO I DO WITH THE BOX, INSULATION AND ICEPACK?",
-            "answer": "<p>The cardboard box can be put into your curbside recycling. The insulation is biodegradable and can go in the compost bin or use on the garden as mulch. And cats love it! If you can't re-use the gel icepack, the contents can be mixed in with soil in pot plants or the garden to help retain water.<br\/>For more details go to...<\/p>"
+            "answer": "<p>The cardboard box can be put into your curbside recycling. The insulation is biodegradable and can go in the compost bin or use on the garden as mulch. And cats love it! If you can't re-use the gel icepack, the contents can be mixed in with soil in pot plants or the garden to help retain water.<br\/>For more details go to...<\/p>",
+            "button_link": "",
+            "button_label": ""
           }
         }
       },
