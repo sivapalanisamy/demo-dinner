@@ -21,19 +21,19 @@
             >
               {%- if section.settings.image != blank -%}
                 <img
-                  srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | img_url: '165x' }} 165w,{%- endif -%}
-                    {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | img_url: '360x' }} 360w,{%- endif -%}
-                    {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | img_url: '535x' }} 535w,{%- endif -%}
-                    {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | img_url: '750x' }} 750w,{%- endif -%}
-                    {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | img_url: '1070x' }} 1070w,{%- endif -%}
-                    {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | img_url: '1500x' }} 1500w,{%- endif -%}
-                    {{ section.settings.image | img_url: 'master' }} {{ section.settings.image.width }}w"
-                  src="{{ section.settings.image | img_url: '1500x' }}"
+                  srcset="{%- if section.settings.image.width >= 165 -%}{{ blocks.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+                    {%- if blocks.settings.image.width >= 360 -%}{{ blocks.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+                    {%- if blocks.settings.image.width >= 535 -%}{{ blocks.settings.image | img_url: '535x' }} 535w,{%- endif -%}
+                    {%- if blocks.settings.image.width >= 750 -%}{{ blocks.settings.image | img_url: '750x' }} 750w,{%- endif -%}
+                    {%- if blocks.settings.image.width >= 1070 -%}{{ blocks.settings.image | img_url: '1070x' }} 1070w,{%- endif -%}
+                    {%- if blocks.settings.image.width >= 1500 -%}{{ blocks.settings.image | img_url: '1500x' }} 1500w,{%- endif -%}
+                    {{ blocks.settings.image | img_url: 'master' }} {{ blocks.settings.image.width }}w"
+                  src="{{ blocks.settings.image | img_url: '1500x' }}"
                   sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-                  alt="{{ section.settings.image.alt | escape }}"
+                  alt="{{ blocks.settings.image.alt | escape }}"
                   loading="lazy"
-                  width="{{ section.settings.image.width }}"
-                  height="{{ section.settings.image.height }}"
+                  width="{{ blocks.settings.image.width }}"
+                  height="{{ blocks.settings.image.height }}"
                 >
               {%- else -%}
                 {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
