@@ -4,7 +4,7 @@
 <noscript>{{ 'section-main-page.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'faq.css' | asset_url | stylesheet_tag }}</noscript>
 
-<div class="page-width page-width--narrow faq-page">
+<div class="page-width faq-page">
   <h1 class="main-page-title page-title h0">
     {{ page.title | escape }}
   </h1>
@@ -14,8 +14,8 @@
                   		<div class="faq-left">
                           <h2>{{block.settings.question}}</h2>
                   		</div>
-                  		<div class="faq-left">
-                          <p>{{block.settings.answer}}</p>
+                  		<div class="faq-right">
+                          {{block.settings.answer}}
                   		</div>
     			</div>
          
