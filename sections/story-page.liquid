@@ -19,7 +19,7 @@
             <div class="image-with-text__media image-with-text__media--{{ section.settings.height }} {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}"
               {% if section.settings.height == 'adapt' and section.settings.image != blank %} style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"{% endif %}
             >
-              <img src="{{block.settings.image | img_url: 'master'}}"  loading="lazy" width=""   height="">
+              
               {%- if section.settings.image != blank -%}
                 <img
                   srcset="{%- if section.settings.image.width >= 165 -%}{{ blocks.settings.image | img_url: '165x' }} 165w,{%- endif -%}
