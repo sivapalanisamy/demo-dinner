@@ -17,7 +17,7 @@
                   		<div class="faq-right">
                           {{block.settings.answer}}
                           {%- if block.settings.button_label != blank -%}
-                          <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}" {{ block.shopify_attributes }}>
+                          <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button button--green" {{ block.shopify_attributes }}>
                             {{ block.settings.button_label | escape }}
                           </a>
                         {%- endif -%}
