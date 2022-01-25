@@ -4,15 +4,9 @@
       "type": "story-page",
       "settings": {
       }
-    },
-    "image-with-text": {
-      "type": "image-with-text",
-      "settings": {
-      }
     }
   },
   "order": [
-    "main",
-    "image-with-text"
+    "main"
   ]
 }
