@@ -15,8 +15,24 @@
 
 {% schema %}
 {
-  "name": "t:sections.main-page.name",
-  "tag": "section",
-  "class": "spaced-section"
-}
+    "name": "FAQ",    
+	"blocks": [
+     {
+       "name": "FAQ",
+       "type": "question",
+       "settings": [         
+		 {
+           "type": "text",
+           "id": "question",
+           "label": "Enter Question"
+         },
+		 {
+           "type": "richtext",
+           "id": "answer",
+           "label": "Enter Answer"
+         }
+       ]
+     }
+	]
+  }
 {% endschema %}
