@@ -43,7 +43,9 @@
           <div class="grid__item">
             <div class="image-with-text__content image-with-text__content--{{ section.settings.height }}">
               {%- for block in section.blocks -%}
+              <p>1</p>
                 {% case block.type %}
+              <p>2</p>
                   {%- when 'heading' -%}
                     <h2 class="image-with-text__heading h1" {{ block.shopify_attributes }}>
                       {{ block.settings.heading | escape }}
