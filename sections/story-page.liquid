@@ -13,6 +13,7 @@
      <div class="about-row grid grid--gapless grid--1-col grid--2-col-tablet">
        	<div class="grid__item">
           {%- if block.settings.image != blank -%}
+          <img src="{{block.settings.image | img_url: 'master'}}"  loading="lazy" width=""   height="">
           <img
             srcset="{%- if section.settings.image.width >= 165 -%}{{ block.settings.image | img_url: '165x' }} 165w,{%- endif -%}
               {%- if section.settings.image.width >= 360 -%}{{ block.settings.image | img_url: '360x' }} 360w,{%- endif -%}
