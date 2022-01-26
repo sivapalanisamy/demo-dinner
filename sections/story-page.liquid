@@ -12,6 +12,7 @@
   <div class="about-content">
      <div class="about-row grid grid--gapless grid--1-col grid--2-col-tablet">
        	<div class="grid__item">
+          <img src="{{block.settings.image | img_url: 'master'}}"  loading="lazy" width=""   height="">
           {%- if block.settings.image != blank -%}
           <img src="{{block.settings.image | img_url: 'master'}}"  loading="lazy" width=""   height="">
           <img
