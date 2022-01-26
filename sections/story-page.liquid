@@ -9,62 +9,10 @@
   <h1 class="main-page-title page-title h0">
     {{ page.title | escape }}
   </h1>
-  <div class="rte">
-    {{ page.content }}
-    
+  <div class="rte about-content">
+       
 
-      <div class="image-with-text {% if section.settings.full_width %}image-with-text--full-width{% else %}page-width{% endif %} color-scheme-{{ section.settings.color_scheme }}">
-        <div class="image-with-text__grid color-{{ section.settings.color_scheme }} grid grid--gapless grid--1-col grid--2-col-tablet gradient{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
-          <div class="grid__item">
-            <div class="image-with-text__media image-with-text__media--{{ section.settings.height }} {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}"
-              {% if section.settings.height == 'adapt' and section.settings.image != blank %} style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"{% endif %}
-            >
-              
-              {%- if section.settings.image != blank -%}
-                <img
-                  srcset="{%- if section.settings.image.width >= 165 -%}{{ blocks.settings.image | img_url: '165x' }} 165w,{%- endif -%}
-                    {%- if blocks.settings.image.width >= 360 -%}{{ blocks.settings.image | img_url: '360x' }} 360w,{%- endif -%}
-                    {%- if blocks.settings.image.width >= 535 -%}{{ blocks.settings.image | img_url: '535x' }} 535w,{%- endif -%}
-                    {%- if blocks.settings.image.width >= 750 -%}{{ blocks.settings.image | img_url: '750x' }} 750w,{%- endif -%}
-                    {%- if blocks.settings.image.width >= 1070 -%}{{ blocks.settings.image | img_url: '1070x' }} 1070w,{%- endif -%}
-                    {%- if blocks.settings.image.width >= 1500 -%}{{ blocks.settings.image | img_url: '1500x' }} 1500w,{%- endif -%}
-                    {{ blocks.settings.image | img_url: 'master' }} {{ blocks.settings.image.width }}w"
-                  src="{{ blocks.settings.image | img_url: '1500x' }}"
-                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-                  alt="{{ blocks.settings.image.alt | escape }}"
-                  loading="lazy"
-                  width="{{ blocks.settings.image.width }}"
-                  height="{{ blocks.settings.image.height }}"
-                >
-              {%- else -%}
-                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-              {%- endif -%}
-            </div>
-          </div>
-          <div class="grid__item">
-            <div class="image-with-text__content image-with-text__content--{{ section.settings.height }}">
-              {%- for block in section.blocks -%}
-              <p>1 {{ block.settings.heading | escape }}</p>
-                {% case block.type %}
-              <p>2</p>
-                  {%- when 'heading' -%}
-                    <h2 class="image-with-text__heading h1" {{ block.shopify_attributes }}>
-                      {{ block.settings.heading | escape }}
-                    </h2>
-                  {%- when 'text' -%}
-                    <div class="image-with-text__text rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
-                  {%- when 'button' -%}
-                    {%- if block.settings.button_label != blank -%}
-                      <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}" {{ block.shopify_attributes }}>
-                        {{ block.settings.button_label | escape }}
-                      </a>
-                    {%- endif -%}
-                {%- endcase -%}
-              {%- endfor -%}
-            </div>
-          </div>
-        </div>
-      </div>
+      
   </div>
 </div>
 
