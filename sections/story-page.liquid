@@ -35,11 +35,13 @@
         {%- endif -%}
        </div>
        <div class="grid__item">
+          <div class="image-content">
          	<div class="icoblk">
               <img src="{{block.settings.icon | img_url: 'master'}}"  loading="lazy" width=""   height="">
             </div>
          	<h3>{{block.settings.Heading}}</h3>
             {{block.settings.content}}
+       	</div>
        </div>
      </div>
 	{%endfor%}
