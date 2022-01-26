@@ -234,6 +234,9 @@ nav ul li .list-menu__item{
     margin-top: 0;
     margin-bottom: 0;
 }
+.bg-container{
+    background: #D4DED3;
+}
 summary .icon-dl{
     position: absolute;
     height: 0.6rem;

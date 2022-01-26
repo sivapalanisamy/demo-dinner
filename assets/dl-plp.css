@@ -1,3 +1,8 @@
+.spaced-section.collection-grid-section{
+    padding-top: 3rem;
+    margin-top: 0;
+    background: #D4DED3;
+}
 .page-container h2.page-title{
     font-size: 60px;
     line-height: 100px;
