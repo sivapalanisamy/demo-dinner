@@ -14,7 +14,7 @@
      <div class="about-row grid grid--gapless grid--1-col grid--2-col-tablet">
        	<div class="grid__item">
           <p>{{block.settings.Heading}}</p>
-          <img src="{{block.settings.images | img_url: 'master'}}"  loading="lazy" width=""   height="">
+          <img src="{{block.settings.image | img_url: 'master'}}"  loading="lazy" width=""   height="">
           {%- if block.settings.image != blank -%}
           <img src="{{block.settings.image | img_url: 'master'}}"  loading="lazy" width=""   height="">
           <img
@@ -71,7 +71,7 @@
             },
 			{
              "type": "image_picker",
-             "id": "images",
+             "id": "image",
              "label": "image"
            },
            
