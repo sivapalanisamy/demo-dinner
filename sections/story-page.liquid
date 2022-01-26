@@ -9,7 +9,7 @@
   <h1 class="main-page-title page-title h0">
     {{ page.title | escape }}
   </h1>
-  <div class="rte about-content">
+  <div class="about-content">
        
 
       
@@ -18,10 +18,22 @@
 
 {% schema %}
 {
-  "name": "t:sections.main-page.name",
+  "name": "about",
   "tag": "section",
   "class": "spaced-section",  
    "blocks": [
+		{
+       "name": "aboutImageWithText",
+       "type": "imagewithText",
+		"settings": [
+			{
+             "type": "image_picker",
+             "id": "image",
+             "label": "image"
+           }
+		]
+           
+        }
     ]
 }
 {% endschema %}
