@@ -58,6 +58,7 @@
           "type": "imagewithText",
           "settings": {
             "layout": "image_first",
+            "image": "shopify:\/\/shop_images\/img1_36a5d75d-a984-4790-a8cc-ec2361332362.png",
             "Heading": "",
             "content": ""
           }
