@@ -10,6 +10,7 @@
     {{ page.title | escape }}
   </h1>
   <div class="about-content">
+    {%for block in section.blocks %}
      <div class="about-row grid grid--gapless grid--1-col grid--2-col-tablet">
        	<div class="grid__item">
           <p>{{block.settings.Heading}}</p>
@@ -38,7 +39,7 @@
        <div class="grid__item">
        </div>
      </div>
-
+	{%endfor%}
       
   </div>
 </div>
