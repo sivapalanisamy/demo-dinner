@@ -11,7 +11,7 @@
   </h1>
   <div class="about-content">
     {%for block in section.blocks %}
-     <div class="about-row grid grid--gapless grid--1-col grid--2-col-tablet">
+     <div class="about-row grid grid--gapless grid--1-col grid--2-col-tablet {% if block.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
        	<div class="grid__item">
           <p>{{block.settings.Heading}}</p>          
           {%- if block.settings.image != blank -%}
