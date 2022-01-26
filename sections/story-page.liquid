@@ -7,7 +7,7 @@
 <noscript>{{ 'dl-about.css' | asset_url | stylesheet_tag }}</noscript>
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
 
-<div class="page-width siba">
+<div class="page-width siba about-container">
   <h1 class="main-page-title page-title h0">
     {{ page.title | escape }}
   </h1>
@@ -30,6 +30,7 @@
             loading="lazy"
             width="{{ section.settings.image.width }}"
             height="{{ section.settings.image.height }}"
+            class="img"
           >
         {%- else -%}
           {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
