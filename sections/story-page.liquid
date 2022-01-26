@@ -5,164 +5,98 @@
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
 
-<div class="page-width page-width--narrow siba">
+<div class="page-width siba">
   <h1 class="main-page-title page-title h0">
     {{ page.title | escape }}
   </h1>
-  <div class="rte">
-    {{ page.content }}
-    
-
-      <div class="image-with-text {% if section.settings.full_width %}image-with-text--full-width{% else %}page-width{% endif %} color-scheme-{{ section.settings.color_scheme }}">
-        <div class="image-with-text__grid color-{{ section.settings.color_scheme }} grid grid--gapless grid--1-col grid--2-col-tablet gradient{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
-          <div class="grid__item">
-            <div class="image-with-text__media image-with-text__media--{{ section.settings.height }} {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}"
-              {% if section.settings.height == 'adapt' and section.settings.image != blank %} style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"{% endif %}
-            >
-              
-              {%- if section.settings.image != blank -%}
-                <img
-                  srcset="{%- if section.settings.image.width >= 165 -%}{{ blocks.settings.image | img_url: '165x' }} 165w,{%- endif -%}
-                    {%- if blocks.settings.image.width >= 360 -%}{{ blocks.settings.image | img_url: '360x' }} 360w,{%- endif -%}
-                    {%- if blocks.settings.image.width >= 535 -%}{{ blocks.settings.image | img_url: '535x' }} 535w,{%- endif -%}
-                    {%- if blocks.settings.image.width >= 750 -%}{{ blocks.settings.image | img_url: '750x' }} 750w,{%- endif -%}
-                    {%- if blocks.settings.image.width >= 1070 -%}{{ blocks.settings.image | img_url: '1070x' }} 1070w,{%- endif -%}
-                    {%- if blocks.settings.image.width >= 1500 -%}{{ blocks.settings.image | img_url: '1500x' }} 1500w,{%- endif -%}
-                    {{ blocks.settings.image | img_url: 'master' }} {{ blocks.settings.image.width }}w"
-                  src="{{ blocks.settings.image | img_url: '1500x' }}"
-                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-                  alt="{{ blocks.settings.image.alt | escape }}"
-                  loading="lazy"
-                  width="{{ blocks.settings.image.width }}"
-                  height="{{ blocks.settings.image.height }}"
-                >
-              {%- else -%}
-                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-              {%- endif -%}
+  <div class="about-content">
+    {%for block in section.blocks %}
+     <div class="about-row grid grid--gapless grid--1-col grid--2-col-tablet {% if block.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
+       	<div class="grid__item">          
+          {%- if block.settings.image != blank -%}
+          <img
+            srcset="{%- if block.settings.image.width >= 165 -%}{{ block.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+              {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+              {%- if block.settings.image.width >= 535 -%}{{ block.settings.image | img_url: '535x' }} 535w,{%- endif -%}
+              {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | img_url: '750x' }} 750w,{%- endif -%}
+              {%- if block.settings.image.width >= 1070 -%}{{ block.settings.image | img_url: '1070x' }} 1070w,{%- endif -%}
+              {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | img_url: '1500x' }} 1500w,{%- endif -%}
+              {{ block.settings.image | img_url: 'master' }} {{ block.settings.image.width }}w"
+            src="{{ block.settings.image | img_url: '1500x' }}"
+            sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+            alt="{{ section.settings.image.alt | escape }}"
+            loading="lazy"
+            width="{{ section.settings.image.width }}"
+            height="{{ section.settings.image.height }}"
+          >
+        {%- else -%}
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        {%- endif -%}
+       </div>
+       <div class="grid__item">
+          <div class="image-content">
+         	<div class="icoblk">
+              <img src="{{block.settings.icon | img_url: 'master'}}"  loading="lazy" width=""   height="">
             </div>
-          </div>
-          <div class="grid__item">
-            <div class="image-with-text__content image-with-text__content--{{ section.settings.height }}">
-              {%- for block in section.blocks -%}
-              <p>1 {{ block.settings.heading | escape }}</p>
-                {% case block.type %}
-              <p>2</p>
-                  {%- when 'heading' -%}
-                    <h2 class="image-with-text__heading h1" {{ block.shopify_attributes }}>
-                      {{ block.settings.heading | escape }}
-                    </h2>
-                  {%- when 'text' -%}
-                    <div class="image-with-text__text rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
-                  {%- when 'button' -%}
-                    {%- if block.settings.button_label != blank -%}
-                      <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}" {{ block.shopify_attributes }}>
-                        {{ block.settings.button_label | escape }}
-                      </a>
-                    {%- endif -%}
-                {%- endcase -%}
-              {%- endfor -%}
-            </div>
-          </div>
-        </div>
-      </div>
+         	<h3>{{block.settings.Heading}}</h3>
+            {{block.settings.content}}
+       	</div>
+       </div>
+     </div>
+	{%endfor%}
+      
   </div>
 </div>
 
 {% schema %}
 {
-  "name": "t:sections.main-page.name",
-  "tag": "section",
-  "class": "spaced-section",  
-"blocks": [
-{
-"name": "t:sections.image-with-text.presets.name",
-"type": "image",
-"settings":[
-	
-    {
-      "type": "image_picker",
-      "id": "image",
-      "label": "t:sections.image-with-text.settings.image.label"
-    },
-    {
-      "type": "select",
-      "id": "height",
-      "options": [
-        {
-          "value": "adapt",
-          "label": "t:sections.image-with-text.settings.height.options__1.label"
-        },
-        {
-          "value": "small",
-          "label": "t:sections.image-with-text.settings.height.options__2.label"
-        },
-        {
-          "value": "large",
-          "label": "t:sections.image-with-text.settings.height.options__3.label"
+  "name": "AboutTemplate",
+   "blocks": [
+		{
+       "name": "aboutImageWithText",
+       "type": "imagewithText",
+		"settings": [
+            {
+              "type": "select",
+              "id": "layout",
+              "options": [
+                {
+                  "value": "image_first",
+                  "label": "t:sections.image-with-text.settings.layout.options__1.label"
+                },
+                {
+                  "value": "text_first",
+                  "label": "t:sections.image-with-text.settings.layout.options__2.label"
+                }
+              ],
+              "default": "image_first",
+              "label": "t:sections.image-with-text.settings.layout.label",
+              "info": "t:sections.image-with-text.settings.layout.info"
+            },
+			{
+             "type": "image_picker",
+             "id": "image",
+             "label": "image"
+           },
+           
+           {
+             "type": "text",
+             "id": "Heading",
+             "label": "Heading"
+           },
+            {
+             "type": "image_picker",
+             "id": "icon",
+             "label": "icon"
+           },
+           {
+             "type": "richtext",
+             "id": "content",
+             "label": "Description"
+           }
+		]
+           
         }
-      ],
-      "default": "adapt",
-      "label": "t:sections.image-with-text.settings.height.label"
-    },
-    {
-      "type": "select",
-      "id": "color_scheme",
-      "options": [
-        {
-          "value": "background-1",
-          "label": "t:sections.image-with-text.settings.color_scheme.options__1.label"
-        },
-        {
-          "value": "background-2",
-          "label": "t:sections.image-with-text.settings.color_scheme.options__2.label"
-        },
-        {
-          "value": "inverse",
-          "label": "t:sections.image-with-text.settings.color_scheme.options__3.label"
-        },
-        {
-          "value": "accent-1",
-          "label": "t:sections.image-with-text.settings.color_scheme.options__4.label"
-        },
-        {
-          "value": "accent-2",
-          "label": "t:sections.image-with-text.settings.color_scheme.options__5.label"
-        }
-      ],
-      "default": "background-1",
-      "label": "t:sections.image-with-text.settings.color_scheme.label"
-    },
-    {
-      "type": "select",
-      "id": "layout",
-      "options": [
-        {
-          "value": "image_first",
-          "label": "t:sections.image-with-text.settings.layout.options__1.label"
-        },
-        {
-          "value": "text_first",
-          "label": "t:sections.image-with-text.settings.layout.options__2.label"
-        }
-      ],
-      "default": "image_first",
-      "label": "t:sections.image-with-text.settings.layout.label",
-      "info": "t:sections.image-with-text.settings.layout.info"
-    },
-    {
-      "type": "text",
-      "id": "heading",
-      "default": "Image with text",
-    	"label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
-    },
-    {
-              "type": "richtext",
-              "id": "text",
-              "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-              "label": "t:sections.image-with-text.blocks.text.settings.text.label"
-            }
-]
-}
-  ]
+    ]
 }
 {% endschema %}
