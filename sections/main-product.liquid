@@ -6,6 +6,7 @@
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+{{ 'dl-pdp.css' | asset_url | stylesheet_tag }}
 
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
 
@@ -18,7 +19,7 @@
   <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
-<section class="page-width">
+<section class="page-width product-details-container">
   <div class="product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper">
       <slider-component class="slider-mobile-gutter">
@@ -77,17 +78,101 @@
           {%- when '@app' -%}
             {% render block %}
           {%- when 'text' -%}
-            <p class="product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}" {{ block.shopify_attributes }}>
+           {% comment %}  <p class="product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}" {{ block.shopify_attributes }}>
               {{- block.settings.text -}}
-            </p>
+            </p> {% endcomment %}
           {%- when 'title' -%}
             <h1 class="product__title" {{ block.shopify_attributes }}>
               {{ product.title | escape }}
             </h1>
-          {%- when 'price' -%}
-            <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
-              {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+            <div class="product-tags-wrap pdp-tags">
+                <ul class="tags-list">
+                    {% for tag in product.tags %}{% if tag == 'SALE' or tag == 'sale' or tag == 'Sale' %}
+                        <li>
+                            <a class="sale" href="/collections/all/{{ tag | handleize }}">
+                                <span class="el-icon-tag">{{ tag }}</span>
+                            </a>
+                        </li>
+                    {% else %}
+                        <li>
+                            <a href="/collections/all/{{ tag | handleize }}">
+                                <span class="el-icon-tag">{{ tag }}</span>
+                            </a>
+                        </li>
+                    {% endif %}{% endfor %}
+                </ul>
             </div>
+          {%- when 'price' -%}
+            {% comment %} <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+              {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+            </div> {% endcomment %}
+            <div id="product-varient" class="product-variant-wrap">
+                        {%- if product.has_only_default_variant -%}
+                            <div>This product has no variant</div>
+                        {%- else -%}
+                            {%- for variant in product.variants -%}
+                                {% assign variant_quantity = 0 %}
+                                {% for cartLineItem in cart.items %}
+                                    {% if cartLineItem.variant.id == variant.id %}
+                                        {% assign variant_quantity = cartLineItem.quantity %}
+                                    {% endif %}
+                                {% endfor %}
+                                <div class="variant-row">
+                                    <div class="variant-info">
+                                        <label>{{ variant.title }}</label>
+                                        <span class="price">{% render 'price', product: variant, price_class: '' %}</span>
+                                    </div>
+                                    <div class="variant-qty-blk">
+                                        <quantity-card>
+
+                                            <form id="{{ variant.id }}_form" class="quantity-form">
+                                                <input type="hidden" id="{{ variant.id }}" name="id"
+                                                       value="{{ variant.id }}"/>
+                                                <div id="{{ variant.id }}_button" {% if variant_quantity != 0 %} style="display:none" {% endif %}>
+
+                                                    <button class="btn btn-dl-primary button button--primary"
+                                                            data-qty="0"
+                                                            id="{{ variant.id }}_add_button" name="add"
+                                                    >ADD
+                                                    </button>
+                                                </div>
+
+
+                                                <div id="{{ variant.id }}_selector"
+                                                     class="qty-selector" {% if variant_quantity == 0 %} style="display:none" {% endif %}>
+                                                    <button type="button" class="btn cart-btn next-step"
+                                                            data-sizeid="60713"
+                                                            id="{{ variant.id }}_minus_button"
+                                                            name="minus"
+                                                            {% if variant_quantity == 0 %}
+                                                                disabled="disabled"
+                                                            {% endif %}
+                                                    >
+                                                        -
+                                                    </button>
+                                                    <input class="field__input"
+                                                           id="{{ variant.id }}_quantity"
+                                                           type="text" value="{{ variant_quantity }}"
+                                                           disabled="disabled">
+                                                    <button type="button" class="btn cart-btn next-step"
+                                                            id="{{ variant.id }}_plus_button"
+                                                            data-sizeid="60713" data-state="FROZEN"
+                                                            name="plus">
+                                                        +
+                                                    </button>
+                                                </div>
+                                        </quantity-card>
+                                        </form>
+                                    </div>
+
+                                </div>
+                                <div id="{{ variant.id }}_error" class="product-card__error-message-wrapper"
+                                     role="alert" hidden>
+                                    <span class="product-card__error-message"></span>
+                                </div>
+                            {% endfor %}
+                        {%- endif -%}
+                    </div>
             {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
               <div class="product__tax caption rte">
                 {%- if shop.taxes_included -%}
@@ -131,7 +216,7 @@
               </details>
             </div>
           {%- when 'quantity_selector' -%}
-            <div class="product-form__input product-form__quantity" {{ block.shopify_attributes }}>
+            {% comment %} <div class="product-form__input product-form__quantity" {{ block.shopify_attributes }}>
               <label class="form__label" for="Quantity-{{ section.id }}">
                 {{ 'products.product.quantity.label' | t }}
               </label>
@@ -154,7 +239,7 @@
                   {% render 'icon-plus' %}
                 </button>
               </quantity-input>
-            </div>
+            </div> {% endcomment %}
         
            {%- if product.type == "Gift Cards" -%}
 
@@ -231,7 +316,7 @@
             <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
           {%- when 'variant_picker' -%}
             {%- unless product.has_only_default_variant -%}
-              {%- if block.settings.picker_type == 'button' -%}
+             {% comment %}  {%- if block.settings.picker_type == 'button' -%}
                 <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                   {%- for option in product.options_with_values -%}
                       <fieldset class="js product-form__input">
@@ -281,7 +366,7 @@
                     {{ product.variants | json }}
                   </script>
                 </variant-selects>
-              {%- endif -%}
+              {%- endif -%} {% endcomment %}
             {%- endunless -%}
 
             <noscript class="product-form__noscript-wrapper-{{ section.id }}">
@@ -306,7 +391,7 @@
               </div>
             </noscript>
           {%- when 'buy_buttons' -%}
-            <div {{ block.shopify_attributes }}>
+            {% comment %} <div {{ block.shopify_attributes }}>
               <product-form class="product-form">
                 <div class="product-form__error-message-wrapper" role="alert" hidden>
                   <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13">
@@ -367,7 +452,7 @@
                   </pickup-availability-preview>
                 </template>
               </pickup-availability>
-            </div>
+            </div> {% endcomment %}
 
             <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
           {%- when 'rating' -%}

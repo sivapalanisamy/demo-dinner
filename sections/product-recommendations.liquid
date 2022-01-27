@@ -11,9 +11,9 @@
 <product-recommendations class="product-recommendations page-width" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4">
   {% if recommendations.performed and recommendations.products_count > 0 %}
     <h2 class="product-recommendations__heading">{{ section.settings.heading | escape }}</h2>
-    <ul class="grid grid--2-col product-grid{% if recommendations.products_count > 3 %} grid--4-col-desktop grid--quarter-max{% else %} grid--{{ recommendations.products_count }}-col-tablet{% endif %}" role="list">
+    <ul class="product-card recommendation-slider grid grid--2-col product-grid{% if recommendations.products_count > 3 %} grid--4-col-desktop grid--quarter-max{% else %} grid--{{ recommendations.products_count }}-col-tablet{% endif %}" role="list">
       {% for recommendation in recommendations.products %}
-        <li class="grid__item">
+        <li class="product-list grid__item">
           {% render 'product-card',
             product_card_product: recommendation,
             media_size: section.settings.image_ratio,
@@ -21,7 +21,8 @@
             add_image_padding: section.settings.add_image_padding,
             show_vendor: section.settings.show_vendor,
             show_image_outline: section.settings.show_image_outline,
-            show_rating: section.settings.show_rating
+            show_rating: section.settings.show_rating,
+            show_button: true
           %}
         </li>
       {% endfor %}
@@ -46,6 +47,40 @@
             const recommendations = html.querySelector('product-recommendations');
             if (recommendations && recommendations.innerHTML.trim().length) {
               this.innerHTML = recommendations.innerHTML;
+              $(".recommendation-slider").slick({
+                infinite: true,
+                speed: 500,
+                slidesToShow: 4,
+                slidesToScroll: 2,
+                responsive: [
+                  {
+                    breakpoint: 1024,
+                    settings: {
+                      arrows: true,
+                      slidesToShow: 2,
+                      slidesToScroll: 2,
+                    },
+                  },
+                  {
+                    breakpoint: 600,
+                    settings: {
+                      arrows: false,
+                      centerMode: true,
+                      centerPadding: "20px",
+                      slidesToShow: 1,
+                    },
+                  },
+                  {
+                    breakpoint: 480,
+                    settings: {
+                      arrows: false,
+                      centerMode: true,
+                      centerPadding: "20px",
+                      slidesToShow: 1,
+                    },
+                  },
+                ],
+              });
             }
           })
           .catch(e => {
@@ -58,6 +93,7 @@
   }
 
   customElements.define('product-recommendations', ProductRecommendations);
+  
 {% endjavascript %}
 
 {% schema %}

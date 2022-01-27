@@ -1,8 +1,12 @@
 .product-recommendations {
   display: block;
+  margin-top: 80px;
 }
 
 .product-recommendations__heading {
   margin: 0;
   margin-bottom: 3rem;
+  font-size: 60px;
+  text-align: center;
+
 }
