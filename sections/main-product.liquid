@@ -102,6 +102,12 @@
                     {% endif %}{% endfor %}
                 </ul>
             </div>
+            
+            {%- if product.description != blank -%}
+              <div class="product__description rte">
+                {{ product.description }}
+              </div>
+            {% endif %}
           {%- when 'price' -%}
             {% comment %} <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
               {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
@@ -189,11 +195,99 @@
                 {{ form | payment_terms }}
               {%- endform -%}
             </div>
-          {%- when 'description' -%}
-            {%- if product.description != blank -%}
-              <div class="product__description rte">
+          
+            {%- if product.metafields != blank -%}
+              {% comment %} <div class="product__description rte">
                 {{ product.description }}
-              </div>
+              </div> {% endcomment %}
+              {% comment %} <div class="productTab">
+                    <div class="tabItem open">
+                        <h2 class="tab-heading">How We Make It</h2>
+                        <div class="tab-content">
+                          {{ product.metafields.dl_fields.how_we_make_it }}
+                        </div>
+                      </div>
+                      <div class="tabItem close">
+                            <h2 class="tab-heading">Goes With</h2>
+                            <div class="tab-content">
+                              {{ product.metafields.dl_fields.goes_with }}
+                            </div>
+                      </div>
+
+                      <div class="tabItem close">
+                        <h2 class="tab-heading">Prep, Cook and Serve</h2>
+                        <div class="tab-content">
+							{{ product.metafields.dl_fields.prep_cook_and_serve}}
+                        </div>
+                      </div>
+                       <div class="tabItem close">
+                        <h2 class="tab-heading">Allergens</h2>
+                        <div class="tab-content">
+                          <h3>CONTAINS:</h3>
+                          <p>{{ product.metafields.dl_fields.allergens.value.does_contain}}</p>
+                          <h3>MAY CONTAIN TRACES OF:</h3>
+                          <p>{{ product.metafields.dl_fields.allergens.value.may_contain}}</p>
+                        </div>
+                      </div>
+                       <div class="tabItem close">
+                        <h2 class="tab-heading"> Ingredients</h2>
+                        <div class="tab-content">
+							{{ product.metafields.dl_fields.ingredients }}
+                        </div>
+                      </div>
+                  </div> {% endcomment %}
+
+              <div class="productTab">
+                  <div class="tabItem open">
+                        <h2 class="tab-heading">About accordions</h2>
+                        <div class="tab-content">
+                          <p>JavaScript accordions let you squeeze a lot of content into a small space in a Web page.</p>
+                          <p>This simple accordion degrades gracefully in browsers that don't support JavaScript or CSS.</p>
+                        </div>
+                      </div>
+
+                      <div class="tabItem close">
+                        <h2 class="tab-heading">Accordion items</h2>
+                        <div class="tab-content">
+                          <p>A JavaScript accordion is made up of a number of expandable/collapsible items. Only one item is ever shown at a time.</p>
+                          <p>You can include any content you want inside an accordion item. Here's a bullet list:</p>
+                          <ul>
+                            <li>List item #1</li>
+                            <li>List item #2</li>
+                            <li>List item #3</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="tabItem close">
+                        <h2 class="tab-heading">How to use a JavaScript accordion</h2>
+                        <div class="tab-content">
+                          <table cellpadding="10" cellSpacing="0" border="0" class="tabTable">
+                            <thead>
+                            <tr>
+                              <th></th>
+                              <th>Per 100g (Small)</th>
+                              <th>Per Small</th>
+                              <th>Per Large</th>
+                            </tr>
+                          </thead>
+                            <tr>
+                              <td>Energy(kJ)</td>
+                              <td>575</td>
+                              <td>4661</td>
+                              <td>4661</td>
+                            </tr>
+                            <tr>
+                              <td>Protein(g)</td>
+                              <td>23</td>
+                              <td>43</td>
+                              <td>43</td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                  </div>
+              
             {%- endif -%}
           {%- when 'custom_liquid' -%}
             {{ block.settings.custom_liquid }}

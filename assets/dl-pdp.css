@@ -22,6 +22,15 @@
 .product-details-container #product-varient .variant-row .variant-info label{
     margin-right: 25px;
 }
+.share-button{
+    display: inline-block;
+}
+.product-details-container .product__description{
+    font-size: 26px;
+    line-height: 30px;
+    font-family: var(--font-heading-family);
+    font-weight: 400;
+}
 
 @media screen and (max-width: 749px) {
     .product-details-container{
@@ -51,4 +60,108 @@
     .product-recommendations .recommendation-slider .slick-list {
         padding:0 12% 0 0 !important;
     }
+}
+
+
+.tabItem{
+    float:left;
+    display:block;
+    width:100%;
+    box-sizing: border-box;
+}
+.tab-heading{
+    cursor:pointer;
+    margin:0px 0px 10px 0px;
+    padding:20px;
+    background:#FFFFFF;
+    color:#405343;
+    width:100%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'quattrocento_sansregular', sans-serif;
+    position: relative;
+}
+.tab-heading::after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    background: url("tab-ico.png") no-repeat;
+}
+.close .tab-content{
+    height:0px;
+    transition:height 1s ease-out;
+    -webkit-transform: scaleY(0);
+	-o-transform: scaleY(0);
+	-ms-transform: scaleY(0);
+	transform: scaleY(0);
+    float:left;
+    display:block;
+    
+    
+}
+.open .tab-content{
+    padding: 0px;
+    font-size: 18px;
+    line-height: 30px;
+    background-color: transparent;
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+    display:block;
+    -webkit-transform: scaleY(1);
+	-o-transform: scaleY(1);
+	-ms-transform: scaleY(1);
+	transform: scaleY(1);
+    -webkit-transform-origin: top;
+	-o-transform-origin: top;
+	-ms-transform-origin: top;
+	transform-origin: top;
+
+	-webkit-transition: -webkit-transform 0.4s ease-out;
+	-o-transition: -o-transform 0.4s ease;
+	-ms-transition: -ms-transform 0.4s ease;
+	transition: transform 0.4s ease;
+        box-sizing: border-box;
+}
+
+.open .tab-heading{
+    margin:0px;
+    background: #D4DED3;
+    color: #405343;
+
+}
+
+.open .tab-heading::after{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.open .tab-content table{
+    margin-top: 20px;
+}
+.tabTable{
+    border:1px #BBCEB9 solid;
+    border-collapse: collapse;
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+.tabTable th, .tabTable td{
+    border:1px #BBCEB9 solid;
+}
+.tabTable th{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.tabTable tr:nth-child(even) {
+    background-color: #FCF7EE;
 }

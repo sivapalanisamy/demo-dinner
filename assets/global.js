@@ -951,3 +951,21 @@ class ProductQuantityInput extends HTMLElement {
 }
 
 customElements.define("quantity-card", ProductQuantityInput);
+
+
+var tabItem = document.getElementsByClassName("tabItem");
+  var tabHD = document.querySelectorAll(".tab-heading");
+  
+  console.log(tabHD);
+  for (i = 0; i < tabHD.length; i++) {
+    tabHD[i].addEventListener("click", toggleItem, false);
+  }
+  function toggleItem() {
+    var itemClass = this.parentNode.className;
+    for (i = 0; i < tabItem.length; i++) {
+      tabItem[i].className = "tabItem close";
+    }
+    if (itemClass == "tabItem close") {
+      this.parentNode.className = "tabItem open";
+    }
+  }

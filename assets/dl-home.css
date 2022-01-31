@@ -28,6 +28,29 @@
     top: -37px;
     max-width: 8em;
 }
+a{
+    position: relative;
+    overflow: hidden;
+    text-decoration: none !important;
+}
+a:hover{
+text-decoration: none !important;
+}
+a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transform: translateX(-100%);
+    transition: transform .5s ease;
+
+}
+a:hover::before {
+    transform: translateX(0);
+    background: #000000;
+}
 @media screen and (max-width: 749px) {
     #shopify-section-header .header .header__heading-logo{
         max-width: 8em;
