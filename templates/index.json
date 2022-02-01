@@ -11,10 +11,20 @@
             "button_link": "shopify:\/\/products\/dill-cured-salmon-gravlax-and-blini-kit",
             "button_label": "Order Now"
           }
+        },
+        "7296ced9-6ace-4fae-80fd-64651d9be8b1": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner_933a2745-d117-44fb-8933-50ad660bc950.png",
+            "bannerText": "Food from the DL",
+            "button_link": "shopify:\/\/products\/dinner-ladies-gift-card",
+            "button_label": "Order Now"
+          }
         }
       },
       "block_order": [
-        "9efc433c-4517-4824-bd07-c812917d7f0c"
+        "9efc433c-4517-4824-bd07-c812917d7f0c",
+        "7296ced9-6ace-4fae-80fd-64651d9be8b1"
       ],
       "settings": {
       }
