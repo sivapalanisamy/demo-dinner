@@ -1,5 +1,3 @@
-
-
 <div id="Banner-{{ section.id }}" class="banner home-banner-container">
   <div class="home-banner">
   <ul class="banner-slider">
@@ -24,22 +22,6 @@
         width="{{ block.settings.image.width }}"
         height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio }}"
       > 
-      {% comment %}  <img
-            srcset="{%- if block.settings.image.width >= 165 -%}{{ block.settings.image | img_url: '165x' }} 165w,{%- endif -%}
-              {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | img_url: '360x' }} 360w,{%- endif -%}
-              {%- if block.settings.image.width >= 535 -%}{{ block.settings.image | img_url: '535x' }} 535w,{%- endif -%}
-              {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | img_url: '750x' }} 750w,{%- endif -%}
-              {%- if block.settings.image.width >= 1070 -%}{{ block.settings.image | img_url: '1070x' }} 1070w,{%- endif -%}
-              {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | img_url: '1500x' }} 1500w,{%- endif -%}
-              {{ block.settings.image | img_url: 'master' }} {{ block.settings.image.width }}w"
-            src="{{ block.settings.image | img_url: '1500x' }}"
-            sizes="(min-width: {{ settings.page_width }}px) 100vw, (min-width: 750px) 100vw"
-            alt="{{ section.settings.image.alt | escape }}"
-            loading="lazy"
-            width="{{ section.settings.image.width }}"
-            height="{{ section.settings.image.height }}"
-            class="img"
-          > {% endcomment %}
         {%- else -%}
           {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
         {%- endif -%}
@@ -99,7 +81,7 @@
 
 {% javascript %}
 $('.banner-slider').slick({
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,

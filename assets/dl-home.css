@@ -184,6 +184,18 @@ nav ul li .list-menu__item{
 .home-banner .slick-next{
     right: 25px;
 }
+.home-banner .slick-prev,
+.home-banner .slick-next{
+    background: #FFFFFF60;
+    padding: 20px;
+    border-radius: 50%;
+    z-index: 9999;
+}
+.home-banner .slick-prev:before, .home-banner .slick-next:before{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
 .banner-slider{
     margin: 0;
     padding: 0;
@@ -219,35 +231,15 @@ nav ul li .list-menu__item{
     color: #000000;
     padding: 15px 54px;
 }
-.banner .banner-circle-1{
-    width: 527px;
-    height: 486px;
-    background: transparent;
-    display: block;
-    border-radius: 50% 50% 0 0;
-    position: absolute;
-    left: 30%;
-    bottom: -414px;
-    z-index: 1;
+.banner-slider .slick-disabled{
+    cursor: not-allowed;
 }
-.banner .banner-circle-2{
-   display: block;
-    width: 500px;
-    height: 500px;
-    background: #F1ECE1;
-    position: absolute;
-    bottom: -447px;
-    z-index: 2;
-    border-radius: 50% 50% 0 0;
-    left: 31%;
-    border-top: 1px #000 solid;
+.banner-slider *:focus-visible{
+    box-shadow:none
 }
 @media screen and (min-width: 750px) {
     .home-banner-container{
         min-height: 56rem;
-    }
-    .banner__media{
-        height: 100%;
     }
     .banner__content--middle-center{
         
@@ -257,17 +249,19 @@ nav ul li .list-menu__item{
     }
 }
 @media screen and (max-width: 749px) {
-.banner .banner-circle-1,
-.banner .banner-circle-2{
-    display: none;
-}
+
 .banner-slider li{
     height: 34rem;
 }
+.home-banner .slick-prev{
+    left: 15px;
+}
+.home-banner .slick-next{
+    right: 15px;
+}
 .banner .banner__content{
     bottom: 10%;
-    left: 10%;
-    width: 80%;
+    width: 100%;
     margin: 0;
     top: inherit;
 }
