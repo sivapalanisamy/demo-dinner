@@ -84,7 +84,7 @@
               <h2 class="footer-block__heading">{{ section.settings.newsletter_heading | escape }}</h2>
             {%- endif -%}
             {%- if section.settings.newsletter_content != blank -%}
-            <p>{{ section.settings.newsletter_content | escape }}</p>
+            	<p>{{ section.settings.newsletter_content | escape }}</p>
             {%- endif -%}
             
             {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
