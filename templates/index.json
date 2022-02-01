@@ -3,42 +3,19 @@
     "image_banner": {
       "type": "home-slider",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "9efc433c-4517-4824-bd07-c812917d7f0c": {
+          "type": "banner",
           "settings": {
-            "heading": "Food from the hearts",
-            "heading_size": "medium"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Order Now",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "bannerText": "Food from the hearts",
+            "button_link": "shopify:\/\/products\/dill-cured-salmon-gravlax-and-blini-kit",
+            "button_label": "Order Now"
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "9efc433c-4517-4824-bd07-c812917d7f0c"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/banner_18deeab9-db25-4fc8-801c-fa36e942c8a3.png",
-        "image_2": "shopify:\/\/shop_images\/banner_933a2745-d117-44fb-8933-50ad660bc950.png",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "adapt_height_first_image": false,
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
       }
     },
     "what-we-do": {
