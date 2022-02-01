@@ -174,16 +174,47 @@ nav ul li .list-menu__item{
     background: url("banner-line.png") no-repeat bottom left;
     padding-bottom: 20px;
 }
+.home-banner{
+    width: 100%;
+    display: block;
+}
+.home-banner .slick-prev{
+    left: 25px;
+}
+.home-banner .slick-next{
+    right: 25px;
+}
+.banner-slider{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.banner-slider li{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.banner-slider li img{
+    max-width: inherit;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    transition: opacity .4s cubic-bezier(.25,.46,.45,.94);
+}
+.banner-slider li .banner__content{
+    position: absolute;
+}
 .banner{
     position: relative;
 }
-.banner .banner__box{
+.banner-slider li  .banner__box{
     opacity: 1;
     padding: 0;
     background: transparent;
     text-align: left;
 }
-.banner .banner__box .banner__buttons .button--primary{
+.banner-slider li .banner__box .banner__buttons .button--primary{
     background: #E8D4B0;
     color: #000000;
     padding: 15px 54px;
@@ -212,10 +243,14 @@ nav ul li .list-menu__item{
     border-top: 1px #000 solid;
 }
 @media screen and (min-width: 750px) {
+    .home-banner-container{
+        min-height: 56rem;
+    }
+    .banner__media{
+        height: 100%;
+    }
     .banner__content--middle-center{
-        justify-content: flex-start !important;
-        padding: 0 !important;
-        margin: 0px !important;
+        
         text-align: left;
         bottom:10% ;
         top: inherit !important;
@@ -225,6 +260,9 @@ nav ul li .list-menu__item{
 .banner .banner-circle-1,
 .banner .banner-circle-2{
     display: none;
+}
+.banner-slider li{
+    height: 34rem;
 }
 .banner .banner__content{
     bottom: 10%;

@@ -1,37 +1,30 @@
-{%- if section.settings.adapt_height_first_image and section.settings.image != blank -%}
-  {%- style -%}
-  @media screen and (max-width: 749px) {
-    #Banner-{{ section.id }}::before,
-    #Banner-{{ section.id }} .banner__media::before,
-    #Banner-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
-      padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
-      content: '';
-      display: block;
-    }
-  }
 
-  @media screen and (min-width: 750px) {
-    #Banner-{{ section.id }}::before,
-    #Banner-{{ section.id }} .banner__media::before {
-      padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
-      content: '';
-      display: block;
-    }
-  }
-  {%- endstyle -%}
-{%- endif -%}
 
-{%- style -%}
-  #Banner-{{ section.id }}::after {
-    opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
-  }
-{%- endstyle -%}
-
-<div id="Banner-{{ section.id }}" class="banner  banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.adapt_height_first_image and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
-  {%for block in section.blocks %}
-    <div class="home-banner">
+<div id="Banner-{{ section.id }}" class="banner home-banner-container">
+  <div class="home-banner">
+  <ul class="banner-slider">
+  {%- for block in section.blocks -%}
+     <li class="">
+      
         {%- if block.settings.image != blank -%}
           <img
+        srcset="{%- if block.settings.image.width >= 375 -%}{{ block.settings.image | img_url: '375x' }} 375w,{%- endif -%}
+          {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | img_url: '750x' }} 750w,{%- endif -%}
+          {%- if block.settings.image.width >= 1100 -%}{{ block.settings.image | img_url: '1100x' }} 1100w,{%- endif -%}
+          {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | img_url: '1500x' }} 1500w,{%- endif -%}
+          {%- if block.settings.image.width >= 1780 -%}{{ block.settings.image | img_url: '1780x' }} 1780w,{%- endif -%}
+          {%- if block.settings.image.width >= 2000 -%}{{ block.settings.image | img_url: '2000x' }} 2000w,{%- endif -%}
+          {%- if block.settings.image.width >= 3000 -%}{{ block.settings.image | img_url: '3000x' }} 3000w,{%- endif -%}
+          {%- if block.settings.image.width >= 3840 -%}{{ block.settings.image | img_url: '3840x' }} 3840w,{%- endif -%}
+          {{ block.settings.image | img_url: 'master' }} {{ block.settings.image.width }}w"
+        sizes="100vw"
+        src="{{ block.settings.image | img_url: '1500x' }}"
+        loading="lazy"
+        alt="{{ block.settings.image.alt | escape }}"
+        width="{{ block.settings.image.width }}"
+        height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio }}"
+      > 
+      {% comment %}  <img
             srcset="{%- if block.settings.image.width >= 165 -%}{{ block.settings.image | img_url: '165x' }} 165w,{%- endif -%}
               {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | img_url: '360x' }} 360w,{%- endif -%}
               {%- if block.settings.image.width >= 535 -%}{{ block.settings.image | img_url: '535x' }} 535w,{%- endif -%}
@@ -40,29 +33,33 @@
               {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | img_url: '1500x' }} 1500w,{%- endif -%}
               {{ block.settings.image | img_url: 'master' }} {{ block.settings.image.width }}w"
             src="{{ block.settings.image | img_url: '1500x' }}"
-            sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+            sizes="(min-width: {{ settings.page_width }}px) 100vw, (min-width: 750px) 100vw"
             alt="{{ section.settings.image.alt | escape }}"
             loading="lazy"
             width="{{ section.settings.image.width }}"
             height="{{ section.settings.image.height }}"
             class="img"
-          >
+          > {% endcomment %}
         {%- else -%}
           {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
         {%- endif -%}
 
         <div class="banner__content banner__content--middle-center page-width">
             <div class="banner__box">
+              {%- if block.settings.bannerText != blank -%}
                 <h2 class="banner__heading h1">{{block.settings.bannerText}}</h2>
+              {%- endif -%}
                 <div class="banner__buttons">
-                  <a {% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button button--green" {{ block.shopify_attributes }}>
+                  <a {% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button" {{ block.shopify_attributes }}>
                     {{ block.settings.button_label | escape }}
                   </a>
                 </div>
             </div>
         </div>
-    </div>
-  {%endfor%}
+      </li>
+    {%- endfor -%}
+  </ul>
+  </div>
 </div>
 
 
@@ -99,3 +96,14 @@
 	]
   }
 {% endschema %}
+
+{% javascript %}
+$('.banner-slider').slick({
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true
+    
+});
+{% endjavascript %}
