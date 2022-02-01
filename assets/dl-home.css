@@ -28,7 +28,7 @@
     top: -37px;
     max-width: 8em;
 }
-a{
+/* a{
     position: relative;
     overflow: hidden;
     text-decoration: none !important;
@@ -50,7 +50,7 @@ a::before{
 a:hover::before {
     transform: translateX(0);
     background: #000000;
-}
+} */
 @media screen and (max-width: 749px) {
     #shopify-section-header .header .header__heading-logo{
         max-width: 8em;
