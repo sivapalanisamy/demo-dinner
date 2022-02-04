@@ -32,8 +32,8 @@
                   <div class="social-block">
                     <h5>Follow us:</h5>
                     <ul>                        
-                        <li><a href=""><img  src="{{ 'insta-ico.png' | asset_url }}" alt="{{ shop.name }}"></a></li>
-                        <li><a href=""><img  src="{{ 'fb-ico.png' | asset_url }}" alt="{{ shop.name }}"></a></li>
+                        <li><a href="{{section.settings.instaUrl}}"><img  src="{{ 'insta-ico.png' | asset_url }}" alt="{{ shop.name }}"></a></li>
+                        <li><a href="{{section.settings.fbUrl}}"><img  src="{{ 'fb-ico.png' | asset_url }}" alt="{{ shop.name }}"></a></li>
                     </ul>
                 </div>
                   
@@ -137,6 +137,16 @@
       "type": "text",
       "id": "phone",
       "label": "Phone  Number"
+    },
+    {
+      "type": "url",
+      "id": "instaUrl",
+      "label": "Intagram URL"
+    },
+    {
+      "type": "url",
+      "id": "fbUrl",
+      "label": "Facebook URL"
     }
     
   ],
