@@ -1,0 +1,79 @@
+.login-container{
+    position: relative;
+    width: 100%;
+    background: url("login-img.png") no-repeat top left;
+    background-size: cover;
+    padding: 60px 0px;
+}
+.login-container img{
+    max-width: 100%;
+}
+.login-container .login-block{
+    width: 100%;
+    /* position: absolute; */
+    top: 0;
+}
+.login-container .login-block .customer{
+    background: #D4DED3;
+    padding: 60px;
+    border-radius: 20px;
+    border: 1.2px solid #BBCEB9;
+    margin: 0 auto;
+    max-width: 67rem;
+}
+
+.login-container .login-block .customer form .field .field__input{
+    border: 1px solid #E8D4B0;
+    background: #FFFFFF;
+    border-radius: 50px;
+    box-shadow: none;
+    padding: 3.5rem 3rem 2.5rem 3.7rem;
+}
+.login-container .login-block .customer h1{
+    font-size: 60px;
+    margin: 0;
+    padding: 0;
+    color: #344E38;
+}
+.login-container .login-block .customer form .field .text-area{
+    height: 170px;
+    border-radius: 20px;
+}
+.login-container .login-block .customer form .field label{
+    font-size: 18px;
+    left: 38px;
+    top: 20px;
+}
+.login-container .login-block .customer form .field__input:focus ~ .field__label{
+    font-size: 1rem;
+    top: 0.3em;
+}
+.login-container .login-block .customer .button--green{
+    background: #344E38;
+    color: #FFFFFF;
+    padding: 1rem 10rem;
+}
+.login-container .login-block .customer .login-links a{
+    width: inherit;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 15px;
+}
+.login-container .login-block .customer .login-links a:hover{
+    text-decoration-thickness:inherit
+    
+}
+.login-container .login-block .login p{
+    margin: 0;
+    font-size: 18px;
+
+}
+@media screen and (max-width: 749px){
+    .login-container .login-block .customer{
+        width: 95%;
+        padding: 20px 20px 50px;
+    }
+    .login-container .login-block .customer .button--green{
+        padding: 1rem 6.3rem;
+    }
+}
