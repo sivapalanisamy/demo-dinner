@@ -35,6 +35,9 @@
     padding: 0;
     color: #344E38;
 }
+.login-container .login-block .customer form{
+    margin-top: 0;
+}
 .login-container .login-block .customer form .field .text-area{
     height: 170px;
     border-radius: 20px;
