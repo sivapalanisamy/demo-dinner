@@ -5,6 +5,9 @@
   <h1 class="title">{{ page.title | escape }}</h1>
   <div class="address-container">
       <h2>The Dinner Ladies</h2>
+      <div class="image-block">
+          <img  src="{{section.settings.contactImg | img_url: 'master'}}" alt="{{ shop.name }}">
+      </div>
       <div class="address-block">
           <div class="address address-section">
               <div class="ico">
@@ -39,10 +42,7 @@
                   
               </div>
           </div>
-      </div>
-      <div class="image-block">
-          <img  src="{{section.settings.contactImg | img_url: 'master'}}" alt="{{ shop.name }}">
-      </div>
+      </div>      
       
   </div>
   <div class="form-container">

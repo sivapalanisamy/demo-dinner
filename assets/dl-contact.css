@@ -74,18 +74,7 @@
     display: inline-block;
     padding: 0px 10px;
 }
-.contact-page .address-container .image-block{
-    width: 380px;
-    float: right;
-    margin-right: 0;
-    padding: 18px;
-    border: 1.2px solid #BBCEBA;
-    border-radius: 20px;
-    position: absolute;
-    right: 60px;
-    top: -30px;
-    background: #FFFAF1;
-}
+
 .contact-page .address-container .image-block img{
 	border-radius:8px;
 }
@@ -134,4 +123,48 @@
 }
 .contact-page .form-container form .contact__button .button--green{
     padding:1rem 10rem;
+}
+.contact-page .address-container .image-block{
+    width: 380px;
+    padding: 18px;
+    border: 1.2px solid #BBCEBA;
+    border-radius: 20px;
+    position: absolute;
+    background: #FFFAF1;
+}
+@media screen and (min-width: 750px){
+    .contact-page .address-container .image-block{
+        width: 380px;
+        right: 60px;
+        top: -30px;
+    }
+}
+@media screen and (max-width: 749px){
+    .contact-page{
+        width: 95%;
+        margin-top: 20px;
+    }
+    .contact-page .address-container{
+        margin-bottom: 10px;
+    }
+    .contact-page h1,
+    .contact-page .address-container h2{
+        text-align: center;
+        padding-left: 0;
+        padding-bottom: 0;
+    }
+    .contact-page .address-container .image-block{
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .contact-page .address-container .address-block{
+        padding: 0;
+        width: 90%;
+        margin: 25px auto 0;
+        float: inherit;
+    }
+    .contact-page .form-container form h3{
+        text-align: center;
+    }
 }
