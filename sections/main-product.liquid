@@ -20,6 +20,9 @@
 {%- endif -%}
 
 <section class="page-width product-details-container">
+  <div class="back-to-menu">
+      <a href="" onclick="window.history.go(-1); return false;">Back to Menu</a>
+  </div>
   <div class="product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper">
       <slider-component class="slider-mobile-gutter">
@@ -194,6 +197,11 @@
                 <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                 {{ form | payment_terms }}
               {%- endform -%}
+            </div>
+
+            <div class="varient-description">
+                <p><b>Small:</b> Serves one (hungry!) to two adults</p>
+                <p><b>Large:</b> Serves three to four adults</p>
             </div>
           
             {%- if product.metafields != blank -%}

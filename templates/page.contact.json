@@ -1,8 +1,6 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page"
-    },
+    
     "form": {
       "type": "contact-form",
       "settings": {
@@ -11,7 +9,7 @@
     }
   },
   "order": [
-    "main",
+    
     "form"
   ]
 }

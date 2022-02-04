@@ -132,7 +132,7 @@
                     //console.log(shippingAddress);
                 } else {
                     //no shipping address attribute is set, show the shipping address popup modal
-                    showShippingAddressModal();
+                    //showShippingAddressModal();
                 }
             });
     }
@@ -179,7 +179,7 @@
             },
             body: JSON.stringify(shippingAddressAttrObj),
         }).then(response => {
-            hideShippingAddressModal();
+            //hideShippingAddressModal();
             alert('Successfully add the shipping address to the cart\'s attributes !');
         }).catch((error) => {
             console.error('Error:', error);

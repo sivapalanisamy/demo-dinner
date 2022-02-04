@@ -1,7 +1,51 @@
 {{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
+{{ 'dl-contact.css' | asset_url | stylesheet_tag }}
 
-<div class="contact page-width page-width--narrow spaced-section">
-  <h2 class="title">{{ section.settings.heading | escape }}</h2>
+<div class="contact contact-page">
+  <h1 class="title">{{ page.title | escape }}</h1>
+  <div class="address-container">
+      <h2>The Dinner Ladies</h2>
+      <div class="address-block">
+          <div class="address address-section">
+              <div class="ico">
+                <img  src="{{ 'address-ico.png' | asset_url }}" alt="{{ shop.name }}"> 
+              </div>
+              <div class="content">
+                  <h5>Address:</h5>
+                  <p>Unit 14, 30-32 Perry Street Matraville NSW 2036, Australia</p>
+              </div>
+          </div>
+          <div class="phone address-section">
+              <div class="ico">
+                <img  src="{{ 'phone-ico.png' | asset_url }}" alt="{{ shop.name }}"> 
+              </div>
+              <div class="content">
+                  <h5>Phone:</h5>
+                  <p>+612 9666 4194</p>
+              </div>
+          </div>
+          <div class="social address-section">
+              <div class="ico">
+                <img  src="{{ 'social-ico.png' | asset_url }}" alt="{{ shop.name }}"> 
+              </div>
+              <div class="content">
+                  <div class="social-block">
+                    <h5>Follow us:</h5>
+                    <ul>                        
+                        <li><a href=""><img  src="{{ 'insta-ico.png' | asset_url }}" alt="{{ shop.name }}"></a></li>
+                        <li><a href=""><img  src="{{ 'fb-ico.png' | asset_url }}" alt="{{ shop.name }}"></a></li>
+                    </ul>
+                </div>
+                  
+              </div>
+          </div>
+      </div>
+      <div class="image-block">
+          <img  src="{{ 'contact-img.png' | asset_url }}" alt="{{ shop.name }}">
+      </div>
+      
+  </div>
+  <div class="form-container">
   {%- form 'contact', id: 'ContactForm' -%}
     {%- if form.posted_successfully? -%}
       <div class="form-status form-status-list form__message" tabindex="-1" autofocus>{% render 'icon-success' %} {{ 'templates.contact.form.post_success' | t }}</div>
@@ -17,7 +61,7 @@
         </li>
       </ul>
     {%- endif -%}
-    <div class="contact__fields">
+    <h3>Send us a message</h3>
       <div class="field">
         <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="{{ 'templates.contact.form.name' | t }}">
         <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
@@ -47,7 +91,6 @@
           </small>
         {%- endif -%}
       </div>
-    </div>
     <div class="field">
       <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel" name="contact[{{ 'templates.contact.form.phone' | t }}]" pattern="[0-9\-]*" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}" placeholder="{{ 'templates.contact.form.phone' | t }}">
       <label class="field__label" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
@@ -65,11 +108,12 @@
       <label class="form__label field__label" for="ContactForm-body">{{ 'templates.contact.form.comment' | t }}</label>
     </div>
     <div class="contact__button">
-      <button type="submit" class="button">
+      <button type="submit" class="button button--green">
         {{ 'templates.contact.form.send' | t }}
       </button>
     </div>
   {%- endform -%}
+ </div>
 </div>
 
 {% schema %}

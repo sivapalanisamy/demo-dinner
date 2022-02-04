@@ -86,6 +86,13 @@ nav ul li .list-menu__item{
 .header__icon--cart:hover .icon-cart{
     transform: inherit;
 }
+.header__icons .header__icon--cart .cart-count-bubble{
+    background: #2A332F;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 700;
+    padding-top: 3px;
+}
 .footer{
     background: #FEF9F0;
 
@@ -118,6 +125,12 @@ nav ul li .list-menu__item{
     font-size: 24px;
     text-align: left;
 }
+.footer .footer-menu-news p{
+    text-align: left;
+    font-size: 18px;
+    line-height: 30px;
+    color: #000000;
+}
 .footer .footer-menu-news form{
     width: 100%;
     max-width: 100%;
@@ -148,6 +161,26 @@ nav ul li .list-menu__item{
     padding: 0px 36px;
     right: 8px;
     top: 8px;
+}
+.footer .footer__content-top{
+    padding-bottom: 0;
+}
+.footer .footer__content-bottom{
+    border: 0;
+    padding-top: 0;
+    text-align: left;
+    padding-bottom: 20px;
+}
+.footer .footer__content-bottom .footer__localization:empty + .footer__column--info{
+    align-items: flex-start;
+}
+.footer .footer__content-bottom .footer__copyright{
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
 }
 @media screen and (max-width: 1024px) {
     .footer .footer-menu-links,
@@ -544,6 +577,8 @@ summary .icon-dl{
     margin-bottom: 40px;
     line-height: 50px;
     padding-bottom: 30px;
+    color:#344E38;
+
 }
 .featured-section .collection .view-collection{
     width: 100%;
