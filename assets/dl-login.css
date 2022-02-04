@@ -68,6 +68,18 @@
     font-size: 18px;
 
 }
+.customer h2.form__message{
+    display: none;
+}
+.login-container .login-block .customer .errors ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.login-container .login-block .customer .errors ul li{
+    font-size: 18px;
+    color: #FF0000;
+}
 @media screen and (max-width: 749px){
     .login-container .login-block .customer{
         width: 95%;
