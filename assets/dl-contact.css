@@ -10,6 +10,9 @@
 .contact-page h1{
     margin: 0;
     padding: 30px 0px 20px 50px;
+    font-size:60px;
+    color:#344E38;
+
 }
 .contact-page .address-container{
     position: relative;
