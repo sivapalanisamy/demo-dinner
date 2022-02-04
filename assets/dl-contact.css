@@ -83,6 +83,9 @@
     top: -30px;
     background: #FFFAF1;
 }
+.contact-page .address-container .image-block img{
+	border-radius:8px;
+}
 .contact-page .form-container{
     background: #D4DED3;
     padding:20px 20px 80px;
