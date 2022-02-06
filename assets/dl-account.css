@@ -4,3 +4,9 @@
 .account-container .account{
   margin-top:0;
 }
+.account-container .account .logout{
+    font-size:18px
+	color: #313131;
+
+}
+
