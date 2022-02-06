@@ -85,5 +85,9 @@
   	border-bottom: 1px solid #E8D4B0;
     line-height:75px;
   }
+  .account-container .account  .account-content .account-order table thead tr{
+  	border-bottom: 1px solid #E8D4B0;
+    border-top:0;
+  }
 }
 
