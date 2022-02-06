@@ -69,8 +69,12 @@
 .account-container .account  .account-content .account-address .account-details h5{
 	font-size:26px;
     font-weight:700;
-    margin:0;
+    margin:0px 0px 15px;
     padding:0;
    line-height:36px;
+}
+.account-container .account  .account-content .account-address .account-details p{
+	font-size:18px;
+    line-height:30px;
 }
 
