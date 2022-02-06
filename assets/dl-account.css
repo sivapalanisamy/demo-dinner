@@ -38,6 +38,8 @@
     font-size: 18px;
     color: #405343;
     font-weight: 700;
+    padding-top: 1.8rem;
+	padding-bottom: 1.8rem;
 }
 .account-container .account  .account-content .account-address{
 	width:100%;
