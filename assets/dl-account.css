@@ -84,13 +84,15 @@
   .account-container .account .account-content h2{
   	border-bottom: 1px solid #E8D4B0;
     line-height:75px;
+    margin-bottom:10px;
   }
   .account-container .account  .account-content .account-order table thead tr{
   	border-bottom: 1px solid #E8D4B0;
     border-top:0;
   }
   .account-container .account  .account-content .account-order table tbody tr td{
-  	padding:20px;
+  	padding:10px 20px;
+    line-height: 28px;
   }
   .account-container .account  .account-content .account-order table tbody tr td:before{
   	font-size:18px;
