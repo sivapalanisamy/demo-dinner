@@ -105,8 +105,7 @@
     <div class="account-address">
       <h2>{{ 'customer.account.details' | t }}</h2>
 	  <div class="account-details">
-        {{customer.default_address.first_name}}
-        {{customer.default_address.last_name}}
+        <h5>{{customer.default_address.first_name}} {{customer.default_address.last_name}}</h5>
         <p>{{customer.default_address.address1}} <br/>
          {%- if customer.default_address.address2 != blank -%}
            {{customer.default_address.address2}}<br/>
