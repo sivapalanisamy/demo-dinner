@@ -10,4 +10,8 @@
     text-decoration:underline;
 
 }
+.account-container .account h2{
+	font-size:30px;
+    line-height:100px;
+}
 
