@@ -101,5 +101,11 @@
     font-weight:700;
     text-transform: none;
   }
+  .account-container .account .account-content .account-order table{
+  	border-bottom:0;
+  }
+  .account-container .account .account-content .account-address h2{
+    border-bottom:0;
+  }
 }
 
