@@ -58,4 +58,11 @@
 	width:100%;
     max-width:362px;
 }
+.account-container .account  .account-content .account-address .account-details{
+	width:100%;
+    display:inline-block;
+    background:#FFFFFF;
+    border: 1px solid #E8D4B0;
+    padding:40px;
+}
 
