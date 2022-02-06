@@ -27,6 +27,9 @@
 	width:100%;
     max-width:1023px;
 }
+.account-container .account  .account-content .account-order table{
+  box-shadow: none;
+}
 .account-container .account  .account-content .account-address{
 	width:100%;
     max-width:362px;
