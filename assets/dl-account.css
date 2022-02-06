@@ -33,6 +33,12 @@
 .account-container .account  .account-content .account-order table thead tr{
  background: #D4DED3;
 }
+.account-container .account  .account-content .account-order table thead tr th{
+    text-transform: none;
+    font-size: 18px;
+    color: #405343;
+    font-weight: 700;
+}
 .account-container .account  .account-content .account-address{
 	width:100%;
     max-width:362px;
