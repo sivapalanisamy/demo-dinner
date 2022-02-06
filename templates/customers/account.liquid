@@ -107,11 +107,11 @@
 	  <div class="account-details">
         {{customer.default_address.first_name}}
         {{customer.default_address.last_name}}
-        {{customer.default_address.address1}}
-        {{customer.default_address.address2}}
+        <p>{{customer.default_address.address1}} <br/>
+        {{customer.default_address.address2}}<br/>
         {{customer.default_address.city}}
-        {{customer.default_address.zip}}
-        {{customer.default_address.country}}
+        {{customer.default_address.zip}}<br/>
+          {{customer.default_address.country}}</p>
       {{ customer.default_address | format_address }}
 
       <a href="{{ routes.account_addresses_url }}">
