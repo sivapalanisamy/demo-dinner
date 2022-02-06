@@ -72,6 +72,7 @@
     margin:0px 0px 15px;
     padding:0;
    line-height:36px;
+  font-family:var(--font-body-family);
 }
 .account-container .account  .account-content .account-address .account-details p{
 	font-size:18px;
