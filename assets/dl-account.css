@@ -48,6 +48,11 @@
     padding-top: 1.8rem;
 	padding-bottom: 1.8rem;
 }
+.account-container .account  .account-content .account-order table td:first-of-type a{
+  box-shadow:none;
+  font-size:18px;
+  padding:0;
+}
 
 .account-container .account  .account-content .account-address{
 	width:100%;
