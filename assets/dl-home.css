@@ -1,3 +1,9 @@
+h1{
+    font-size: 60px;
+    color:#344E38;
+    margin: 0;
+    padding: 0;
+}
 
 #shopify-section-header{
     z-index: 999;
