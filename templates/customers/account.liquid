@@ -108,12 +108,14 @@
         {{customer.default_address.first_name}}
         {{customer.default_address.last_name}}
         <p>{{customer.default_address.address1}} <br/>
-        {{customer.default_address.address2}}<br/>
+         {%- if customer.default_address.address2 != blank -%}
+           {{customer.default_address.address2}}<br/>
+         {%- endif -%}
         {{customer.default_address.city}}
           {{customer.default_address.province_code}}
         {{customer.default_address.zip}}<br/>
           {{customer.default_address.country}}</p>
-      {{ customer.default_address | format_address }}
+      
 
       <a href="{{ routes.account_addresses_url }}">
         {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
