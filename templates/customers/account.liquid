@@ -111,6 +111,7 @@
         {{customer.default_address.address2}}
         {{customer.default_address.city}}
         {{customer.default_address.zip}}
+        {{customer.default_address.country}}
       {{ customer.default_address | format_address }}
 
       <a href="{{ routes.account_addresses_url }}">
