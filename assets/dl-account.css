@@ -13,14 +13,22 @@
     text-decoration:underline;
 
 }
-.account-container .account  .account-content{
+.account-container .account .account-content{
   	margin:0;
 }
-.account-container .account h2{
+.account-container .account .account-content h2{
 	font-size:30px;
     line-height:100px;
     color: #344E38;
     margin:0;
 
+}
+.account-container .account  .account-content .account-order{
+	width:100%;
+    max-width:1023px;
+}
+.account-container .account  .account-content .account-address{
+	width:100%;
+    max-width:362px;
 }
 
