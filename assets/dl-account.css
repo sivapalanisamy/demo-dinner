@@ -80,3 +80,10 @@
     line-height:30px;
 }
 
+@media screen and (max-width: 749px) {
+  .account-container .account .account-content h2{
+  	border-bottom: 1px solid #E8D4B0;
+    line-height:75px;
+  }
+}
+
