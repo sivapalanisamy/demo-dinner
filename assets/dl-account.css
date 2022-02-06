@@ -4,6 +4,9 @@
 .account-container .account{
   margin-top:0;
 }
+.account-container .account h1{
+	margin-bottom:0;
+}
 .account-container .account .logout{
     font-size:18px;
 	color: #313131;
@@ -13,5 +16,7 @@
 .account-container .account h2{
 	font-size:30px;
     line-height:100px;
+    color: #344E38;
+
 }
 
