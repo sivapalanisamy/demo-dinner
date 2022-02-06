@@ -89,5 +89,13 @@
   	border-bottom: 1px solid #E8D4B0;
     border-top:0;
   }
+  .account-container .account  .account-content .account-order table tbody tr td{
+  	padding:20px;
+  }
+  .account-container .account  .account-content .account-order table tbody tr td:before{
+  	font-size:18px;
+    font-weight:700;
+    text-transform: none;
+  }
 }
 
