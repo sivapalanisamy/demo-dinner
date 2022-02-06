@@ -78,6 +78,7 @@
 .account-container .account  .account-content .account-address .account-details p{
 	font-size:18px;
     line-height:30px;
+    margin-bottom:5px;
 }
 
 @media screen and (max-width: 749px) {
