@@ -105,7 +105,12 @@
     <div class="account-address">
       <h2>{{ 'customer.account.details' | t }}</h2>
 	  <div class="account-details">
+        {{customer.default_address.first_name}}
+        {{customer.default_address.last_name}}
         {{customer.default_address.address1}}
+        {{customer.default_address.address2}}
+        {{customer.default_address.city}}
+        {{customer.default_address.zip}}
       {{ customer.default_address | format_address }}
 
       <a href="{{ routes.account_addresses_url }}">
