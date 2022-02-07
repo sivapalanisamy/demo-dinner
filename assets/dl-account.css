@@ -224,6 +224,10 @@
   	margin-top:15px;
     padding-bottom:0
   }
+  .edit-address-section .edit-address form .field{
+      flex-basis: 100%;
+      padding-right: 0;
+  }
 }
 
 
