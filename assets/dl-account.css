@@ -112,7 +112,7 @@
   }
 }
 
-.edit-address-section div[id]{
+.edit-address-section .edit-address{
 	display:none;
 }
 
