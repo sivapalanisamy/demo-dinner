@@ -108,6 +108,17 @@
           {%- if address == customer.default_address -%}
             <h2>{{ 'customer.addresses.default' | t }}</h2>
           {%- endif -%}
+          <h5>{{customer.default_address.first_name}} {{customer.default_address.last_name}}</h5>
+          <p> <b>Address</b><br/>
+           {{customer.default_address.address1}} <br/>
+           {%- if customer.default_address.address2 != blank -%}
+             {{customer.default_address.address2}}<br/>
+           {%- endif -%}
+          {{customer.default_address.city}}
+            {{customer.default_address.province_code}}
+          {{customer.default_address.zip}}<br/>
+            {{customer.default_address.country}}</p>
+            
           {{ address | format_address }}
           <button
             type="button"
