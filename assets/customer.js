@@ -64,10 +64,7 @@ class CustomerAddresses {
     const editAddressForm = target.getAttribute("data-edit-id");
     console.log(editAddressForm);
     document.getElementById(editAddressForm).style.display = "block";
-    target.setAttribute(
-      attributes.expanded,
-      (target.getAttribute(attributes.expanded) === 'false').toString()
-    );
+    
   }
 
   _handleAddEditButtonClick = ({ currentTarget }) => {
