@@ -130,4 +130,19 @@
     text-align:left;
 }
 
+.account-container .account .addresses .address-list li .address-col h5{
+	font-size:26px;
+    font-weight:700;
+    margin:0px 0px 15px;
+    padding:0;
+   line-height:36px;
+   font-family:var(--font-body-family);
+   text-transform: capitalize;
+}
+.account-container .account .addresses .address-list li .address-col p{
+	font-size:18px;
+    line-height:30px;
+    margin-bottom:5px;
+}
+
 
