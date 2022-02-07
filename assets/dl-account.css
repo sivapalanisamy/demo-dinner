@@ -211,5 +211,10 @@
 .edit-address-section .edit-address .button--green{
     background: #344E38;
     color: #FFFFFF;
+    box-shadow:none;
+}
+.edit-address-section .edit-address .button--cancel{
+	border: 2px solid #E8D4B0
+    box-shadow:none;
 }
 
