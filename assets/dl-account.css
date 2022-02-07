@@ -116,3 +116,8 @@
 	display:none;
 }
 
+.account-container .account .address{
+	max-width:inherit;
+    margin:0;
+}
+
