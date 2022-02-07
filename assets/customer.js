@@ -63,6 +63,7 @@ class CustomerAddresses {
   _toggleExpanded(target) {
     const editAddressForm = target.getAttribute("data-edit-id");
     console.log(editAddressForm);
+    document.getelementsbyclassname("edit-address").style.display = "none";
     document.getElementById(editAddressForm).style.display = "block";
     
   }
