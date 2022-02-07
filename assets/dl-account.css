@@ -189,7 +189,7 @@
     left: 38px;
     top: 20px;
 }
-.edit-address-section .edit-address form .field__input:focus ~ .field__label{
+.edit-address-section .edit-address .field input:not(:placeholder-shown)~label{
     font-size: 1rem;
     top: 0.3em;
 }
