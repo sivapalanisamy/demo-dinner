@@ -191,6 +191,9 @@
 	border: 2px solid #E8D4B0;
     box-shadow:none;
 }
+.account-container .addresses button:hover{
+   box-shadow:none;
+}
 .add-address-container .btn-add{
 	margin:0px 0px 30px;
 }
