@@ -173,3 +173,24 @@
 
 }
 
+.edit-address-section .edit-address form .field input{
+    border: 1px solid #E8D4B0;
+    background: #FFFFFF;
+    border-radius: 50px;
+    box-shadow: none;
+    padding: 3.5rem 3rem 2.5rem 3.7rem;
+}
+.edit-address-section .edit-address form .field .text-area{
+    height: 170px;
+    border-radius: 20px;
+}
+.edit-address-section .edit-address form .field label{
+    font-size: 18px;
+    left: 38px;
+    top: 20px;
+}
+.edit-address-section .edit-address form .field__input:focus ~ .field__label{
+    font-size: 1rem;
+    top: 0.3em;
+}
+
