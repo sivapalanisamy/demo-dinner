@@ -222,6 +222,7 @@
   }
   .account-container .account .addresses ul li{
   	margin-top:15px;
+    padding-bottom:0
   }
 }
 
