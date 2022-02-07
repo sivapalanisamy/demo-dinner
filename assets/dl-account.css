@@ -161,4 +161,15 @@
     text-transform: inherit;
 }
 
+.edit-address-section{
+	width:100%;
+    max-width:880px
+}
+.edit-address-section .edit-address h2{
+	font-size:30px;
+    margin:0;
+    padding:0;
+    color: #344E38;
+
+}
 
