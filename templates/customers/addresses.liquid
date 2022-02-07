@@ -1,5 +1,5 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
-
+{{ 'dl-account.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'customer.js' | asset_url }}" defer></script>
 <div class="customer account">
 {%- paginate customer.addresses by 5 -%}
