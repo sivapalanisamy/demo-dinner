@@ -34,6 +34,20 @@
     font-size: 18px;
     line-height: 30px;
 }
+.about-container .about-content .about-row .image-content .button{
+    margin-bottom: 30px;
+}
+.about-container .service-content{
+    width: 100%;
+    max-width: 946px;
+    margin: 0px auto 50px;
+    text-align: center;
+}
+.about-container .service-content p{
+    font-family: var(--font-heading-family);
+    font-size: 26px;
+    line-height: 36px;
+}
 
 @media screen and (max-width: 749px) {
     .about-container .about-content .about-row .image-content{
