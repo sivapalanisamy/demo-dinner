@@ -239,7 +239,7 @@
   .account-container .button-row{
   	text-align:center;
   }
-  .account-container .button-row button{
+  .account-container .addresses .button-row button{
     width:100%;
     max-width:240px;
     margin:10px 0px;
