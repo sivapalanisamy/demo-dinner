@@ -177,12 +177,12 @@
     top: 0.3em;
 }
 
-.edit-address-section .edit-address .button--green{
+.account-container .button--green{
     background: #344E38;
     color: #FFFFFF;
     box-shadow:none;
 }
-.edit-address-section .edit-address .button--cancel{
+.account-container .button--cancel{
 	border: 2px solid #E8D4B0;
     box-shadow:none;
 }
