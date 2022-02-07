@@ -176,13 +176,23 @@
 	flex-basis: 50%;
     padding-right: 2rem;
 }
-.edit-address-section .edit-address form .field input, .edit-address-section .edit-address form .field select{
+.edit-address-section .edit-address form .field input, 
+.edit-address-section .edit-address form .field select{
     border: 1px solid #E8D4B0;
     background: #FFFFFF;
     border-radius: 50px;
     box-shadow: none;
     padding: 3.5rem 3rem 2.5rem 3.7rem;
 }
+.edit-address-section .edit-address form .field select{
+    padding: 1rem 3rem 0rem 3.7rem;
+    height: 62px;
+}
+.edit-address-section .edit-address .field.selectbox label{
+    font-size: 1rem;
+    top: 0.3em;
+}
+
 .edit-address-section .edit-address form .field .text-area{
     height: 170px;
     border-radius: 20px;
