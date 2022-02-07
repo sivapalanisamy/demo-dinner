@@ -112,3 +112,7 @@
   }
 }
 
+.edit-address-section div[id]{
+	display:none;
+}
+
