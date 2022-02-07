@@ -178,8 +178,8 @@
     z-index:999;
 }
 .edit-address-section .edit-address .field input:not(:placeholder-shown)~label{
-    font-size: 1rem;
-    top: 0.3em;
+    font-size: 18px;
+    top: 0.4em;
 }
 
 .account-container .button--green{
