@@ -63,7 +63,10 @@ class CustomerAddresses {
   _toggleExpanded(target) {
     const editAddressForm = target.getAttribute("data-edit-id");
     console.log(editAddressForm);
-    document.querySelectorAll(".edit-address");
+    Array.from(document.querySelectorAll(".edit-address"))
+        .forEach(function(val) {
+            val.style.display = 'none';
+    });
     document.getElementById(editAddressForm).style.display = "block";
     
   }
