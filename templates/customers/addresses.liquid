@@ -108,7 +108,7 @@
           {%- if address == customer.default_address -%}
             <h2>{{ 'customer.addresses.default' | t }}</h2>
           {%- endif -%}
-          <h5>{{customer.default_address.first_name}} {{customer.default_address.last_name}}</h5>
+          <h5>{{address.first_name}} {{address.last_name}}</h5>
           <p> <b>Address</b><br/>
            {{customer.default_address.address1}} <br/>
            {%- if customer.default_address.address2 != blank -%}
