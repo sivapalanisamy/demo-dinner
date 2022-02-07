@@ -162,7 +162,7 @@
                 <input type="text" id="AddressCity_{{ form.id }}" name="address[city]" value="{{ form.city }}" autocomplete="address-level2" placeholder="{{ 'customer.addresses.city' | t }}">
                 <label for="AddressCity_{{ form.id }}">{{ 'customer.addresses.city' | t }}</label>
               </div>
-              <div>
+              <div class="field">
                 <label for="AddressCountry_{{ form.id }}">
                   {{ 'customer.addresses.country' | t }}
                 </label>
@@ -182,7 +182,7 @@
                   </svg>
                 </div>
               </div>
-              <div id="AddressProvinceContainer_{{ form.id }}" style="display:none;">
+              <div id="AddressProvinceContainer_{{ form.id }}" class="field" style="display:none;">
                 <label for="AddressProvince_{{ form.id }}">
                   {{ 'customer.addresses.province' | t }}
                 </label>
