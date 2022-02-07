@@ -13,7 +13,9 @@
   </h1>
   <div class="service-content">
       {{section.settings.content}}
-    <a href="{{section.settings.subscribeLink}}" class="button button--green">SUBSCRIBE HERE</a>
+    {%- if section.settings.button_label != blank -%}
+    	<a href="{{section.settings.button_link}}" class="button button--green">{{section.settings.button_label}}</a>
+    {%- endif -%}
   </div>
   <div class="about-content">
     {%for block in section.blocks %}
