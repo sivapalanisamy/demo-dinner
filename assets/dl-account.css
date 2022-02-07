@@ -145,6 +145,10 @@
 	flex-basis: 50%;
     padding-right: 2rem;
 }
+.edit-address-section .edit-address form .field.phone{
+	flex-basis: 100%;
+    padding-right: 0;
+}
 .edit-address-section .edit-address form .field input, 
 .edit-address-section .edit-address form .field select{
     border: 1px solid #E8D4B0;
