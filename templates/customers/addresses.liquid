@@ -105,9 +105,6 @@
       {%- for address in customer.addresses -%}
         <li data-address class="grid__item">
           <div class="address-col">
-          {%- if address == customer.default_address -%}
-            <h2>{{ 'customer.addresses.default' | t }}</h2>
-          {%- endif -%}
           <h5>{{address.first_name}} {{address.last_name}}</h5>
           <p> <b>Address: {%- if address == customer.default_address -%} {{ 'customer.addresses.default' | t }} {%- endif -%}</b><br/>
            {{address.address1}} <br/>
