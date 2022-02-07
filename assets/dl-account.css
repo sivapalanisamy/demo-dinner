@@ -228,6 +228,14 @@
       flex-basis: 100%;
       padding-right: 0;
   }
+  .edit-address-section .edit-address .button-row{
+  	text-align:center;
+  }
+  .edit-address-section .edit-address .button-row button{
+    width:100%;
+    max-width:240px;
+    margin:10px 0px;
+  }
 }
 
 
