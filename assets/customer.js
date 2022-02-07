@@ -61,9 +61,8 @@ class CustomerAddresses {
   }
 
   _toggleExpanded(target) {
-    console.log(target.getAttribute("aria-controls"));
-    console.log(target.aria-controls);
-    document.getElementById(target.aria-controls).style.display = "block";
+    const editAddressForm = target.getAttribute("data-edit-id");
+    document.getElementById(editAddressForm).style.display = "block";
     target.setAttribute(
       attributes.expanded,
       (target.getAttribute(attributes.expanded) === 'false').toString()
