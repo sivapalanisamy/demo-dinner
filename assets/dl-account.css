@@ -144,7 +144,7 @@
     line-height:30px;
     margin-bottom:5px;
 }
-.account-container .account .addresses .address-list li .address-col .button{
+.account-container .account .addresses .address-list li .address-col button{
 	margin: 0;
     padding: 0;
     background: transparent;
