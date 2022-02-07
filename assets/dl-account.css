@@ -81,37 +81,6 @@
     margin-bottom:5px;
 }
 
-@media screen and (max-width: 749px) {
-  .account-container .account .account-content h2{
-  	border-bottom: 1px solid #E8D4B0;
-    line-height:75px;
-    margin-bottom:10px;
-    color: #344E38;
-
-  }
-  .account-container .account  .account-content .account-order table tr{
-  	border-bottom: 1px solid #E8D4B0;
-    border-top:0;
-    padding-bottom:10px;
-    margin-bottom:10px;
-  }
-  .account-container .account  .account-content .account-order table tbody tr td{
-  	padding:10px 20px;
-    line-height: 28px;
-  }
-  .account-container .account  .account-content .account-order table tbody tr td:before{
-  	font-size:18px;
-    font-weight:700;
-    text-transform: none;
-  }
-  .account-container .account .account-content .account-order table{
-  	border-bottom:0;
-  }
-  .account-container .account .account-content .account-address h2{
-    border-bottom:0;
-  }
-}
-
 .edit-address-section .edit-address{
 	display:none;
 }
@@ -217,4 +186,44 @@
 	border: 2px solid #E8D4B0;
     box-shadow:none;
 }
+
+@media screen and (max-width: 749px) {
+  .account-container .account .account-content h2{
+  	border-bottom: 1px solid #E8D4B0;
+    line-height:75px;
+    margin-bottom:10px;
+    color: #344E38;
+
+  }
+  .account-container .account  .account-content .account-order table tr{
+  	border-bottom: 1px solid #E8D4B0;
+    border-top:0;
+    padding-bottom:10px;
+    margin-bottom:10px;
+  }
+  .account-container .account  .account-content .account-order table tbody tr td{
+  	padding:10px 20px;
+    line-height: 28px;
+  }
+  .account-container .account  .account-content .account-order table tbody tr td:before{
+  	font-size:18px;
+    font-weight:700;
+    text-transform: none;
+  }
+  .account-container .account .account-content .account-order table{
+  	border-bottom:0;
+  }
+  .account-container .account .account-content .account-address h2{
+    border-bottom:0;
+  }
+  
+  .account-container .account .addresses{
+  	padding:0;
+  }
+  .account-container .account .addresses ul li{
+  	margin-top:15px;
+  }
+}
+
+
 
