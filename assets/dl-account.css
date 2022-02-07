@@ -119,5 +119,6 @@
 .account-container .account .addresses{
 	max-width:inherit;
     margin:0;
+    text-align:left;
 }
 
