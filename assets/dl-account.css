@@ -182,12 +182,12 @@
     top: 0.4em;
 }
 
-.account-container .button--green{
+.account-container .addresses .button--green{
     background: #344E38;
     color: #FFFFFF;
     box-shadow:none;
 }
-.account-container .button--cancel{
+.account-container .addresses .button--cancel{
 	border: 2px solid #E8D4B0;
     box-shadow:none;
 }
