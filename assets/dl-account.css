@@ -157,6 +157,7 @@
     min-width: auto;
     margin-right: 20px;
     text-decoration: underline;
+    font-family:var(--font-body-family);
 }
 
 
