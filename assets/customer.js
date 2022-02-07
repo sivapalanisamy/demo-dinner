@@ -62,6 +62,7 @@ class CustomerAddresses {
 
   _toggleExpanded(target) {
     console.log(target.id);
+    document.getElementById(target.id).style.display = "block";
     target.setAttribute(
       attributes.expanded,
       (target.getAttribute(attributes.expanded) === 'false').toString()
