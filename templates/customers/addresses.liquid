@@ -1,6 +1,7 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
 {{ 'dl-account.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'customer.js' | asset_url }}" defer></script>
+<div class="account-container">
 <div class="customer account">
 {%- paginate customer.addresses by 5 -%}
   <div class="customer addresses" data-customer-addresses>
@@ -264,6 +265,7 @@
     {%- endif -%}
   </div>
 {%- endpaginate -%}
+  </div>
   </div>
 <script>
   window.onload = () => {
