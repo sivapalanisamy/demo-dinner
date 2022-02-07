@@ -15,7 +15,45 @@
       {{ 'customer.account.return' | t }}
     </a>
 
-    <div data-address>
+    <ul role="list" class="grid grid--1-col grid--3-col-tablet address-list">
+      {%- for address in customer.addresses -%}
+        <li data-address class="grid__item">
+          <div class="address-col">
+          <h5>{{address.first_name}} {{address.last_name}}</h5>
+          <p> <b>Address: {%- if address == customer.default_address -%} ({{ 'customer.addresses.default' | t }}){%- endif -%}</b><br/>
+           {{address.address1}} <br/>
+           {%- if address.address2 != blank -%}
+             {{address.address2}}<br/>
+           {%- endif -%}
+          {{address.city}}
+            {{address.province_code}}
+          {{address.zip}}<br/>
+            {{address.country}}</p>
+            
+          <button
+            type="button"
+            id="EditFormButton_{{ address.id }}"
+            aria-label="{{ 'customer.addresses.edit_address' | t }} {{ forloop.index }}"
+            aria-controls="EditAddress_{{ address.id }}"
+            aria-expanded="false"
+            data-address-id="{{ address.id }}"
+            data-edit-id="EditAddress_{{ address.id }}"
+          >
+            {{ 'customer.addresses.edit' | t }}
+          </button>
+          <button
+            type="button"
+            aria-label="{{ 'customer.addresses.delete' | t }} {{ forloop.index }}"
+            data-target="{{ address.url }}"
+            data-confirm-message="{{ 'customer.addresses.delete_confirm' | t }}"
+          >
+            {{ 'customer.addresses.delete' | t }}
+          </button>
+          </div>
+        </li>
+      {%- endfor -%}
+    </ul>
+      <div data-address>
       <button
         type="button"
         aria-expanded="false"
@@ -100,45 +138,6 @@
         {%- endform -%}
       </div>
     </div>
-
-    <ul role="list" class="grid grid--1-col grid--3-col-tablet address-list">
-      {%- for address in customer.addresses -%}
-        <li data-address class="grid__item">
-          <div class="address-col">
-          <h5>{{address.first_name}} {{address.last_name}}</h5>
-          <p> <b>Address: {%- if address == customer.default_address -%} ({{ 'customer.addresses.default' | t }}){%- endif -%}</b><br/>
-           {{address.address1}} <br/>
-           {%- if address.address2 != blank -%}
-             {{address.address2}}<br/>
-           {%- endif -%}
-          {{address.city}}
-            {{address.province_code}}
-          {{address.zip}}<br/>
-            {{address.country}}</p>
-            
-          <button
-            type="button"
-            id="EditFormButton_{{ address.id }}"
-            aria-label="{{ 'customer.addresses.edit_address' | t }} {{ forloop.index }}"
-            aria-controls="EditAddress_{{ address.id }}"
-            aria-expanded="false"
-            data-address-id="{{ address.id }}"
-            data-edit-id="EditAddress_{{ address.id }}"
-          >
-            {{ 'customer.addresses.edit' | t }}
-          </button>
-          <button
-            type="button"
-            aria-label="{{ 'customer.addresses.delete' | t }} {{ forloop.index }}"
-            data-target="{{ address.url }}"
-            data-confirm-message="{{ 'customer.addresses.delete_confirm' | t }}"
-          >
-            {{ 'customer.addresses.delete' | t }}
-          </button>
-          </div>
-        </li>
-      {%- endfor -%}
-    </ul>
       <div class="edit-address-section">
         {%- for address in customer.addresses -%}
           
