@@ -61,6 +61,7 @@ class CustomerAddresses {
   }
 
   _toggleExpanded(target) {
+    console.log(target);
     target.setAttribute(
       attributes.expanded,
       (target.getAttribute(attributes.expanded) === 'false').toString()
