@@ -76,10 +76,12 @@ class CustomerAddresses {
   }
 
   _handleCancelButtonClick = ({ currentTarget }) => {
-    Array.from(document.querySelectorAll(".edit-address"))
-        .forEach(function(val) {
-            val.style.display = 'none';
-    });
+    console.log(currentTarget);
+    this._toggleExpanded(
+      currentTarget
+        .closest(selectors.addressContainer)
+        .querySelector(`[${attributes.expanded}]`)
+    )
   }
 
   _handleDeleteButtonClick = ({ currentTarget }) => {
