@@ -155,15 +155,16 @@
     background: #FFFFFF;
     border-radius: 50px;
     box-shadow: none;
-    padding: 3.5rem 3rem 2.5rem 3.7rem;
+    padding: 4rem 3rem 2rem 3.7rem;
+   font-weight:700;
 }
 .edit-address-section .edit-address form .field select{
     padding: 1rem 3rem 0rem 3.7rem;
     height: 62px;
 }
 .edit-address-section .edit-address .field.selectbox label{
-    font-size: 1rem;
-    top: 0.3em;
+    font-size: 18px;
+    top: 0.4em;
 }
 
 .edit-address-section .edit-address form .field .text-area{
