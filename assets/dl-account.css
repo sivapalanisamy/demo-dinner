@@ -125,7 +125,8 @@
 	background:#FFFFFF;
     border: 1px solid #E8D4B0;
     border-radius:15px;
-    padding:30px 50px
+    padding:30px 50px;
+    height:100%;
 }
 
 
