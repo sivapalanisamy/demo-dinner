@@ -191,6 +191,7 @@
     font-size: 18px;
     left: 38px;
     top: 20px;
+    z-index:999;
 }
 .edit-address-section .edit-address .field input:not(:placeholder-shown)~label{
     font-size: 1rem;
