@@ -12,9 +12,8 @@
     {{ page.title | escape }}
   </h1>
   <div class="service-content">
-      <p>The Dinner Ladies take away the stress of thinking about, shopping for, preparing and cooking dinner by delivering it to your door, so that you can enjoy great, homemade food every day.<br/>
- Ordering is simple. There are no lock-in contracts. There is a lot of choice. You can order once a week or once a year (obviously we would strongly encourage you to order once a week!). We do recommend that you subscribe to our newsletter so that we can send you our weekly menu.</p>
-    <a href="#" class="button button--green">SUBSCRIBE HERE</a>
+      {{section.settings.content}}
+    <a href="{{section.settings.subscribeLink}}" class="button button--green">SUBSCRIBE HERE</a>
   </div>
   <div class="about-content">
     {%for block in section.blocks %}
