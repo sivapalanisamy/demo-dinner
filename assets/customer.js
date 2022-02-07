@@ -76,7 +76,8 @@ class CustomerAddresses {
   }
 
   _handleCancelButtonClick = ({ currentTarget }) => {
-    console.log(currentTarget);
+    console.log(currentTarget
+        .closest(selectors));
     this._toggleExpanded(
       currentTarget
         .closest(selectors.addressContainer)
