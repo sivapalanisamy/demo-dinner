@@ -172,7 +172,9 @@
     color: #344E38;
 
 }
-
+.edit-address-section .edit-address form .field{
+	flex-basis: 50%;
+}
 .edit-address-section .edit-address form .field input{
     border: 1px solid #E8D4B0;
     background: #FFFFFF;
