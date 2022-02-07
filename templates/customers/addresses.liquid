@@ -106,7 +106,7 @@
         <li data-address class="grid__item">
           <div class="address-col">
           <h5>{{address.first_name}} {{address.last_name}}</h5>
-          <p> <b>Address: {%- if address == customer.default_address -%} {{ 'customer.addresses.default' | t }} {%- endif -%}</b><br/>
+          <p> <b>Address: {%- if address == customer.default_address -%} ( {{ 'customer.addresses.default' | t }} ){%- endif -%}</b><br/>
            {{address.address1}} <br/>
            {%- if address.address2 != blank -%}
              {{address.address2}}<br/>
