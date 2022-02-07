@@ -208,3 +208,8 @@
     top: 0.3em;
 }
 
+.edit-address-section .edit-address .button--green{
+    background: #344E38;
+    color: #FFFFFF;
+}
+
