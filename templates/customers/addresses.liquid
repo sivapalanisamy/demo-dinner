@@ -110,14 +110,14 @@
           {%- endif -%}
           <h5>{{address.first_name}} {{address.last_name}}</h5>
           <p> <b>Address</b><br/>
-           {{customer.default_address.address1}} <br/>
-           {%- if customer.default_address.address2 != blank -%}
-             {{customer.default_address.address2}}<br/>
+           {{address.address1}} <br/>
+           {%- if address.address2 != blank -%}
+             {{address.address2}}<br/>
            {%- endif -%}
-          {{customer.default_address.city}}
-            {{customer.default_address.province_code}}
-          {{customer.default_address.zip}}<br/>
-            {{customer.default_address.country}}</p>
+          {{address.city}}
+            {{address.province_code}}
+          {{address.zip}}<br/>
+            {{address.country}}</p>
             
           {{ address | format_address }}
           <button
