@@ -61,7 +61,7 @@ class CustomerAddresses {
   }
 
   _toggleExpanded(target) {
-    console.log(target.getAttribute(data-address-id));
+    console.log(target.getAttribute("data-address-id"));
     console.log(target.aria-controls);
     document.getElementById(target.aria-controls).style.display = "block";
     target.setAttribute(
