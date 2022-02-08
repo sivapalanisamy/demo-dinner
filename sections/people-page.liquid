@@ -11,7 +11,7 @@
   <h1 class="main-page-title page-title h0">
     {{ page.title | escape }}
   </h1>
-  <div class="service-content">
+  <div class="static-content">
       {{section.settings.content}}
     {%- if section.settings.button_label != blank -%}
     	<a href="{{section.settings.button_link}}" class="button button--green">{{section.settings.button_label}}</a>
@@ -21,9 +21,9 @@
 <div class="people-container">
   	<div class="page-width">
       	<div class="people-selection">
-          	<ul>
+          	<ul class="grid grid--2-col grid--2-col-tablet grid--4-col-desktop">
                {%for block in section.blocks %}
-              <li>
+              <li class="grid__item">
               	<div class="people-list">
                   	<img src="{{block.settings.picture | img_url: 'master'}}"  loading="lazy" width=""   height="">
                   	<h3>{{block.settings.name}}</h3>
@@ -33,6 +33,28 @@
               {%endfor%}
            </ul>
         </div>
+
+          <div class="join-section">
+            <div class="join-image">
+                <div class="image-box">
+                  <img src="{{ 'address-img.png' | asset_url }}"  loading="lazy" width=""   height="">
+                </div>
+              </div>
+              <div class="join-content">
+                  <h1>Want to join our team?</h1>
+                  <p>We’re always looking for hard-working people to join our team. If you’d like to be considered for any possible opportunities, please send a CV and covering letter to:</p>
+                  <div class="address-section">
+                    <div class="ico">
+                      <img  src="{{ 'address-ico.png' | asset_url }}" alt="{{ shop.name }}"> 
+                    </div>
+                    <div class="content">
+                        <h5>Email:</h5>
+                        <p><a herf="mailto:office@dinnerladies.com.au">office@dinnerladies.com.au</a></p>
+                    </div>
+                </div>
+              </div>
+              
+          </div>
     </div>
 </div>
 

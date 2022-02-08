@@ -37,7 +37,8 @@
 .about-container .about-content .about-row .image-content .button{
     margin-bottom: 30px;
 }
-.about-container .service-content{
+.about-container .service-content,
+.about-container .static-content{
     width: 100%;
     max-width: 946px;
     margin: 0px auto 50px;
@@ -48,9 +49,153 @@
     font-size: 26px;
     line-height: 36px;
 }
+.about-container .static-content p{
+    font-size: 18px;
+    line-height: 30px;
+}
+.about-container .static-content p b{
+    font-family: var(--font-heading-family);
+    font-size: 26px;
+    line-height: 36px;
+}
+
+.people-container{
+    width: 100%;
+    background: #D4DED3;
+    display: inline-block;
+    padding: 60px 0px;
+}
+.people-selection ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.people-selection ul li{
+    flex-grow: 0;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+}
+.people-selection ul li .people-list{
+    background: #FFFAF1;
+    border-radius: 20px;
+    border: 1.2px solid #BBCEBA;
+    padding:20px;
+    text-align: center;
+    height: 100%;
+}
+.people-selection ul li .people-list img{
+    border-radius: 8px;
+}
+.people-selection ul li .people-list h3{
+    margin: 0;
+    padding: 0;
+    line-height: 18px;
+    margin-top: 15px;
+    font-size: 26px;
+}
+.people-selection ul li .people-list p{
+    margin-top: 5px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-family: 'ruffle_beautyregular';
+    font-size: 20px;
+    color: #362E2E;
+    font-weight: 600;;
+}
+
+.join-section{
+    padding: 50px 130px;
+    border-radius: 20px;
+    background: #FFFAF1;
+    border: 1.2px solid #BBCEB9;
+    align-items: center;
+    margin-top: 35px;
+}
+.join-section .join-content{
+    max-width: 728px;
+    padding-right: 32px;
+}
+.join-section .join-content p{
+    font-size: 26px;
+    font-family: var(--font-heading-family);
+    line-height: 36px;
+}
+.join-section .join-content .address-section{
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.join-section .join-content .address-section .ico{
+    width: 10%;
+    float: left;
+    margin-right: 20px; ;
+}
+.join-section .join-content .address-section .content{
+    width: 90%;
+    float: left;
+    font-size: 18px;
+}
+.join-section .join-content .address-section .content h5{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body-family);
+}
+.join-section .join-content .address-section .content p {
+    margin: 0;
+    padding: 0;
+    line-height: 18px;
+    text-decoration: underline;
+}
+.join-section .join-content .address-section .content p a{
+    margin: 0;
+    padding: 0;
+    line-height: 18px;
+    font-family: var(--font-body-family);
+    color: #000000;
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+.join-section .image-box{
+    border: 1.2px solid #BBCEBA;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+@media screen and (min-width: 750px) {
+    .join-section{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
 
 @media screen and (max-width: 749px) {
+    .people-container .page-width{
+        padding: 0px 10px;
+    }
     .about-container .about-content .about-row .image-content{
         padding: 0px;
+    }
+    .join-section{
+        padding: 30px;
+    }
+    .join-section .join-content{
+        margin-top: 20px;
+        padding-right: 0;
+    }
+    .join-section .join-content h1{
+        line-height: 60px;
+    }
+    .join-section .join-content .address-section .ico{
+        width: 20%;
+        margin-right: 10px; ;
+    }
+    .join-section .join-content .address-section .content{
+        width: 80%;
     }
 }
