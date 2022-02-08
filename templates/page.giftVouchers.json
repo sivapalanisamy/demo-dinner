@@ -1,0 +1,90 @@
+{
+  "sections": {
+    "banner": {
+      "type": "image-banner",
+      "blocks": {
+        "164016375065f7ecc9-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "medium"
+          }
+        },
+        "164016375065f7ecc9-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "164016375065f7ecc9-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "164016375065f7ecc9-0",
+        "164016375065f7ecc9-1",
+        "164016375065f7ecc9-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Rectangle_314.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "main": {
+      "type": "service-page",
+      "blocks": {
+        "1c1d5ca5-ae41-419c-986e-0f9b84fb2a49": {
+          "type": "imagewithText",
+          "settings": {
+            "layout": "image_first",
+            "image": "shopify:\/\/shop_images\/img1_36a5d75d-a984-4790-a8cc-ec2361332362.png",
+            "Heading": "OUR STORY",
+            "icon": "shopify:\/\/shop_images\/Screen_Shot_2022-01-13_at_11.47_1.png",
+            "content": "<p>The Dinner Ladies are Sophie Gilliatt and Katherine Westwood. We got together at the school gate in 2007 and came up with the idea of preparing dinners for time-poor friends and family members so that they woud always have good, homemade food in their fridges and freezers (and incidentally, so would we).<br\/>Between us we have seven children and two husbands of varying sizes, appetites and degrees of fussiness - there’s not much we don’t know about pleasing a tricky crowd.<br\/>We started cooking in the shed in Katherine’s back yard on a converted trailer and two camp stoves<br\/>We’d shop on a Monday, cook on a Tuesday and then one of us would do the delivery run while the other fed and bathed all the kids.<\/p>"
+          }
+        },
+        "2ef14f92-cf9d-4f49-aea9-fc35d39a6224": {
+          "type": "imagewithText",
+          "settings": {
+            "layout": "text_first",
+            "image": "shopify:\/\/shop_images\/img1_36a5d75d-a984-4790-a8cc-ec2361332362.png",
+            "Heading": "OUR FOOD",
+            "icon": "shopify:\/\/shop_images\/Screen_Shot_2022-01-13_at_11.47_1.png",
+            "content": "<p>We're no longer cooking in the shed – and we’ve got a few more hands on deck in the kitchen now – but we still cook every dish as if we were cooking for our own families:with the best possible ingredients and no added rubbish like preservatives, emulsifiers, thickeners or flavour-enhancers.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1c1d5ca5-ae41-419c-986e-0f9b84fb2a49",
+        "2ef14f92-cf9d-4f49-aea9-fc35d39a6224"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "main"
+  ]
+}
