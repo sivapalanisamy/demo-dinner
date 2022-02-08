@@ -18,6 +18,23 @@
     {%- endif -%}
   </div>
 </div>
+<div class="people-container">
+  	<div class="page-width">
+      	<div class="people-selection">
+          	<ul>
+               {%for block in section.blocks %}
+              <li>
+              	<div class="people-list">
+                  	<img src="{{block.settings.picture | img_url: 'master'}}"  loading="lazy" width=""   height="">
+                  	<h3>{{block.settings.name}}</h3>
+                  	<p>{{block.settings.Position}}</p>
+                </div>
+              </li>
+              {%endfor%}
+           </ul>
+        </div>
+    </div>
+</div>
 
 {% schema %}
 {
@@ -41,18 +58,18 @@
 	],
    "blocks": [
 		{
-       "name": "aboutImageWithText",
+       "name": "dlImageWithText",
        "type": "imagewithText",
 		"settings": [
 			{
              "type": "image_picker",
-             "id": "image",
-             "label": "image"
+             "id": "picture",
+             "label": "Picture"
            },
            
            {
              "type": "text",
-             "id": "Heading",
+             "id": "name",
              "label": "Name"
            },
 			{
