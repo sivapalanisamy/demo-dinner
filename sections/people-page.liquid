@@ -13,9 +13,6 @@
   </h1>
   <div class="static-content">
       {{section.settings.content}}
-    {%- if section.settings.button_label != blank -%}
-    	<a href="{{section.settings.button_link}}" class="button button--green">{{section.settings.button_label}}</a>
-    {%- endif -%}
   </div>
 </div>
 <div class="people-container">
@@ -37,19 +34,19 @@
           <div class="join-section">
             <div class="join-image">
                 <div class="image-box">
-                  <img src="{{ 'address-img.png' | asset_url }}"  loading="lazy" width=""   height="">
+                  <img src="{{section.settings.joinPicture | img_url: 'master'}}"  loading="lazy" width=""   height="">
                 </div>
               </div>
               <div class="join-content">
-                  <h1>Want to join our team?</h1>
-                  <p>We’re always looking for hard-working people to join our team. If you’d like to be considered for any possible opportunities, please send a CV and covering letter to:</p>
+                  <h1>{{section.settings.heading}}</h1>
+                  {{section.settings.joinContent}}
                   <div class="address-section">
                     <div class="ico">
-                      <img  src="{{ 'address-ico.png' | asset_url }}" alt="{{ shop.name }}"> 
+                      <img  src="{{ 'mail-ico.png' | asset_url }}" alt="{{ shop.name }}"> 
                     </div>
                     <div class="content">
                         <h5>Email:</h5>
-                        <p><a herf="mailto:office@dinnerladies.com.au">office@dinnerladies.com.au</a></p>
+                        <p><a herf="mailto:{{section.settings.email}}">{{section.settings.email}}</a></p>
                     </div>
                 </div>
               </div>
