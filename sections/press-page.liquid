@@ -5,12 +5,12 @@
 <noscript>{{ 'section-main-page.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 
-<div class="page-width">
+<div class="page-width press-container">
   <h1 class="main-page-title page-title h0">
     {{ page.title | escape }}
   </h1>
   <div class="press-selection">
-    <ul class="grid grid--2-col grid--2-col-tablet grid--4-col-desktop">
+    <ul class="grid grid--1-col grid--3-col-tablet grid--3-col-desktop">
       {%for block in section.blocks %}
       <li class="grid__item">
         <div class="news-list">
@@ -19,9 +19,11 @@
           <h3>{{block.settings.title}}</h3>
           
           {%- if block.settings.button_label != blank -%}
-            <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button button--green" {{ block.shopify_attributes }}>
-              {{ block.settings.button_label | escape }}
-            </a>
+            <div class="press-btn">
+              <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button" {{ block.shopify_attributes }}>
+                {{ block.settings.button_label | escape }}
+              </a>
+            </div>
             {%- endif -%}
           
         </div>
