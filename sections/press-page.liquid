@@ -5,19 +5,55 @@
 <noscript>{{ 'section-main-page.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 
-<div class="page-width page-width--narrow">
+<div class="page-width">
   <h1 class="main-page-title page-title h0">
     {{ page.title | escape }}
   </h1>
-  <div class="rte">
-    {{ page.content }}
+  <div class="press-selection">
+    <ul class="grid grid--2-col grid--2-col-tablet grid--4-col-desktop">
+      {%for block in section.blocks %}
+      <li class="grid__item">
+        <div class="news-list">
+          <img src="{{block.settings.picture | img_url: 'master'}}"  loading="lazy" width=""   height="">
+          <h3>{{block.settings.name}}</h3>
+          <p>{{block.settings.position}}</p>
+        </div>
+      </li>
+      {%endfor%}
+    </ul>
   </div>
 </div>
 
 {% schema %}
 {
-  "name": "t:sections.main-page.name",
+  "name": "Press",
   "tag": "section",
-  "class": "spaced-section"
+  "class": "spaced-section",
+   "blocks": [
+		{
+       "name": "dlImageWithText",
+       "type": "imagewithText",
+		"settings": [
+			{
+             "type": "image_picker",
+             "id": "picture",
+             "label": "Picture"
+           },
+           
+           {
+             "type": "text",
+             "id": "name",
+             "label": "Name"
+           },
+			{
+             "type": "text",
+             "id": "position",
+             "label": "Position"
+           }           
+         
+		]
+           
+        }
+    ]
 }
 {% endschema %}
