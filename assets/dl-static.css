@@ -1,0 +1,35 @@
+.static-container{
+    padding-top: 80px;
+}
+.static-container h1{
+    text-align: center;
+    color: #344E38;
+    font-size: 60px;
+}
+
+.static-container .static-content{
+    width: 100%;
+    display: inline-block;
+    padding: 60px 90px;
+    border-radius: 20px;
+    background: #FFFFFF;
+    border: 1.2px solid #D4DED3;
+}
+.static-container .static-content h3{
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+}
+.static-container .static-content p{
+    font-size: 18px;
+    line-height: 30px;
+}
+
+@media screen and (max-width: 749px) {
+    .static-container{
+        padding-top: 40px;
+    }
+   .static-container .static-content{
+        padding: 60px 20px;
+    } 
+}
