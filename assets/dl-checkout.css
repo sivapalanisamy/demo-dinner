@@ -37,6 +37,9 @@
     line-height: 30px;
     font-family: var( --font-heading-family);
 }
+.page--logo-main .checkout-container  .step__sections .section--shipping-address h2{
+	line-height: 100px;
+}
 .page--logo-main .checkout-container  .step__sections p.section__text{
     font-size: 18px;
 }
@@ -51,7 +54,8 @@
 }
 
 .page--logo-main .checkout-container  .step__sections .field input, 
-.page--logo-main .checkout-container  .step__sections .field select{
+.page--logo-main .checkout-container  .step__sections .field select,
+.card-fields-container .field__input{
     border: 1px solid #E8D4B0;
     background: #FFFFFF;
     border-radius: 50px;
@@ -60,6 +64,12 @@
    font-weight:700;
    font-size: 18px;
    max-height: 62px;
+}
+.card-fields-container .field__input{
+   padding: 0.5rem 3rem 1.4rem 2.4rem
+}
+.card-fields-container .tooltip-container .tooltip-control{
+	right:20px;
 }
 .page--logo-main .checkout-container  .step__sections .field select{
     padding: 1rem 3rem 0rem 3.7rem;
@@ -70,11 +80,19 @@
     top: 0.4em;
 }
 
-.content-box .field__input{
-    height: 170px;
+.content-box textarea.field__input{
+    height: 170px !important;
     border-radius: 20px;
+    border: 1px solid #E8D4B0;
+    background: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: none;
+    padding: 1.4rem 3rem 1.4rem 3.7rem;
+   font-weight:700;
+   font-size: 18px;
 }
-.page--logo-main .checkout-container  .step__sections .field label{
+.page--logo-main .checkout-container  .step__sections .field label,
+.card-fields-container .field__label{
     font-size: 18px;
     left: 20px;
     top: 2px;
@@ -259,6 +277,7 @@
 .main .content-box .radio-wrapper{
     padding: 20px 0px;
 }
+.section--shipping-method .content-box__row--secondary,
 .main .content-box #section--billing-address__different{
     margin-top: 20px;
     border: 0;
@@ -292,6 +311,11 @@
 .display-table .radio__label__primary{
     font-weight: 700;
     font-size: 18px;
+}
+
+.section--payment-method .card-fields-container{
+	background:transparent;
+    border:0;
 }
 @media (min-width: 1000px){
     .page--logo-main .checkout-container .sidebar{
