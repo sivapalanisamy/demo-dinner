@@ -1,5 +1,6 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
-
+<div class="page-width">
+<div class="blog-details">
 <article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
   {%- for block in section.blocks -%}
     {%- case block.type -%}
@@ -243,7 +244,8 @@
   </div>
   {%- endif -%}
 </article>
-
+</div>
+</div>
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",

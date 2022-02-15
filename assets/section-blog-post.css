@@ -173,3 +173,17 @@
     margin: 5rem 0 8rem;
   }
 }
+
+.blog-details{
+   width: 100%;
+    display: inline-block;
+    padding: 18px;
+    margin-top: 80px;
+    border-radius: 20px;
+    background: #FFFFFF;
+    border: 1.2px solid #D4DED3;
+}
+.blog-details .article-template__hero-container{
+  margin: 0;
+  max-width: inherit;
+}
