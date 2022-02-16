@@ -90,10 +90,52 @@
         "heading": "Sustainability",
         "content": "<p><strong>At the Dinner Ladies, we're committed to efficient, sustainable solutions to sourcing ingredients, packaging our food and disposing of waste.<\/strong><\/p><p><\/p><p>We go ourselves to Flemington Markets in Sydney twice a week and buy most of our fresh fruit and vegetables from local growers. Our meat is all Australian reared, predominantly grass-fed and all our poultry – chickens, ducks, turkeys and eggs – is free range – and always has been. Our seafood either comes from Australian aquaculture – Humpty Doo barramundi from the Northern Territory and Huon salmon from Tasmania – or is wild caught in Australian waters.<\/p>"
       }
+    },
+    "1644998426288ab08c": {
+      "type": "dl-good-slider",
+      "blocks": {
+        "9a4edca7-351c-42e7-9e7e-09c70aa2031a": {
+          "type": "imagewithText",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2_980ae2c3-0722-45dd-9c39-65d6cff2c3ce.png",
+            "content": "<p>Sophie making our final delivery of the year to Westmead Children's Hospital!<\/p>"
+          }
+        },
+        "5f377078-a2c0-4ab2-8129-3894ee401fe6": {
+          "type": "imagewithText",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_fe10cc8d-d6db-476b-90b9-ec238208d132.png",
+            "content": "<p>The Dinner Ladies are proud sponsors of a school bus at St. Jude's in Tanzania.<\/p>"
+          }
+        },
+        "6cfc37e3-7f37-4b22-8f63-39e96acdec78": {
+          "type": "imagewithText",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3_bd276669-b4c8-4e62-a2b6-821d2af0b7e1.png",
+            "content": "<p>We've supported ETF since it's inception; now building a second pre-school in East Timor!<\/p>"
+          }
+        },
+        "8cfc9938-c6f1-4b45-bd5e-12bc1d221eb5": {
+          "type": "imagewithText",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4_dcc115d0-3e99-475a-8723-219c2125238c.png",
+            "content": "<p>We've lost count of the raffle prizes and silent auction items we've given out over the years!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "9a4edca7-351c-42e7-9e7e-09c70aa2031a",
+        "5f377078-a2c0-4ab2-8129-3894ee401fe6",
+        "6cfc37e3-7f37-4b22-8f63-39e96acdec78",
+        "8cfc9938-c6f1-4b45-bd5e-12bc1d221eb5"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "banner",
-    "main"
+    "main",
+    "1644998426288ab08c"
   ]
 }
