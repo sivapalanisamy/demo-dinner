@@ -11,7 +11,26 @@
 {% schema %}
   {
     "name": "dl-good-slider",
-    "blocks": []
+    "blocks": [
+		{
+       "name": "goodSlider",
+       "type": "imagewithText",
+		"settings": [
+            {
+             "type": "image_picker",
+             "id": "image",
+             "label": "image"
+           },
+           {
+             "type": "richtext",
+             "id": "content",
+             "label": "Description"
+           }
+         
+		]
+           
+        }
+    ]
   }
 {% endschema %}
 
