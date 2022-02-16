@@ -2,7 +2,7 @@
   {%for block in section.blocks %}
     <li>
       <img src="{{block.settings.image | img_url: 'master'}}"  loading="lazy" width=""   height="">
-      <p>{{block.settings.image}}</p>
+      <p>{{block.settings.content}}</p>
       <div class="heart-content">
         <img  src="{{ 'dl-good-ico.png' | asset_url }}" alt="{{ shop.name }}"> 
       </div>
