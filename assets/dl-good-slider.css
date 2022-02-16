@@ -1,0 +1,11 @@
+.dl-good-slider-container{
+    width: 100%;
+    display: inline-block;
+    background: #D4DED3;
+   padding: 40px 0px;
+}
+.dl-good-slider-container ul.dl-slider{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}

@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="{{ 'dl-good-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+
 <div class="dl-good-slider-container">
   <div class="page-width">
     <ul class="dl-slider">
@@ -44,4 +46,38 @@
 {% endstylesheet %}
 
 {% javascript %}
+$('.dl-slider').slick({
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        arrows: true,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '20px',
+        slidesToShow: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '20px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
 {% endjavascript %}
