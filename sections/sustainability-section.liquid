@@ -1,12 +1,146 @@
+<link rel="stylesheet" href="{{ 'section-main-page.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'dl-about.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'section-main-page.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'dl-about.css' | asset_url | stylesheet_tag }}</noscript>
+{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+
+<div class="siba about-container">
+  <div class="page-width">
+  <h1 class="main-page-title page-title h0">
+    {{ page.title | escape }}
+  </h1>
+  <div class="service-content">
+      {{section.settings.dlcontent}}
+    {%- if section.settings.button_label != blank -%}
+    	<a href="{{section.settings.button_link}}" class="button button--green">{{section.settings.button_label}}</a>
+    {%- endif -%}
+  </div>
+  </div>  
+  <div class="page-width">
+  <div class="static-content">
+      <h1>{{section.settings.heading}}</h1>
+      {{section.settings.content}}
+  </div>
+  <div class="about-content">
+    {%for block in section.blocks %}
+     <div class="about-row grid grid--gapless grid--1-col grid--2-col-tablet {% if block.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
+       	<div class="grid__item">          
+          {%- if block.settings.image != blank -%}
+          <img
+            srcset="{%- if block.settings.image.width >= 165 -%}{{ block.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+              {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+              {%- if block.settings.image.width >= 535 -%}{{ block.settings.image | img_url: '535x' }} 535w,{%- endif -%}
+              {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | img_url: '750x' }} 750w,{%- endif -%}
+              {%- if block.settings.image.width >= 1070 -%}{{ block.settings.image | img_url: '1070x' }} 1070w,{%- endif -%}
+              {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | img_url: '1500x' }} 1500w,{%- endif -%}
+              {{ block.settings.image | img_url: 'master' }} {{ block.settings.image.width }}w"
+            src="{{ block.settings.image | img_url: '1500x' }}"
+            sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+            alt="{{ section.settings.image.alt | escape }}"
+            loading="lazy"
+            width="{{ section.settings.image.width }}"
+            height="{{ section.settings.image.height }}"
+            class="img"
+          >
+        {%- else -%}
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        {%- endif -%}
+       </div>
+       <div class="grid__item">
+          <div class="image-content">
+         	<div class="icoblk">
+              <img src="{{block.settings.icon | img_url: 'master'}}"  loading="lazy" width=""   height="">
+            </div>
+         	<h3>{{block.settings.Heading}}</h3>
+            {{block.settings.content}}
+            {%- if block.settings.button_label != blank -%}
+                <a href="{{block.settings.button_link}}" class="button button--green">{{block.settings.button_label}}</a>
+            {%- endif -%}
+       	</div>
+       </div>
+     </div>
+	{%endfor%}
+      
+  </div>
+  </div>
+</div>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  
+  "name": "sustainability",
+   "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Title"
+        },
+		{
+          "type": "richtext",
+          "id": "content",
+          "label": "Sustainability Description"
+        }
+	],
+   "blocks": [
+		{
+       "name": "aboutImageWithText",
+       "type": "imagewithText",
+		"settings": [
+            {
+              "type": "select",
+              "id": "layout",
+              "options": [
+                {
+                  "value": "image_first",
+                  "label": "t:sections.image-with-text.settings.layout.options__1.label"
+                },
+                {
+                  "value": "text_first",
+                  "label": "t:sections.image-with-text.settings.layout.options__2.label"
+                }
+              ],
+              "default": "image_first",
+              "label": "t:sections.image-with-text.settings.layout.label",
+              "info": "t:sections.image-with-text.settings.layout.info"
+            },
+			{
+             "type": "image_picker",
+             "id": "image",
+             "label": "image"
+           },
+           
+           {
+             "type": "text",
+             "id": "Heading",
+             "label": "Heading"
+           },
+            {
+             "type": "image_picker",
+             "id": "icon",
+             "label": "icon"
+           },
+           {
+             "type": "richtext",
+             "id": "content",
+             "label": "Description"
+           },
+			{
+             "type": "text",
+             "id": "button_label",
+             "label": "Button label"
+           },
+           {
+             "type": "url",
+             "id": "button_link",
+             "label": "Button link"
+           }
+         
+		]
+           
+        }
+    ]
+}
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
