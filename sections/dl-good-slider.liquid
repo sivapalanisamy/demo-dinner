@@ -1,11 +1,13 @@
 <ul class="dl-slider">
-  <li>
-    <img src="{{block.settings.icon | img_url: 'master'}}"  loading="lazy" width=""   height="">
-    <p></p>
-    <div class="heart-ico">
-      <img  src="{{ 'dl-good-ico.png' | asset_url }}" alt="{{ shop.name }}" itemprop="logo"> 
-    </div>
-  </li>
+  {%for block in section.blocks %}
+    <li>
+      <img src="{{block.settings.image | img_url: 'master'}}"  loading="lazy" width=""   height="">
+      <p>{{block.settings.image}}</p>
+      <div class="heart-content">
+        <img  src="{{ 'dl-good-ico.png' | asset_url }}" alt="{{ shop.name }}" itemprop="logo"> 
+      </div>
+    </li>
+  {%endfor%}
 </ul>
 
 {% schema %}
