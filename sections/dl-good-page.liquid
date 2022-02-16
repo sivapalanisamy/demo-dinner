@@ -24,7 +24,7 @@
 {% schema %}
 {
   
-  "name": "dl",
+  "name": "dl-good",
    "settings": [
         {
           "type": "richtext",
@@ -40,75 +40,7 @@
            "type": "text",
            "id": "button_label",
            "label": "Button label"
-         },
-        {
-          "type": "text",
-          "id": "heading",
-          "label": "Title"
-        },
-		{
-          "type": "richtext",
-          "id": "content",
-          "label": "Sustainability Description"
-        }
-	],
-   "blocks": [
-		{
-       "name": "aboutImageWithText",
-       "type": "imagewithText",
-		"settings": [
-            {
-              "type": "select",
-              "id": "layout",
-              "options": [
-                {
-                  "value": "image_first",
-                  "label": "t:sections.image-with-text.settings.layout.options__1.label"
-                },
-                {
-                  "value": "text_first",
-                  "label": "t:sections.image-with-text.settings.layout.options__2.label"
-                }
-              ],
-              "default": "image_first",
-              "label": "t:sections.image-with-text.settings.layout.label",
-              "info": "t:sections.image-with-text.settings.layout.info"
-            },
-			{
-             "type": "image_picker",
-             "id": "image",
-             "label": "image"
-           },
-           
-           {
-             "type": "text",
-             "id": "Heading",
-             "label": "Heading"
-           },
-            {
-             "type": "image_picker",
-             "id": "icon",
-             "label": "icon"
-           },
-           {
-             "type": "richtext",
-             "id": "content",
-             "label": "Description"
-           },
-			{
-             "type": "text",
-             "id": "button_label",
-             "label": "Button label"
-           },
-           {
-             "type": "url",
-             "id": "button_link",
-             "label": "Button link"
-           }
-         
-		]
-           
-        }
-    ]
+         }
+	]
 }
 {% endschema %}
