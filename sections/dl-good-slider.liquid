@@ -1,7 +1,17 @@
+<ul class="dl-slider">
+  <li>
+    <img src="{{block.settings.icon | img_url: 'master'}}"  loading="lazy" width=""   height="">
+    <p></p>
+    <div class="heart-ico">
+      <img  src="{{ 'dl-good-ico.png' | asset_url }}" alt="{{ shop.name }}" itemprop="logo"> 
+    </div>
+  </li>
+</ul>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "dl-good-slider",
+    "blocks": []
   }
 {% endschema %}
 
