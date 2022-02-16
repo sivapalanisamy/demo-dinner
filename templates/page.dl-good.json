@@ -52,6 +52,11 @@
       }
     },
     "main": {
+      "type": "dl-good-page",
+      "settings": {
+      }
+    },
+    "sustainability": {
       "type": "sustainability-section",
       "blocks": {
         "1c1d5ca5-ae41-419c-986e-0f9b84fb2a49": {
@@ -86,6 +91,7 @@
   },
   "order": [
     "banner",
-    "main"
+    "main",
+    "sustainability"
   ]
 }
