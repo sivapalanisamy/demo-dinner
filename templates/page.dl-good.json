@@ -84,9 +84,10 @@
         "2ef14f92-cf9d-4f49-aea9-fc35d39a6224"
       ],
       "settings": {
-        "content": "<p>The Dinner Ladies have been proudly supporting community events since 2007. We're involved with schools, charities, sports clubs and hospitals.<br\/>If you would like to apply for support for your event, please click here to download Community Support Appication Form.<\/p>",
+        "heading": "Sustainability",
+        "content": "<p><strong>At the Dinner Ladies, we're committed to efficient, sustainable solutions to sourcing ingredients, packaging our food and disposing of waste.<\/strong><\/p><p><\/p><p>We go ourselves to Flemington Markets in Sydney twice a week and buy most of our fresh fruit and vegetables from local growers. Our meat is all Australian reared, predominantly grass-fed and all our poultry – chickens, ducks, turkeys and eggs – is free range – and always has been. Our seafood either comes from Australian aquaculture – Humpty Doo barramundi from the Northern Territory and Huon salmon from Tasmania – or is wild caught in Australian waters.<\/p>",
         "button_link": "#",
-        "button_label": "DOWNLOAD"
+        "button_label": ""
       }
     }
   },
