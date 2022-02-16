@@ -54,6 +54,9 @@
     "main": {
       "type": "dl-good-page",
       "settings": {
+        "dlcontent": "<p>The Dinner Ladies have been proudly supporting community events since 2007. We're involved with schools, charities, sports clubs and hospitals.<br\/>If you would like to apply for support for your event, please click here to download Community Support Appication Form.<\/p>",
+        "button_link": "#",
+        "button_label": "DOWNLOAD"
       }
     },
     "sustainability": {
@@ -66,7 +69,9 @@
             "image": "shopify:\/\/shop_images\/img1_36a5d75d-a984-4790-a8cc-ec2361332362.png",
             "Heading": "OUR STORY",
             "icon": "shopify:\/\/shop_images\/Screen_Shot_2022-01-13_at_11.47_1.png",
-            "content": "<p>The Dinner Ladies are Sophie Gilliatt and Katherine Westwood. We got together at the school gate in 2007 and came up with the idea of preparing dinners for time-poor friends and family members so that they woud always have good, homemade food in their fridges and freezers (and incidentally, so would we).<br\/>Between us we have seven children and two husbands of varying sizes, appetites and degrees of fussiness - there’s not much we don’t know about pleasing a tricky crowd.<br\/>We started cooking in the shed in Katherine’s back yard on a converted trailer and two camp stoves<br\/>We’d shop on a Monday, cook on a Tuesday and then one of us would do the delivery run while the other fed and bathed all the kids.<\/p>"
+            "content": "<p>The Dinner Ladies are Sophie Gilliatt and Katherine Westwood. We got together at the school gate in 2007 and came up with the idea of preparing dinners for time-poor friends and family members so that they woud always have good, homemade food in their fridges and freezers (and incidentally, so would we).<br\/>Between us we have seven children and two husbands of varying sizes, appetites and degrees of fussiness - there’s not much we don’t know about pleasing a tricky crowd.<br\/>We started cooking in the shed in Katherine’s back yard on a converted trailer and two camp stoves<br\/>We’d shop on a Monday, cook on a Tuesday and then one of us would do the delivery run while the other fed and bathed all the kids.<\/p>",
+            "button_label": "",
+            "button_link": ""
           }
         },
         "2ef14f92-cf9d-4f49-aea9-fc35d39a6224": {
@@ -76,7 +81,9 @@
             "image": "shopify:\/\/shop_images\/img1_36a5d75d-a984-4790-a8cc-ec2361332362.png",
             "Heading": "OUR FOOD",
             "icon": "shopify:\/\/shop_images\/Screen_Shot_2022-01-13_at_11.47_1.png",
-            "content": "<p>We're no longer cooking in the shed – and we’ve got a few more hands on deck in the kitchen now – but we still cook every dish as if we were cooking for our own families:with the best possible ingredients and no added rubbish like preservatives, emulsifiers, thickeners or flavour-enhancers.<\/p>"
+            "content": "<p>We're no longer cooking in the shed – and we’ve got a few more hands on deck in the kitchen now – but we still cook every dish as if we were cooking for our own families:with the best possible ingredients and no added rubbish like preservatives, emulsifiers, thickeners or flavour-enhancers.<\/p>",
+            "button_label": "",
+            "button_link": ""
           }
         }
       },
@@ -85,6 +92,7 @@
         "2ef14f92-cf9d-4f49-aea9-fc35d39a6224"
       ],
       "settings": {
+        "heading": "",
         "content": "<p>The Dinner Ladies take away the stress of thinking about, shopping for, preparing and cooking dinner by delivering it to your door, so that you can enjoy great, homemade food every day.<br\/> Ordering is simple. There are no lock-in contracts. There is a lot of choice. You can order once a week or once a year (obviously we would strongly encourage you to order once a week!). We do recommend that you subscribe to our newsletter so that we can send you our weekly menu.<\/p>"
       }
     }
