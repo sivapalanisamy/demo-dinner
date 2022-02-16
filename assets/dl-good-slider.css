@@ -9,3 +9,33 @@
     padding: 0;
     list-style-type: none;
 }
+.dl-good-slider-container ul.dl-slider li{
+    background: #FFFAF1;
+    padding: 18px;
+    margin: 0px 10px;
+    border-radius: 20px;
+    position: relative;
+}
+.dl-good-slider-container ul.dl-slider li img{
+    border-radius: 8px;
+}
+.dl-good-slider-container ul.dl-slider li p{
+    font-family: 'ruffle_beautyregular';
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+}
+.dl-good-slider-container ul.dl-slider li .heart-content{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+@media screen and (max-width: 749px) {
+   .dl-good-slider-container .page-width{
+       padding: 0;
+   } 
+   .dl-good-slider-container ul.dl-slider li{
+       margin: 0px 5px;
+   }
+}
