@@ -61,6 +61,42 @@
     },
     "slider": {
       "type": "dl-good-slider",
+      "blocks": {
+        "efd2c12f-03ef-4644-8f5d-ef1810bb3912": {
+          "type": "imagewithText",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2_980ae2c3-0722-45dd-9c39-65d6cff2c3ce.png",
+            "content": "<p>Sophie making our final delivery of the year to Westmead Children's Hospital!<\/p>"
+          }
+        },
+        "b823db6c-a6b5-453d-b149-e71570646b69": {
+          "type": "imagewithText",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_fe10cc8d-d6db-476b-90b9-ec238208d132.png",
+            "content": "<p>The Dinner Ladies are proud sponsors of a school bus at St. Jude's in Tanzania.<\/p>"
+          }
+        },
+        "9f7a2a2f-bd02-4e2b-b778-ff5224783b4f": {
+          "type": "imagewithText",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3_bd276669-b4c8-4e62-a2b6-821d2af0b7e1.png",
+            "content": "<p>We've supported ETF since it's inception; now building a second pre-school in East Timor!<\/p>"
+          }
+        },
+        "8240f74e-aa64-4f89-b9aa-0400f9374e58": {
+          "type": "imagewithText",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4_b572e3a4-d80f-4cd6-a9fd-425ed25500dc.png",
+            "content": "<p>We've lost count of the raffle prizes and silent auction items we've given out over the years!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "efd2c12f-03ef-4644-8f5d-ef1810bb3912",
+        "b823db6c-a6b5-453d-b149-e71570646b69",
+        "9f7a2a2f-bd02-4e2b-b778-ff5224783b4f",
+        "8240f74e-aa64-4f89-b9aa-0400f9374e58"
+      ],
       "settings": {
       }
     },
