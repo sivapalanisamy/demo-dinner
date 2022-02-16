@@ -52,7 +52,7 @@
       }
     },
     "main": {
-      "type": "dl-good-page",
+      "type": "sustainability-section",
       "blocks": {
         "1c1d5ca5-ae41-419c-986e-0f9b84fb2a49": {
           "type": "imagewithText",
@@ -61,9 +61,7 @@
             "image": "shopify:\/\/shop_images\/img1_36a5d75d-a984-4790-a8cc-ec2361332362.png",
             "Heading": "OUR STORY",
             "icon": "shopify:\/\/shop_images\/Screen_Shot_2022-01-13_at_11.47_1.png",
-            "content": "<p>The Dinner Ladies are Sophie Gilliatt and Katherine Westwood. We got together at the school gate in 2007 and came up with the idea of preparing dinners for time-poor friends and family members so that they woud always have good, homemade food in their fridges and freezers (and incidentally, so would we).<br\/>Between us we have seven children and two husbands of varying sizes, appetites and degrees of fussiness - there’s not much we don’t know about pleasing a tricky crowd.<br\/>We started cooking in the shed in Katherine’s back yard on a converted trailer and two camp stoves<br\/>We’d shop on a Monday, cook on a Tuesday and then one of us would do the delivery run while the other fed and bathed all the kids.<\/p>",
-            "button_label": "",
-            "button_link": ""
+            "content": "<p>The Dinner Ladies are Sophie Gilliatt and Katherine Westwood. We got together at the school gate in 2007 and came up with the idea of preparing dinners for time-poor friends and family members so that they woud always have good, homemade food in their fridges and freezers (and incidentally, so would we).<br\/>Between us we have seven children and two husbands of varying sizes, appetites and degrees of fussiness - there’s not much we don’t know about pleasing a tricky crowd.<br\/>We started cooking in the shed in Katherine’s back yard on a converted trailer and two camp stoves<br\/>We’d shop on a Monday, cook on a Tuesday and then one of us would do the delivery run while the other fed and bathed all the kids.<\/p>"
           }
         },
         "2ef14f92-cf9d-4f49-aea9-fc35d39a6224": {
@@ -73,9 +71,7 @@
             "image": "shopify:\/\/shop_images\/img1_36a5d75d-a984-4790-a8cc-ec2361332362.png",
             "Heading": "OUR FOOD",
             "icon": "shopify:\/\/shop_images\/Screen_Shot_2022-01-13_at_11.47_1.png",
-            "content": "<p>We're no longer cooking in the shed – and we’ve got a few more hands on deck in the kitchen now – but we still cook every dish as if we were cooking for our own families:with the best possible ingredients and no added rubbish like preservatives, emulsifiers, thickeners or flavour-enhancers.<\/p>",
-            "button_label": "",
-            "button_link": ""
+            "content": "<p>We're no longer cooking in the shed – and we’ve got a few more hands on deck in the kitchen now – but we still cook every dish as if we were cooking for our own families:with the best possible ingredients and no added rubbish like preservatives, emulsifiers, thickeners or flavour-enhancers.<\/p>"
           }
         }
       },
@@ -84,58 +80,12 @@
         "2ef14f92-cf9d-4f49-aea9-fc35d39a6224"
       ],
       "settings": {
-        "dlcontent": "<p>The Dinner Ladies have been proudly supporting community events since 2007. We're involved with schools, charities, sports clubs and hospitals.<br\/>If you would like to apply for support for your event, please click here to download Community Support Appication Form.<\/p>",
-        "button_link": "#",
-        "button_label": "Download",
-        "heading": "Sustainability",
-        "content": "<p><strong>At the Dinner Ladies, we're committed to efficient, sustainable solutions to sourcing ingredients, packaging our food and disposing of waste.<\/strong><\/p><p><\/p><p>We go ourselves to Flemington Markets in Sydney twice a week and buy most of our fresh fruit and vegetables from local growers. Our meat is all Australian reared, predominantly grass-fed and all our poultry – chickens, ducks, turkeys and eggs – is free range – and always has been. Our seafood either comes from Australian aquaculture – Humpty Doo barramundi from the Northern Territory and Huon salmon from Tasmania – or is wild caught in Australian waters.<\/p>"
-      }
-    },
-    "1644998426288ab08c": {
-      "type": "dl-good-slider",
-      "blocks": {
-        "9a4edca7-351c-42e7-9e7e-09c70aa2031a": {
-          "type": "imagewithText",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/2_980ae2c3-0722-45dd-9c39-65d6cff2c3ce.png",
-            "content": "<p>Sophie making our final delivery of the year to Westmead Children's Hospital!<\/p>"
-          }
-        },
-        "5f377078-a2c0-4ab2-8129-3894ee401fe6": {
-          "type": "imagewithText",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/1_fe10cc8d-d6db-476b-90b9-ec238208d132.png",
-            "content": "<p>The Dinner Ladies are proud sponsors of a school bus at St. Jude's in Tanzania.<\/p>"
-          }
-        },
-        "6cfc37e3-7f37-4b22-8f63-39e96acdec78": {
-          "type": "imagewithText",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/3_bd276669-b4c8-4e62-a2b6-821d2af0b7e1.png",
-            "content": "<p>We've supported ETF since it's inception; now building a second pre-school in East Timor!<\/p>"
-          }
-        },
-        "8cfc9938-c6f1-4b45-bd5e-12bc1d221eb5": {
-          "type": "imagewithText",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/4_dcc115d0-3e99-475a-8723-219c2125238c.png",
-            "content": "<p>We've lost count of the raffle prizes and silent auction items we've given out over the years!<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "9a4edca7-351c-42e7-9e7e-09c70aa2031a",
-        "5f377078-a2c0-4ab2-8129-3894ee401fe6",
-        "6cfc37e3-7f37-4b22-8f63-39e96acdec78",
-        "8cfc9938-c6f1-4b45-bd5e-12bc1d221eb5"
-      ],
-      "settings": {
+        "content": "<p>The Dinner Ladies take away the stress of thinking about, shopping for, preparing and cooking dinner by delivering it to your door, so that you can enjoy great, homemade food every day.<br\/> Ordering is simple. There are no lock-in contracts. There is a lot of choice. You can order once a week or once a year (obviously we would strongly encourage you to order once a week!). We do recommend that you subscribe to our newsletter so that we can send you our weekly menu.<\/p>"
       }
     }
   },
   "order": [
     "banner",
-    "main",
-    "1644998426288ab08c"
+    "main"
   ]
 }
