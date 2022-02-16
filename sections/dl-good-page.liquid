@@ -11,12 +11,16 @@
   <h1 class="main-page-title page-title h0">
     {{ page.title | escape }}
   </h1>
-  <div class="static-content">
-      <h1>{{section.settings.heading}}</h1>
-      {{section.settings.content}}
+  <div class="service-content">
+      {{section.settings.dlcontent}}
     {%- if section.settings.button_label != blank -%}
     	<a href="{{section.settings.button_link}}" class="button button--green">{{section.settings.button_label}}</a>
     {%- endif -%}
+  </div>
+  
+  <div class="static-content">
+      <h1>{{section.settings.heading}}</h1>
+      {{section.settings.content}}
   </div>
   <div class="about-content">
     {%for block in section.blocks %}
