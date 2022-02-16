@@ -5,7 +5,8 @@
 
 {%- paginate blog.articles by 6 -%}
 
-  <div class="main-blog page-width">
+  <div class="main-blog">
+    <div class="page-width">
     <h1 class="title--primary">{{ blog.title | escape }}</h1>
 
     <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
@@ -20,13 +21,13 @@
       {%- render 'pagination', paginate: paginate -%}
     {%- endif -%}
   </div>
+</div>
 {%- endpaginate -%}
 
 {% schema %}
 {
   "name": "t:sections.main-blog.name",
   "tag": "section",
-  "class": "spaced-section",
   "settings": [
     {
       "type": "header",

@@ -1,3 +1,65 @@
+
+.blog-details{
+   width: 100%;
+    display: inline-block;
+    padding: 18px;
+    margin-top: 120px;
+    border-radius: 20px;
+    background: #FFFFFF;
+    border: 1.2px solid #D4DED3;
+}
+.blog-details .article-template__hero-container{
+  margin: 0;
+}
+.blog-details .article-template__hero-container img{
+  border-radius: 8px;
+}
+.blog-details .article-template header{
+  margin: 40px 0px 0px;
+  padding: 0px 90px;
+  text-align: center;
+}
+.blog-details .article-template header h1{
+  text-transform: inherit;
+}
+
+.blog-details .article-template  .article-template__content{
+  width: 100%;
+  display: inline-block;
+  padding: 0px 90px;
+  font-size: 18px;
+}
+.blog-details .article-template  .article-template__content h2{
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.blog-details .article-template  .article-template__content p{
+  font-size: 18px;
+  line-height: 30px;
+}
+.blog-details .article-template .bottom-links{
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    padding: 50px 90px;
+}
+.blog-details .article-template .bottom-links .article-template__social-sharing{
+    margin: 0;
+    padding: 0;
+    width: 45%;
+    font-size: 18px;
+    text-decoration: underline;
+}
+.blog-details .article-template .bottom-links .article-template__social-sharing:hover{
+  text-underline-offset:0;
+}
+.blog-details .article-template .bottom-links .article-template__link{
+     margin: 0;
+    padding: 0;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
 .article-template > *:first-child:not(.article-template__hero-container) {
   margin-top: 5rem;
 }
@@ -9,14 +71,7 @@
 }
 
 .article-template__hero-container {
-  max-width: 130rem;
   margin: 0 auto;
-}
-
-@media screen and (min-width: 1320px) {
-  .article-template__hero-container:first-child {
-    margin-top: calc(5rem + var(--page-width-margin));
-  }
 }
 
 .article-template__hero-small {
@@ -173,17 +228,17 @@
     margin: 5rem 0 8rem;
   }
 }
+@media screen and (max-width: 749px) {
+  .blog-details{
+    margin-top: 40px;
+  }
+  .blog-details .article-template header,
+  .blog-details .article-template  .article-template__content,
+  .blog-details .article-template .bottom-links{
+    padding: 0;
+  }
 
-.blog-details{
-   width: 100%;
-    display: inline-block;
-    padding: 18px;
-    margin-top: 80px;
-    border-radius: 20px;
-    background: #FFFFFF;
-    border: 1.2px solid #D4DED3;
+
 }
-.blog-details .article-template__hero-container{
-  margin: 0;
-  max-width: inherit;
-}
+
+
