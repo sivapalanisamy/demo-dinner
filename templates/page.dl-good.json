@@ -89,13 +89,29 @@
             "image": "shopify:\/\/shop_images\/4_b572e3a4-d80f-4cd6-a9fd-425ed25500dc.png",
             "content": "<p>We've lost count of the raffle prizes and silent auction items we've given out over the years!<\/p>"
           }
+        },
+        "dc9dcf6f-053f-46da-97cc-8caa2f230def": {
+          "type": "imagewithText",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3_bd276669-b4c8-4e62-a2b6-821d2af0b7e1.png",
+            "content": "<p>Sophie making our final delivery of the year to Westmead Children's Hospital!<\/p>"
+          }
+        },
+        "441b6f47-c20e-4bd6-9a9c-26b8dd51e4ee": {
+          "type": "imagewithText",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_fe10cc8d-d6db-476b-90b9-ec238208d132.png",
+            "content": "<p>Sophie making our final delivery of the year to Westmead Children's Hospital!<\/p>"
+          }
         }
       },
       "block_order": [
         "efd2c12f-03ef-4644-8f5d-ef1810bb3912",
         "b823db6c-a6b5-453d-b149-e71570646b69",
         "9f7a2a2f-bd02-4e2b-b778-ff5224783b4f",
-        "8240f74e-aa64-4f89-b9aa-0400f9374e58"
+        "8240f74e-aa64-4f89-b9aa-0400f9374e58",
+        "dc9dcf6f-053f-46da-97cc-8caa2f230def",
+        "441b6f47-c20e-4bd6-9a9c-26b8dd51e4ee"
       ],
       "settings": {
       }
