@@ -1,14 +1,18 @@
-<ul class="dl-slider">
-  {%for block in section.blocks %}
-    <li>
-      <img src="{{block.settings.image | img_url: 'master'}}"  loading="lazy" width=""   height="">
-      <p>{{block.settings.content}}</p>
-      <div class="heart-content">
-        <img  src="{{ 'dl-good-ico.png' | asset_url }}" alt="{{ shop.name }}"> 
-      </div>
-    </li>
-  {%endfor%}
-</ul>
+<div class="dl-good-slider-container">
+  <div class="page-width">
+    <ul class="dl-slider">
+      {%for block in section.blocks %}
+        <li>
+          <img src="{{block.settings.image | img_url: 'master'}}"  loading="lazy" width=""   height="">
+          <p>{{block.settings.content}}</p>
+          <div class="heart-content">
+            <img  src="{{ 'dl-good-ico.png' | asset_url }}" alt="{{ shop.name }}"> 
+          </div>
+        </li>
+      {%endfor%}
+    </ul>
+  </div>
+</div>
 
 {% schema %}
   {
