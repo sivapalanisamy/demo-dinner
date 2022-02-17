@@ -104,6 +104,7 @@ class CartItems extends HTMLElement {
           '[quantity]',
           document.getElementById(`Quantity-${line}`).value
         );
+      document.getElementById(`Line-item-error-${line}`).removeClass="hidden";
     }
 
     this.currentItemCount = itemCount;
