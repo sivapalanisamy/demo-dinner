@@ -3,7 +3,7 @@
 
 <noscript>{{ 'section-main-page.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
-<script src="//maps.googleapis.com/maps/api/js?key=GOOGLE-API-KEY&libraries=places&callback=PlaceAutocompleteSearch" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 <script>
   function PlaceAutocompleteSearch() {
     var input = document.getElementById('search-address');
