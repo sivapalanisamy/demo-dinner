@@ -9,7 +9,7 @@
     {{ page.title | escape }}
   </h1>
   <div class="rte">
-    {{ page.content }}
+    <input type="text" id="search-address" value="">
   </div>
 </div>
 
@@ -20,3 +20,16 @@
   "class": "spaced-section"
 }
 {% endschema %}
+
+
+
+{% javascript %}
+<script src="//maps.googleapis.com/maps/api/js?key=GOOGLE-API-KEY&libraries=places&callback=PlaceAutocompleteSearch" async defer></script>
+<script>
+  function PlaceAutocompleteSearch() {
+    var input = document.getElementById('search-address');
+    var autocomplete = new google.maps.places.Autocomplete(input);
+  }
+</script>
+
+{% endjavascript %}
