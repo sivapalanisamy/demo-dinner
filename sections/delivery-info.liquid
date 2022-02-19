@@ -4,7 +4,12 @@
 <noscript>{{ 'section-main-page.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 <script src="//maps.googleapis.com/maps/api/js?key=GOOGLE-API-KEY&libraries=places&callback=PlaceAutocompleteSearch" async defer></script>
-
+<script>
+  function PlaceAutocompleteSearch() {
+    var input = document.getElementById('search-address');
+    var autocomplete = new google.maps.places.Autocomplete(input);
+  }
+</script>
 <div class="page-width page-width--narrow">
   <h1 class="main-page-title page-title h0">
     {{ page.title | escape }}
@@ -25,10 +30,7 @@
 
 
 {% javascript %}
-  function PlaceAutocompleteSearch() {
-    var input = document.getElementById('search-address');
-    var autocomplete = new google.maps.places.Autocomplete(input);
-  }
+
 
 
 {% endjavascript %}
