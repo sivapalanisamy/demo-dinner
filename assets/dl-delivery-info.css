@@ -1,0 +1,141 @@
+.delivery-container{
+    position: relative;
+    width: 100%;
+    background: url("delivery-bg.png") no-repeat top left;
+    background-size: cover;
+    padding: 150px 0px;
+    min-height: 600px;
+}
+.delivery-container img{
+    max-width: 100%;
+}
+.delivery-container .delivery-block{
+    width: 100%;
+    top: 0;
+}
+.delivery-container .delivery-block .delivery-info{
+    background: #D4DED3;
+    border-radius: 20px;
+    border: 1.2px solid #BBCEB9;
+    margin: 0 auto;
+    max-width: 67rem;
+    text-align: center;
+}
+.delivery-container .delivery-block .delivery-info .delivery-cnt{
+    padding: 60px 60px 0px;
+}
+.delivery-container .delivery-block .delivery-info .delivery-image{
+    line-height: 0;
+}
+.delivery-container .delivery-block .delivery-info p{
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    line-height: 30px;
+}
+.delivery-container .delivery-block .delivery-info .delivery-address .field .field__input{
+    border: 1px solid #E8D4B0;
+    background: #FFFFFF;
+    border-radius: 50px;
+    box-shadow: none;
+    padding: 3.5rem 3rem 2.5rem 3.7rem;
+}
+.delivery-container .delivery-block .delivery-info h1{
+    font-size: 60px;
+    margin: 0;
+    padding: 0;
+    color: #344E38;
+}
+.delivery-container .delivery-block .delivery-info .delivery-address{
+    margin-top: 25px;
+}
+.delivery-container .delivery-block .delivery-info .delivery-address .field .text-area{
+    height: 170px;
+    border-radius: 20px;
+}
+.delivery-container .delivery-block .delivery-info .delivery-address .field label{
+    font-size: 18px;
+    left: 38px;
+    top: 20px;
+}
+.delivery-container .delivery-block .delivery-info .delivery-address .field__input:focus ~ .field__label{
+    font-size: 1rem;
+    top: 0.3em;
+}
+
+.delivery-container .delivery-block .delivery-available{
+    padding: 60px;
+}
+.delivery-container .delivery-block .delivery-available .available-content{
+    background: #FFFFFF;
+    border-radius: 20px;
+    border: 2px solid #BBCEB9;
+    margin-bottom: 15px;
+}
+.delivery-container .delivery-block .delivery-available .available-content .title-section{
+    display: flex;
+    padding: 10px 30px;
+    align-items: center;
+    border-bottom: 1px solid #BBCEB9
+}
+.delivery-container .delivery-block .delivery-available .available-content .title-section h3{
+    margin:0px 0px 0px 20px;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 0;
+}
+.delivery-container .delivery-block .delivery-available .available-content .available-table ul{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    list-style-type: none;
+}
+.delivery-container .delivery-block .delivery-available .available-content .available-table ul li:nth-child(even) {
+    background: #FCF7EE;
+}
+.delivery-container .delivery-block .delivery-available .available-content .available-table ul  li:last-child{
+    border-radius: 0px 0px 20px 20px;
+}
+.delivery-container .delivery-block .delivery-available .available-content .available-table ul li{
+    padding: 20px 30px;
+}
+.delivery-container .delivery-block .delivery-available .available-content .available-table ul li label,
+.delivery-container .delivery-block .delivery-available .available-content .available-table ul li span{
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+.delivery-container .delivery-block .delivery-available .available-content .available-table ul li label{
+    color: #405343;
+    width: 240px;
+    display: inline-block;
+}
+.delivery-container .delivery-block .delivery-available .available-content .available-para{
+    padding: 25px 30px 30px;
+    text-align: left;
+}
+.delivery-container .delivery-block .delivery-available .available-msg{
+    width: 100%;
+    max-width: 380px;
+    margin: 0px auto;
+}
+.delivery-container .delivery-block .delivery-available .available-msg label{
+    background: url("smile-ico.png") no-repeat top left;
+    font-family: var(--font-heading-family);
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    padding-left: 35px;
+    display: inline-block;
+}
+
+@media screen and (max-width: 749px){
+    .delivery-container .delivery-block .delivery-info{
+        width: 95%;
+        padding: 20px 20px 50px;
+    }
+    .delivery-container .delivery-block .delivery-info .button--green{
+        padding: 1rem 6.3rem;
+    }
+}

@@ -1,29 +1,75 @@
-<link rel="stylesheet" href="{{ 'section-main-page.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
+{{ 'dl-delivery-info.css' | asset_url | stylesheet_tag }}
 
-<noscript>{{ 'section-main-page.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
-<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>
-<script>
-  function PlaceAutocompleteSearch() {
-    var input = document.getElementById('search-address');
-    var autocomplete = new google.maps.places.Autocomplete(input);
-  }
-</script>
-<div class="page-width page-width--narrow">
-  <h1 class="main-page-title page-title h0">
-    {{ page.title | escape }}
-  </h1>
-  <div class="rte">
-    <input type="text" id="search-address" value="">
-  </div>
+<div class="delivery-container">
+  <div class="delivery-block">
+    <div class="delivery-info">
+      <div class="delivery-cnt">
+          <h1 id="login">Do We Deliver to You?</h1>
+          <p>Please enter and select your delivery <br/>suburb or postcode here.</p>
+          <div class="delivery-address">
+              <div class="field">        
+                <input type="text"  name="customer[delivery-code]" id="deliveryPostcode"  class="field__input" placeholder="Select a Suburb">
+                <label class="field__label" for="CustomerEmail">
+                  Select a Suburb
+                </label>
+              </div>
+          </div>
+      </div>
+      <div class="delivery-available">
+          <div class="available-msg">
+              <label>Yes! Here’s the delivery information for your area</label>
+          </div>
+          <div class="available-content table-content">
+              <div class="title-section">
+                  <img class="title-img" src="{{ 'price.png' | asset_url }}" alt="{{ shop.name }}"> 
+                  <h3>Delivery Prices</h3>
+              </div>
+              <div class="available-table">
+                  <ul>
+                      <li>
+                          <label>Food value over $200</label>
+                          <span>Delivery Free</span>
+                      </li>
+                      <li>
+                          <label>Food value up to $200</label>
+                          <span>Delivery $15.00</span>
+                      </li>
+                      <li>
+                          <label>Minimum food order</label>
+                          <span>$100.00</span>
+                      </li>
+                      <li>
+                          <label>Food value up to $200</label>
+                          <span>Delivery $15.00</span>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="available-content para-content">
+              <div class="title-section">
+                  <img class="title-img" src="{{ 'price.png' | asset_url }}" alt="{{ shop.name }}"> 
+                  <h3>Delivery Prices</h3>
+              </div>
+              <div class="available-para">
+                  <p>We deliver your dinners packed in an insulated cardboard box with an icepack, which can sit happily on your doorstep for a few hours. You don’t need to be home when we deliver but you do need to nominate somewhere safe for us to leave the box.
+You’ll be given a delivery window when you choose your delivery slot. On the evening before your delivery, you should receive an SMS with a more specific time frame. Once we’ve made the delivery, we’ll send you an SMS with a photograph to show you exactly where we left it. </p>
+              </div>
+          </div>
+      </div>
+      <div class="delivery-image">
+          <img class="town-img" src="{{ 'delivery-town.png' | asset_url }}" alt="{{ shop.name }}"> 
+      </div>
+
+
+      
+    </div>
+    </div>
 </div>
-
 {% schema %}
 {
   "name": "t:sections.main-page.name",
   "tag": "section",
-  "class": "spaced-section"
+  "class": "deliverInfo-section"
 }
 {% endschema %}
 
