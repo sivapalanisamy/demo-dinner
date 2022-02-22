@@ -61,7 +61,7 @@
                         </ul>
                     </div>
                 </div>
-            {% elsif block.type == 'block-2' %}
+            {% elsif block.type == 'delivery-times' %}
                 <h3>{{block.settings.title}}</h3>
             {% endif %}
           {% endfor %}
@@ -165,7 +165,7 @@ You’ll be given a delivery window when you choose your delivery slot. On the e
         ]
       },
       {
-        "type": "deliveryTimes",
+        "type": "delivery-times",
         "name": "Delivery Times",
         "settings": [
           {
