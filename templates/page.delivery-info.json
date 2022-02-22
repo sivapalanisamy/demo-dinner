@@ -15,10 +15,25 @@
             "list3": "Minimum food order",
             "value3": "$100.00"
           }
+        },
+        "e08ccb34-2dc5-49a9-a2d2-de31e9180222": {
+          "type": "delivery-times",
+          "settings": {
+            "title": "Delivery Times",
+            "titleimage": "shopify:\/\/shop_images\/times.png",
+            "monday": "8am - 6pm",
+            "tuesday": "8am - 6pm",
+            "wednesday": "8am - 6pm",
+            "thursday": "8am - 6pm",
+            "friday": "8am - 6pm",
+            "saturday": "8am - 6pm",
+            "sunday": "8am - 6pm"
+          }
         }
       },
       "block_order": [
-        "b97ddc74-8814-49e2-b126-4cda3af06e9d"
+        "b97ddc74-8814-49e2-b126-4cda3af06e9d",
+        "e08ccb34-2dc5-49a9-a2d2-de31e9180222"
       ],
       "settings": {
       }
