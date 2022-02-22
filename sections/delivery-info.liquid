@@ -62,7 +62,46 @@
                     </div>
                 </div>
             {% elsif block.type == 'delivery-times' %}
-                <h3>{{block.settings.title}}</h3>
+                <div class="available-content table-content">
+                    <div class="title-section">
+                        <img src="{{block.settings.titleimage | img_url: 'master'}}"  loading="lazy" width=""   height="">
+                        <h3>{{block.settings.title}}</h3>
+                    </div>
+                    <div class="available-table">
+                        <ul>                            
+                            <li>
+                                <label>Mondays</label>
+                                <span>{{block.settings.monday}}</span>
+                            </li>
+                            <li>
+                                <label>Tuesdays</label>
+                                <span>{{block.settings.tuesday}}</span>
+                            </li>
+                            <li>
+                                <label>Wednesdays</label>
+                                <span>{{block.settings.wednesday}}</span>
+                            </li>
+                            <li>
+                                <label>Thursdays</label>
+                                <span>{{block.settings.thursday}}</span>
+                            </li>
+                            <li>
+                                <label>Fridays</label>
+                                <span>{{block.settings.fridays}}</span>
+                            </li>
+                            <li>
+                                <label>Saturdays</label>
+                                <span>{{block.settings.saturday}}</span>
+                            </li>
+                           <li>
+                                <label>Sundays</label>
+                                <span>{{block.settings.sunday}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+           {% elsif block.type == 'delivery-times' %}
+        	<h3>{{block.settings.title}}</h3>
             {% endif %}
           {% endfor %}
           <div class="available-content table-content">
