@@ -3,8 +3,8 @@
     "main": {
       "type": "delivery-info",
       "blocks": {
-        "17cc566e-ceb6-4791-8404-53183f797b01": {
-          "type": "block-1",
+        "b97ddc74-8814-49e2-b126-4cda3af06e9d": {
+          "type": "delivery",
           "settings": {
             "title": "Delivery Prices",
             "list1": "Food value over $200",
@@ -17,7 +17,7 @@
         }
       },
       "block_order": [
-        "17cc566e-ceb6-4791-8404-53183f797b01"
+        "b97ddc74-8814-49e2-b126-4cda3af06e9d"
       ],
       "settings": {
       }
