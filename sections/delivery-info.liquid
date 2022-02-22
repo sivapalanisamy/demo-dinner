@@ -31,13 +31,7 @@
           <div class="available-msg">
               <label>Yes! Here’s the delivery information for your area</label>
           </div>
-          <div class="available-content table-content">
-              <div class="title-section">
-                  <img class="title-img" src="{{ 'price.png' | asset_url }}" alt="{{ shop.name }}"> 
-                  <h3>Delivery Prices</h3>
-              </div>
-            
-            	{% for block in section.blocks %}
+        {% for block in section.blocks %}
             {% if block.type == 'delivery' %}
                 <div class="available-content table-content">
                     <div class="title-section">
@@ -71,6 +65,11 @@
                 <h3>{{block.settings.title}}</h3>
             {% endif %}
           {% endfor %}
+          <div class="available-content table-content">
+              <div class="title-section">
+                  <img class="title-img" src="{{ 'price.png' | asset_url }}" alt="{{ shop.name }}"> 
+                  <h3>Delivery Prices</h3>
+              </div>
             
               <div class="available-table">
                   <ul>
