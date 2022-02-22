@@ -100,7 +100,17 @@
                         </ul>
                     </div>
                 </div>
-           {% elsif block.type == 'delivery-times' %}
+           {% elsif block.type == 'getting-delivery' %}
+        	<div class="available-content para-content">
+                <div class="title-section">
+                    <img src="{{block.settings.titleimage | img_url: 'master'}}"  loading="lazy" width=""   height="">
+                    <h3>{{block.settings.title}}</h3>
+                </div>
+                <div class="available-para">
+                    {{block.settings.description}}
+                </div>
+            </div>
+           {% elsif block.type == 'getting-delivery' %}
         	<h3>{{block.settings.title}}</h3>
             {% endif %}
           {% endfor %}
@@ -253,7 +263,28 @@ You’ll be given a delivery window when you choose your delivery slot. On the e
             "label": "Sundays"
           }
         ]
-      }
+      },
+      {
+        "type": "getting-delivery",
+        "name": "Getting your delivery",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+           "type": "image_picker",
+           "id": "titleimage",
+           "label": "ico"
+         },
+          {
+            "type": "richtext",
+            "id": "description",
+            "label": "description"
+          }
+          ]
+        }
     ]
 }
 {% endschema %}
