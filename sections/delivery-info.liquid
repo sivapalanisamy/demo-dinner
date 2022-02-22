@@ -35,7 +35,7 @@
             {% if block.type == 'delivery' %}
                 <div class="available-content table-content">
                     <div class="title-section">
-                        <img class="title-img" src="{{ 'price.png' | asset_url }}" alt="{{ shop.name }}"> 
+                        <img src="{{block.settings.image | img_url: 'master'}}"  loading="lazy" width=""   height="">
                         <h3>{{block.settings.title}}</h3>
                     </div>
                     <div class="available-table">
@@ -127,6 +127,11 @@ You’ll be given a delivery window when you choose your delivery slot. On the e
             "id": "title",
             "label": "Title"
           },
+          {
+           "type": "image_picker",
+           "id": "titleimage",
+           "label": "ico"
+         },
           {
             "type": "text",
             "id": "list1",
