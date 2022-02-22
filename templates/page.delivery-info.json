@@ -2,6 +2,23 @@
   "sections": {
     "main": {
       "type": "delivery-info",
+      "blocks": {
+        "17cc566e-ceb6-4791-8404-53183f797b01": {
+          "type": "block-1",
+          "settings": {
+            "title": "Delivery Prices",
+            "list1": "Food value over $200",
+            "value1": "Delivery Free",
+            "list2": "Food value up to $200",
+            "value2": "Delivery $15.00",
+            "list3": "Minimum food order",
+            "value3": "$100.00"
+          }
+        }
+      },
+      "block_order": [
+        "17cc566e-ceb6-4791-8404-53183f797b01"
+      ],
       "settings": {
       }
     }
