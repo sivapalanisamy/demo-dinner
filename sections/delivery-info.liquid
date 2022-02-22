@@ -1,4 +1,16 @@
 {{ 'dl-delivery-info.css' | asset_url | stylesheet_tag }}
+<script>
+    window.AddressFinderPlugin = {
+        key: "FL8CEJW9VT73DKXAHM64",
+        widgetOptions: {
+            address_params: {
+                gnaf: 1
+            }
+        }
+    }
+</script>
+<script async src=https://api.addressfinder.io/assets/shopify/v1/boot.js></script>
+
 
 <div class="delivery-container">
   <div class="delivery-block">
