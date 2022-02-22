@@ -7,6 +7,7 @@
           "type": "delivery",
           "settings": {
             "title": "Delivery Prices",
+            "titleimage": "shopify:\/\/shop_images\/price.png",
             "list1": "Food value over $200",
             "value1": "Delivery Free",
             "list2": "Food value up to $200",
