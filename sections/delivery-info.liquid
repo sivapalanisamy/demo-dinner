@@ -110,47 +110,18 @@
                     {{block.settings.description}}
                 </div>
             </div>
-           {% elsif block.type == 'getting-delivery' %}
-        	<h3>{{block.settings.title}}</h3>
+           {% elsif block.type == 'box-recycling' %}
+        	<div class="available-content para-content">
+                <div class="title-section">
+                    <img src="{{block.settings.titleimage | img_url: 'master'}}"  loading="lazy" width=""   height="">
+                    <h3>{{block.settings.title}}</h3>
+                </div>
+                <div class="available-para">
+                    {{block.settings.description}}
+                </div>
+            </div>
             {% endif %}
           {% endfor %}
-          <div class="available-content table-content">
-              <div class="title-section">
-                  <img class="title-img" src="{{ 'price.png' | asset_url }}" alt="{{ shop.name }}"> 
-                  <h3>Delivery Prices</h3>
-              </div>
-            
-              <div class="available-table">
-                  <ul>
-                      <li>
-                          <label> {{ 'general.delivery_info.delivery_prices_over_title' | t }}</label>
-                          <span>{{ 'general.delivery_info.delivery_prices_over_price' | t }} Free</span>
-                      </li>
-                      <li>
-                          <label>Food value up to $200</label>
-                          <span>Delivery $15.00</span>
-                      </li>
-                      <li>
-                          <label>Minimum food order</label>
-                          <span>$100.00</span>
-                      </li>
-                      <li>
-                          <label>Food value up to $200</label>
-                          <span>Delivery $15.00</span>
-                      </li>
-                  </ul>
-              </div>
-          </div>
-          <div class="available-content para-content">
-              <div class="title-section">
-                  <img class="title-img" src="{{ 'price.png' | asset_url }}" alt="{{ shop.name }}"> 
-                  <h3>Delivery Prices</h3>
-              </div>
-              <div class="available-para">
-                  <p>We deliver your dinners packed in an insulated cardboard box with an icepack, which can sit happily on your doorstep for a few hours. You don’t need to be home when we deliver but you do need to nominate somewhere safe for us to leave the box.
-You’ll be given a delivery window when you choose your delivery slot. On the evening before your delivery, you should receive an SMS with a more specific time frame. Once we’ve made the delivery, we’ll send you an SMS with a photograph to show you exactly where we left it. </p>
-              </div>
-          </div>
       </div>
       <div class="delivery-image">
           <img class="town-img" src="{{ 'delivery-town.png' | asset_url }}" alt="{{ shop.name }}"> 
@@ -267,6 +238,27 @@ You’ll be given a delivery window when you choose your delivery slot. On the e
       {
         "type": "getting-delivery",
         "name": "Getting your delivery",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+           "type": "image_picker",
+           "id": "titleimage",
+           "label": "ico"
+         },
+          {
+            "type": "richtext",
+            "id": "description",
+            "label": "description"
+          }
+          ]
+        },
+        {
+        "type": "box-recycling",
+        "name": "Box Recycling",
         "settings": [
           {
             "type": "text",
