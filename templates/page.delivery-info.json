@@ -37,12 +37,21 @@
             "titleimage": "shopify:\/\/shop_images\/getting.png",
             "description": "<p>We deliver your dinners packed in an insulated cardboard box with an icepack, which can sit happily on your doorstep for a few hours. You don’t need to be home when we deliver but you do need to nominate somewhere safe for us to leave the box.<br\/>You’ll be given a delivery window when you choose your delivery slot. On the evening before your delivery, you should receive an SMS with a more specific time frame. Once we’ve made the delivery, we’ll send you an SMS with a photograph to show you exactly where we left it.<\/p>"
           }
+        },
+        "4e2efe9c-d63a-4eac-a8d3-27041d0b338a": {
+          "type": "box-recycling",
+          "settings": {
+            "title": "Box Recycling",
+            "titleimage": "shopify:\/\/shop_images\/box.png",
+            "description": "<p>When you’ve finished with it, the cardboard box can be put in your recycling bin. The gel in the icepack is non-toxic and can be mixed with soil in the garden as a wetting agent or simply disposed of in general waste. The paper liners are recyclable, the wool liners are biodegradable and compostable.<\/p>"
+          }
         }
       },
       "block_order": [
         "b97ddc74-8814-49e2-b126-4cda3af06e9d",
         "e08ccb34-2dc5-49a9-a2d2-de31e9180222",
-        "718dfafb-9033-4450-a523-5aa2dc51a43f"
+        "718dfafb-9033-4450-a523-5aa2dc51a43f",
+        "4e2efe9c-d63a-4eac-a8d3-27041d0b338a"
       ],
       "settings": {
       }
