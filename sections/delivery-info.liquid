@@ -36,6 +36,42 @@
                   <img class="title-img" src="{{ 'price.png' | asset_url }}" alt="{{ shop.name }}"> 
                   <h3>Delivery Prices</h3>
               </div>
+            
+            	{% for block in section.blocks %}
+            {% if block.type == 'delivery' %}
+                <div class="available-content table-content">
+                    <div class="title-section">
+                        <img class="title-img" src="{{ 'price.png' | asset_url }}" alt="{{ shop.name }}"> 
+                        <h3>{{block.settings.title}}</h3>
+                    </div>
+                    <div class="available-table">
+                        <ul>
+                            {% if block.settings.list1 != blank %}
+                            <li>
+                                <label> {{block.settings.list1}}</label>
+                                <span>{{block.settings.value1}}</span>
+                            </li>
+                            {% endif %}
+                            {% if block.settings.list2 != blank %}
+                             <li>
+                                <label> {{block.settings.list2}}</label>
+                                <span>{{block.settings.value2}}</span>
+                            </li>
+                            {% endif %}
+                            {% if block.settings.list3 != blank %}
+                             <li>
+                                <label> {{block.settings.list3}}</label>
+                                <span>{{block.settings.value3}}</span>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            {% elsif block.type == 'block-2' %}
+                <h3>{{block.settings.title}}</h3>
+            {% endif %}
+          {% endfor %}
+            
               <div class="available-table">
                   <ul>
                       <li>
