@@ -29,11 +29,20 @@
             "saturday": "8am - 6pm",
             "sunday": "8am - 6pm"
           }
+        },
+        "718dfafb-9033-4450-a523-5aa2dc51a43f": {
+          "type": "getting-delivery",
+          "settings": {
+            "title": "Getting your delivery",
+            "titleimage": "shopify:\/\/shop_images\/getting.png",
+            "description": "<p>We deliver your dinners packed in an insulated cardboard box with an icepack, which can sit happily on your doorstep for a few hours. You don’t need to be home when we deliver but you do need to nominate somewhere safe for us to leave the box.<br\/>You’ll be given a delivery window when you choose your delivery slot. On the evening before your delivery, you should receive an SMS with a more specific time frame. Once we’ve made the delivery, we’ll send you an SMS with a photograph to show you exactly where we left it.<\/p>"
+          }
         }
       },
       "block_order": [
         "b97ddc74-8814-49e2-b126-4cda3af06e9d",
-        "e08ccb34-2dc5-49a9-a2d2-de31e9180222"
+        "e08ccb34-2dc5-49a9-a2d2-de31e9180222",
+        "718dfafb-9033-4450-a523-5aa2dc51a43f"
       ],
       "settings": {
       }
