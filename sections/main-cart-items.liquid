@@ -65,7 +65,7 @@
 
                     <a href="{{ item.url }}" class="cart-item__name h4 break">{{ item.product.title | escape }}</a>
 
-                    {% comment %} {%- if item.original_price != item.final_price -%}
+                     {%- if item.original_price != item.final_price -%}
                       <div class="cart-item__discounted-prices">
                         <span class="visually-hidden">
                           {{ 'products.product.price.regular_price' | t }}
@@ -126,7 +126,7 @@
                           {{ discount.title }}
                         </li>
                       {%- endfor -%}
-                    </ul> {% endcomment %}
+                    </ul> 
                     <div class="cart-item__totals medium-hide large-up-hide">
                       <div class="loading-overlay hidden">
                         <div class="loading-overlay__spinner">
