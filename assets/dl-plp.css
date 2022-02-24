@@ -67,3 +67,10 @@
 .collection-hero .collection-hero__image-container img{
 	height:100%;
 }
+.collection-hero h1{
+	font-size: 60px;
+    line-height: 100px;
+    color: #344e38;
+    margin: 0;
+   padding:0;
+}
