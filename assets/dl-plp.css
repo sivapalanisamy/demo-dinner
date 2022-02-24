@@ -53,7 +53,10 @@
     font-size: 16px;
     font-weight: 700;
 }
-
+.collection-hero.collection-hero--with-image{
+	padding:0;
+    background:#D4DED3;
+}
 .collection-hero .collection-hero__image-container{
 	width:100%;
     margin:0;
