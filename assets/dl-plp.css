@@ -61,3 +61,6 @@
     flex: inherit;
     align-self: inherit;
 }
+.collection-hero .collection-hero__image-container img{
+	height:100%;
+}
