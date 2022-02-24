@@ -53,3 +53,11 @@
     font-size: 16px;
     font-weight: 700;
 }
+
+.collection-hero .collection-hero__image-container{
+	width:100%;
+    margin:0;
+    padding:0;
+    flex: inherit;
+    align-self: inherit;
+}
