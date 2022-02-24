@@ -10,7 +10,7 @@
 <div class="page-container">
 <div class="page-border">
 <div class="page-width">
- <h2 class="page-title">{{ 'sections.collection_template.title' | t }}</h2>
+ 
 {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
   {{ 'component-facets.css' | asset_url | stylesheet_tag }}
   <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
