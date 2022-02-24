@@ -59,6 +59,7 @@
 }
 .collection-hero .collection-hero__inner{
 	margin:0;
+    padding-top: 3rem;
 }
 .collection-hero .collection-hero__image-container{
 	width:100%;
