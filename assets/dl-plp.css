@@ -57,6 +57,9 @@
 	padding:0 !important;
     background:#D4DED3;
 }
+.collection-hero .collection-hero__inner{
+	margin:0;
+}
 .collection-hero .collection-hero__image-container{
 	width:100%;
     margin:0;
