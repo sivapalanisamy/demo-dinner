@@ -92,7 +92,15 @@
     },
     "content_for_index": [
 
-    ]
+    ],
+    "blocks": {
+      "0d36beb9-0fff-4373-bca2-dc7e3d364395": {
+        "type": "shopify:\/\/apps\/instagram-feed-story-tiktok\/blocks\/social-widget\/508b8d5b-b176-4dc6-a0ba-2b222db6eb79",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
   },
   "presets": {
     "Default": {
